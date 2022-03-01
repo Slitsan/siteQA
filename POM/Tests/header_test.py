@@ -15,8 +15,8 @@ from POM.Pages.studentPortalLoginPage import StudentPortal
 # -------------------------------------
 correctUserName = 'dagula74@yahoo.com'
 correctPassword = '310870969'
-
-
+studentPortalTitle = 'Students Portal RT-ED'
+popUp_close_XPATH = '//*[@id="lead-form-modal1"]/span'
 #
 
 
@@ -30,23 +30,21 @@ class HeaderTest(unittest.TestCase):
         cls.driver.implicitly_wait(20)
         cls.driver.set_page_load_timeout(30)
         cls.driver.get('https://rt-ed.co.il/')
-        print('-----  BEFORE SLEEP  -----')
-        time.sleep(22)
-        print('-----  AFTER SLEEP  -----')
-        cls.driver.find_element(By.XPATH, '//*[@id="lead-form-modal1"]/span').click()
-        print('-----  END OF CLS  -----')
+        time.sleep(17)
+        cls.driver.find_element(By.XPATH, popUp_close_XPATH).click()
+
 
     def test_legalEnter_studentPortal_fromHeader(self):
-        print('-----  START test_studentPortal_fromHeader  -----')
         header = Header(self.driver)
-        print('-----  after init Header test_studentPortal_fromHeader  -----')
-        header.goToStudentPortal()
+        titleStr = header.goToStudentPortal()
+        time.sleep(4)
+        print('-----  TITLE     -----' + titleStr)
+        if titleStr == studentPortalTitle:
+            stPortal = StudentPortal(self.driver)
+            stPortal.enterUserName(correctUserName)
+            stPortal.enterPassword(correctPassword)
+            stPortal.logIn()
+        else:
+            print('-----  WRONG StPortal TITle     -----')
 
-        stPortal = StudentPortal(self.driver)
-        stPortal.enterUserName(correctUserName)
-        stPortal.enterPassword(correctPassword)
-        stPortal.logIn()
 
-
-#    def closeEnteryPopUp(self, driver, popUp_close_xpath):
-#        driver.find_element(By.XPATH, popUp_close_xpath).click()
