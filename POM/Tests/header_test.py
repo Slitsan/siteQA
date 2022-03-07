@@ -25,16 +25,16 @@ class HeaderTest(unittest.TestCase):
     def setUpClass(cls) -> None:
 
         cls.driver: WebDriver = webdriver.Chrome(executable_path=
-                                                 'C:\\Users\\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
+                                                 'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
         cls.driver.maximize_window()
         cls.driver.delete_all_cookies()
         cls.driver.implicitly_wait(20)
         cls.driver.set_page_load_timeout(30)
         cls.driver.get('https://rt-ed.co.il/')
-        print('-----  BEFORE SLEEP  -----')
-        time.sleep(12)
-        print('-----  AFTER SLEEP  -----')
-        cls.driver.find_element(By.XPATH, '//*[@id="lead-form-modal1"]/span').click()
+        # print('-----  BEFORE SLEEP  -----')
+        # time.sleep(12)
+        # print('-----  AFTER SLEEP  -----')
+        # cls.driver.find_element(By.XPATH, '//*[@id="lead-form-modal1"]/span').click()
         print('-----  END OF CLS  -----')
 
     # def test_legalEnter_studentPortal_fromHeader(self):
@@ -48,21 +48,27 @@ class HeaderTest(unittest.TestCase):
     #     stPortal.enterPassword(correctPassword)
     #     stPortal.logIn()
 
+
     def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
         print(f"---Checking The {button_name} Page...---")
         if title == actual_title_of_page:
             print("---The page is correct---")
+            return True
         else:
             print("---Not the right page---")
+            return False
 
     def maslul_real_time(self):
         print("---Inside maslul_real_time function---")
         header = Header(self.driver)
         index = 0
         running = True
-        #list_of_titles = ["Bootcamp Real Time", "Embedded Systems", "Real Time Embedded Linux", "Embedded Linux"]
-        dict_of_titles = {"Bootcamp Real Time": "קורס Real-Time Bootcamp | הכשרה מקוצרת לפיתוח מערכות משובצות מחשב", "Embedded Systems": "קורס Embedded Systems | מסלול הכשרה והשמה בפיתוח bare board", "Real Time Embedded Linux": "קורס Real Time Embedded Linux » Real Time College", "Embedded Linux": "מסלול Embedded Linux | פיתוח מערכות משובצות » Real Time Group"}
+        # list_of_titles = ["Bootcamp Real Time", "Embedded Systems", "Real Time Embedded Linux", "Embedded Linux"]
+        dict_of_titles = {"Bootcamp Real Time": "קורס Real-Time Bootcamp | הכשרה מקוצרת לפיתוח מערכות משובצות מחשב",
+                          "Embedded Systems": "קורס Embedded Systems | מסלול הכשרה והשמה בפיתוח bare board",
+                          "Real Time Embedded Linux": "קורס Real Time Embedded Linux » Real Time College",
+                          "Embedded Linux": "מסלול Embedded Linux | פיתוח מערכות משובצות » Real Time Group"}
         while running:
             for length in range(len(header.list_of_courses_on_real_time())):
                 header.goToMaslul()
@@ -102,7 +108,8 @@ class HeaderTest(unittest.TestCase):
         header = Header(self.driver)
         index = 0
         running = True
-        dict_of_titles = {" סייבר ואבטחת מידע | cyber security": "קורס Cyber אבטחת מידע וסייבר | Cyber Security » Real Time Group"}
+        dict_of_titles = {
+            " סייבר ואבטחת מידע | cyber security": "קורס Cyber אבטחת מידע וסייבר | Cyber Security » Real Time Group"}
 
         while running:
             for length in range(len(header.list_of_courses_on_cyber())):
@@ -123,7 +130,9 @@ class HeaderTest(unittest.TestCase):
         index = 0
         running = True
         dict_of_titles = {
-            "Data Analyst": "Data Analyst » Real Time College", "Machine Learning & Data Science": "קורס machine learning | הכשרה והשמה :Real Time Group", "Image Processing": "קורס עיבוד תמונה Image Processing | השתלבות בחזית העשייה החדשנית"}
+            "Data Analyst": "Data Analyst » Real Time College",
+            "Machine Learning & Data Science": "קורס machine learning | הכשרה והשמה :Real Time Group",
+            "Image Processing": "קורס עיבוד תמונה Image Processing | השתלבות בחזית העשייה החדשנית"}
 
         while running:
             for length in range(len(header.list_of_courses_on_machine_learning())):
@@ -206,89 +215,677 @@ class HeaderTest(unittest.TestCase):
         print("---Inside course_real_time function---")
         header = Header(self.driver)
         index = 0
-        running = True
-        list_pressed_buttons = []
+        run = True
         dict_of_titles = {
-            " FreeRTOS": "קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן",
-            " שפת ++C": "קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College",
-            "Yocto Programming": "YOCTO programming | מערכות Embedded Linux » Real Time College",
-            " Embedded Linux": "קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group",
             " RT Concepts": "קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group",
             " שפת C": "קורס שפת C | לימודים שפת | C למתחילים :Real Time Group",
             " Linux Kernel And Device Drivers": "קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס",
             " ARM - Embedded Systems": "קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College",
-            " Internet Of Things": "קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו?"}
+            " Internet Of Things": "קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו?",
+            " FreeRTOS": "קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן",
+            " שפת ++C": "קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College",
+            "Yocto Programming": "YOCTO programming | מערכות Embedded Linux » Real Time College",
+            " Embedded Linux": "קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
 
-        while running:
-            for length in range(len(header.list_of_sub_courses_on_real_time_course())):
-                header.click_on_courses_tab()
-                header.click_on_course_real_time()
-                header.list_of_sub_courses_on_real_time_course()[index].click()
-                title = header.get_title()
-                expected_title = list(dict_of_titles.values())[index]
-                self.compare_title_pages(title, expected_title, title)
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_real_time().click()
+                if index == 0:
+                    header.sub_course_rt_concepts().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_c_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_linux_kernel_and_device_drivers().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_arm_embedded_systems().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_internet_of_things().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 5:
+                    header.sub_course_free_rtos().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 6:
+                    header.sub_course_c_plus_plus_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 7:
+                    header.sub_course_yocto_programming().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 8:
+                    header.sub_course_linux_embedded().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
                 index += 1
-            running = False
+            run = False
 
         print("---Outside course_real_time function---")
 
-    #def test_run_maslulim(self):
-        #self.maslul_real_time()
-        #self.maslul_full_stack()
-        #self.maslul_cyber()
-        #self.maslul_machine_learning()
-        #self.maslul_qa()
-        #self.maslul_dev_ops()
-        #self.maslul_linux_servers()
+    def course_web_development(self):
+        print("---Inside course_web_development function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " Web Foundations": "קורס Web Foundations להכיר את היסודות של בניית אתרים» Real Time College",
+            " AngularJS | אנגולר": "קורס AngularJS / לימודי אנגולר למתחילים » Real Time College",
+            " פייתון |  Python": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            " CSS3": "קורס CSS3 | ללמוד הצגה ועיצוב של דפי אינטרנט :Real Time Group",
+            " NodeJS": "קורס NodeJS | הקורס המקיף והמעשי ביותר בארץ :Real Time Group",
+            " Javascript": "קורס JavaScript & jQuery של Real Time College מקבוצה של RTG",
+            " TypeScript": "קורס TypeScript | התמחות בכלים של Google » Real Time Group",
+            " MongoDB": "קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group",
+            " HTML5": "קורס HTML | למד HTML5 עם המומחים של Real Time College",
+            " React |  ריאקט": "קורס React | לימודי תכנות ופיתוח אפליקציות React native JS",
+            " Java": "קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group",
+            " Bootstrap": "קורס Bootstrap | בניית אתרי אינטרנט בעזרת בוטסטראפ",
+            " פיתוח אפליקציות לאנדרואיד": "קורס פיתוח אפליקציות לאנדרואיד | פיתוח אפליקציות תוך שימוש בשפת התכנות Java",
+            " GIT (Version Control)": "קורס Version Control עם המומחים » Real Time Group",
+            " SQL": "קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group",
+        }
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_web_development().click()
+                if index == 0:
+                    header.sub_course_web_foundations().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 1:
+                    header.sub_course_angular_js().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 2:
+                    header.sub_course_python_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 3:
+                    header.sub_course_css_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 4:
+                    header.sub_course_node_js().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 5:
+                    header.sub_course_javascript_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 6:
+                    header.sub_course_typescript_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 7:
+                    header.sub_course_mongodb().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 8:
+                    header.sub_course_html5().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 9:
+                    header.sub_course_react().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 10:
+                    header.sub_course_java_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 11:
+                    header.sub_course_bootstrap().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 12:
+                    header.sub_course_app_development_for_android().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 13:
+                    header.sub_course_git().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 14:
+                    header.sub_course_sql().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Outside course_web_development function---")
+
+    def course_cyber_security(self):
+        print("---Inside course_cyber_security function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "הכנה לבחינת הסמכה C | EH": "הכנה לבחינת הסמכה CEH » Real Time College",
+            " Cyber Attack Infrastructure": "קורס Cyber Attack Infrastructure - לזהות נקודות תורפה | Real Time College",
+            " Malware Analysis": "קורס Malware Analysis לפרק ולהבין איומים פוטנציאלים » Real Time College",
+            " Penetration Testing": "קורס Penetration Testing - מבחני חדירות » Real Time College",
+            " Linux Fundamentals": "קורס Linux Fundamentals -כל הידע והפרקטיקה הנדרשים » Real Time College",
+            " Cyber Security Fundamentals": "קורס Cyber Security Fundamentals | סייבר ואבטחת מידע :Real Time Group",
+            " Networking": "קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College",
+            " Forensics Investigation & Incident Response": "קורס Forensics Investigation & Incident Response » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_cyber_security().click()
+                if index == 0:
+                    header.sub_course_preparations_for_certification_exam().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_cyber_attack_infrastructure().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_malware_analysis().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_penetration_testing().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_linux_fundamentals().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 5:
+                    header.sub_course_cyber_security_fundamentals().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 6:
+                    header.sub_course_networking().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 7:
+                    header.sub_course_forensics_investigation_and_incident_response().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_cyber_security function---")
+
+    def course_devops(self):
+        print("---Inside course_devops function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " Docker": "קורס Docker - פלטפורמת תוכנה מובילה לניהול יישומים והרצת קוד בקונטיינרים",
+            " לינוקס | Linux Admin": "קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College",
+            " Kubernetes": "קורס Kubernetes | לימוד קוברנטיס מעשי » Real Time College",
+            " פייתון |  Python": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            " Zabbix": "קורס Zabbix | מעקב אחר פעילות שירותי ענן » Real Time Group",
+            " Terraform": "קורס Terraform - ניהול תשתיות בענן » Real Time College",
+            " Networking": "קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College",
+            " ANSIBLE": "קורס ANSIBLE - כלי לניהול ופיתוח כלי אוטומציה » Real Time College",
+            " Bash Scripting": "קורס Bash Scripting | תיכנות בסביבת לינוקס » Real Time Group",
+            " AWS": "קורס AWS | התמחות בכלי שירותי הענן של אמזון :Real Time Group",
+            " Jenkins": "קורס Jenkins - למד לעבוד עם ג'נקינס בצורה הטובה ביותר! | Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_devops().click()
+                if index == 0:
+                    header.sub_course_docker().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_linux_admin().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_kubernetes().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_python_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_zabbix().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                if index == 5:
+                    header.sub_course_terraform().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 6:
+                    header.sub_course_networking().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 7:
+                    header.sub_course_ansible().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 8:
+                    header.sub_course_bash_scripting().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 9:
+                    header.sub_course_aws().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 10:
+                    header.sub_course_jenkins().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_devops function---")
+
+    def course_data_science(self):
+        print("---Inside course_data_science function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " Machine Learning Fundamentals": "קורס Machine Learning Fundamentals » Real Time College",
+            " Machine Learning With Python": "קורס Machine Learning with Python » Real Time College",
+            " Deep Learning With Tensorflow": "קורס פיתוח Deep Learning with Tensorflow » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_data_science().click()
+                if index == 0:
+                    header.sub_course_machine_learning_fundamentals().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_machine_learning_with_python().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_deep_learning_with_tensorflow().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_data_science function---")
+
+    def coure_software_testing(self):
+        print("---Inside course_software_testing function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " Selenium": "קורס Selenium - לימודי פיתוח אוטומציה | הקורס הכי מקיף ומעשי בארץ",
+            " LabView": "קורס LabView - לימוד מעשי וממוקד לפיתוח בפלטפורמת LabView",
+            " JIRA | ג'ירה": "קורס JIRA | בואו להתמקצע ולצבור ניסיון בכלי המוביל למעקב באגים",
+            " מתודולוגיות QA": "קורס מתודולוגיות QA עם המומחים של Real Time College",
+            " Java": "קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_software_testing().click()
+                if index == 0:
+                    header.sub_course_selenium().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_labview().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_jira().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_qa_methodologies().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_java_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_software_testing function---")
+
+    def course_network_and_sysadmin(self):
+        print("---Inside course_network_and_sysadmin function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " לינוקס | Linux Admin": "קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College",
+            " LPIC-2": "קורס LPIC-2 » Real Time College",
+            " Linux Fundamentals": "קורס Linux Fundamentals -כל הידע והפרקטיקה הנדרשים » Real Time College",
+            " LPIC-1": "קורס LPIC-1 - הכנה למבחן הסמכה בינלאומית של לינוקס » Real Time College",
+            " Networking": "קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_network_and_sysadmin().click()
+                if index == 0:
+                    header.sub_course_linux_admin().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_lpic_2().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_linux_fundamentals().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_lpic_1().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_networking().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_network_and_sysadmin function---")
+
+    def course_programming_language(self):
+        print("---Inside course_programming_language function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " Java": "קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group",
+            " שפת C": "קורס שפת C | לימודים שפת | C למתחילים :Real Time Group",
+            " Javascript": "קורס JavaScript & jQuery של Real Time College מקבוצה של RTG",
+            " פייתון |  Python": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            " שפת ++C": "קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_programming_language().click()
+                if index == 0:
+                    header.sub_course_java_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_c_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_javascript_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_python_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_c_plus_plus_language().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_programming_language function---")
+
+    def course_cloud_computing(self):
+        print("---Inside course_cloud_computing function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " AWS": "קורס AWS | התמחות בכלי שירותי הענן של אמזון :Real Time Group",
+            " Microsoft Azure": "קורס Microsoft Azure | סט כלים בסביבת אונליין » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_cloud_computing().click()
+                if index == 0:
+                    header.sub_course_aws().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_microsoft_azure().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_cloud_computing function---")
+
+    def course_image_processing(self):
+        print("---Inside course_image_processing function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " Machine Learning Fundamentals": "קורס Machine Learning Fundamentals » Real Time College",
+            " OpenCV": "קורס OpenCV | לפתח קריירה בחזית התעשייה בתחום של Image Processing",
+            " CUDA": "קורס CUDA | לנצל את הכוח GPU של המחשב » Real Time College",
+            " Machine Learning With Python": "קורס Machine Learning with Python » Real Time College",
+            " Deep Learning With Tensorflow": "קורס פיתוח Deep Learning with Tensorflow » Real Time College",
+            " Nvidia GPUs": "קורס Nvidia GPUs | שימוש לטובת פיתוח עיבוד תמונה לצורך פרוייקטים"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_image_processing().click()
+                if index == 0:
+                    header.sub_course_machine_learning_fundamentals().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_open_cv().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 2:
+                    header.sub_course_cuda().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 3:
+                    header.sub_course_machine_learning_with_python().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 4:
+                    header.sub_course_deep_learning_with_tensorflow().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 5:
+                    header.sub_course_nvidia_gpus().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_image_processing     function---")
+
+    def course_database_management(self):
+        print("---Inside course_database_management function---")
+        header = Header(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            " SQL": "קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group",
+            " MongoDB": "קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for key in keys_of_dict_of_titles:
+                header.courses_tab().click()
+                header.course_database_management().click()
+                if index == 0:
+                    header.sub_course_sql().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                elif index == 1:
+                    header.sub_course_mongodb().click()
+                    title = header.get_title()
+                    expected_title = list(dict_of_titles.values())[index]
+                    self.compare_title_pages(title, expected_title, key)
+                index += 1
+            run = False
+        print("---Inside course_database_management function---")
+    # def test_run_maslulim(self):
+    # self.maslul_real_time()
+    # self.maslul_full_stack()
+    # self.maslul_cyber()
+    # self.maslul_machine_learning()
+    # self.maslul_qa()
+    # self.maslul_dev_ops()
+    # self.maslul_linux_servers()
 
     def test_run_courses(self):
         self.course_real_time()
+        self.course_web_development()
+        self.course_cyber_security()
+        self.course_devops()
+        self.course_data_science()
+        self.coure_software_testing()
+        self.course_network_and_sysadmin()
+        self.course_programming_language()
+        self.course_cloud_computing()
+        self.course_image_processing()
+        self.course_database_management()
 
-    # def go_to_page_courses_for_companies(self):
-    #     print("---Inside go_to_page_courses_for_companies function---")
-    #     header = Header(self.driver)
-    #     title = header.go_to_courses_for_companies()
-    #     actual_page_title = "Real Time College » Real Time Group's Training Center"
-    #     button_name = 'Courses For Companies'
-    #     self.compare_title_pages(title, actual_page_title, button_name)
-    #     print("---Outside go_to_page_courses_for_companies function---")
-    #
-    # def go_to_page_articles(self):
-    #     print("---Inside go_to_page_articles function---")
-    #     header = Header(self.driver)
-    #     title = header.go_to_articles()
-    #     actual_page_title = "Realtime Group - מאמרים"
-    #     button_name = 'Articles'
-    #     self.compare_title_pages(title, actual_page_title, button_name)
-    #     print("---Outside go_to_page_articles function---")
-    #
-    # def go_to_page_about_us(self):
-    #     print("---Inside go_to_page_about_us function---")
-    #     header = Header(self.driver)
-    #     title = header.go_to_about_us()
-    #     actual_page_title= "אודות Real Time Group - חטיבת הדרכה | חטיבת השמה | מיקור חוץ"
-    #     button_name = "About Us"
-    #     self.compare_title_pages(title, actual_page_title, button_name)
-    #     print("---Outside go_to_page_about_us function---")
-    #
-    # def go_to_page_declaration_of_accessibility(self):
-    #     print("---Inside go_to_page_declaration_of_accessibility function---")
-    #     header = Header(self.driver)
-    #     title = header.go_to_declaration_of_accessibility()
-    #     actual_page_title = "הצהרת נגישות » Real Time College"
-    #     button_name = "Declaration Of Accessibility"
-    #     self.compare_title_pages(title, actual_page_title, button_name)
-    #     print("---Outside go_to_page_declaration_of_accessibility function---")
-    #
-    # def go_to_page_jobs(self):
-    #     print("---Inside go_to_page_jobs function---")
-    #     header = Header(self.driver)
-    #     title = header.go_to_jobs()
-    #     actual_page_title = "Real Time College » Real Time Group's Training Center"
-    #     button_name = "Jobs"
-    #     self.compare_title_pages(title, actual_page_title, button_name)
-    #     print("---Outside go_to_page_jobs function---")
-    #
+    def go_to_page_courses_for_companies(self):
+        print("---Inside go_to_page_courses_for_companies function---")
+        header = Header(self.driver)
+        header.courses_for_companies().click()
+        title = header.get_title()
+        actual_page_title = "Real Time College » Real Time Group's Training Center"
+        button_name = 'Courses For Companies'
+        self.compare_title_pages(title, actual_page_title, button_name)
+        print("---Outside go_to_page_courses_for_companies function---")
+
+    def go_to_page_articles(self):
+        print("---Inside go_to_page_articles function---")
+        header = Header(self.driver)
+        header.articles().click()
+        title = header.get_title()
+        actual_page_title = "Realtime Group - מאמרים"
+        button_name = 'Articles'
+        self.compare_title_pages(title, actual_page_title, button_name)
+        print("---Outside go_to_page_articles function---")
+
+    def go_to_page_about_us(self):
+        print("---Inside go_to_page_about_us function---")
+        header = Header(self.driver)
+        header.about_us().click()
+        title = header.get_title()
+        actual_page_title= "אודות Real Time Group - חטיבת הדרכה | חטיבת השמה | מיקור חוץ"
+        button_name = "About Us"
+        self.compare_title_pages(title, actual_page_title, button_name)
+        print("---Outside go_to_page_about_us function---")
+
+    def go_to_page_declaration_of_accessibility(self):
+        print("---Inside go_to_page_declaration_of_accessibility function---")
+        header = Header(self.driver)
+        header.declaration_of_accessibility().click()
+        title = header.get_title()
+        actual_page_title = "הצהרת נגישות » Real Time College"
+        button_name = "Declaration Of Accessibility"
+        self.compare_title_pages(title, actual_page_title, button_name)
+        print("---Outside go_to_page_declaration_of_accessibility function---")
+
+    def go_to_page_jobs(self):
+        print("---Inside go_to_page_jobs function---")
+        header = Header(self.driver)
+        header.jobs().click()
+        title = header.get_title()
+        actual_page_title = "Real Time College » Real Time Group's Training Center"
+        button_name = "Jobs"
+        self.compare_title_pages(title, actual_page_title, button_name)
+        print("---Outside go_to_page_jobs function---")
+
     # def test_run_five_buttons(self):
     #     self.go_to_page_courses_for_companies()
     #     self.go_to_page_articles()
