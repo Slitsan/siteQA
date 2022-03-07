@@ -814,27 +814,6 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             run = False
         print("---Inside course_database_management function---")
-    # def test_run_maslulim(self):
-    # self.maslul_real_time()
-    # self.maslul_full_stack()
-    # self.maslul_cyber()
-    # self.maslul_machine_learning()
-    # self.maslul_qa()
-    # self.maslul_dev_ops()
-    # self.maslul_linux_servers()
-
-    def test_run_courses(self):
-        self.course_real_time()
-        self.course_web_development()
-        self.course_cyber_security()
-        self.course_devops()
-        self.course_data_science()
-        self.coure_software_testing()
-        self.course_network_and_sysadmin()
-        self.course_programming_language()
-        self.course_cloud_computing()
-        self.course_image_processing()
-        self.course_database_management()
 
     def go_to_page_courses_for_companies(self):
         print("---Inside go_to_page_courses_for_companies function---")
@@ -886,12 +865,34 @@ class HeaderTest(unittest.TestCase):
         self.compare_title_pages(title, actual_page_title, button_name)
         print("---Outside go_to_page_jobs function---")
 
-    # def test_run_five_buttons(self):
-    #     self.go_to_page_courses_for_companies()
-    #     self.go_to_page_articles()
-    #     self.go_to_page_about_us()
-    #     self.go_to_page_declaration_of_accessibility()
-    #     self.go_to_page_jobs()
+    def test_run_maslulim(self):
+        self.maslul_real_time()
+        self.maslul_full_stack()
+        self.maslul_cyber()
+        self.maslul_machine_learning()
+        self.maslul_qa()
+        self.maslul_dev_ops()
+        self.maslul_linux_servers()
+
+    def test_run_courses(self):
+        self.course_real_time()
+        self.course_web_development()
+        self.course_cyber_security()
+        self.course_devops()
+        self.course_data_science()
+        self.coure_software_testing()
+        self.course_network_and_sysadmin()
+        self.course_programming_language()
+        self.course_cloud_computing()
+        self.course_image_processing()
+        self.course_database_management()
+
+    def test_run_five_buttons(self):
+        self.go_to_page_courses_for_companies()
+        self.go_to_page_articles()
+        self.go_to_page_about_us()
+        self.go_to_page_declaration_of_accessibility()
+        self.go_to_page_jobs()
 
     # def test_get_maslul_and_check_title(self):
     #     print("-----Start get_maslul_and_check_title-----")

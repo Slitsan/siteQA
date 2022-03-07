@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.relative_locator import locate_with
 
+
 class Header:
 
     def __init__(self, drive: WebDriver):
@@ -262,6 +263,7 @@ class Header:
 
     def list_of_sub_courses_on_database_management_course(self):
         return self.driver.find_elements(By.XPATH, self.database_management_courses_by_xpath)
+
     # -------------------------------- SUB COURSES ----------------------------------------
 
     def sub_course_rt_concepts(self):
@@ -358,7 +360,8 @@ class Header:
         return self.driver.find_element(By.LINK_TEXT, self.sub_course_networking_by_txt)
 
     def sub_course_forensics_investigation_and_incident_response(self):
-        return self.driver.find_element(By.LINK_TEXT, self.sub_course_forensics_investigation_and_incident_response_by_txt)
+        return self.driver.find_element(By.LINK_TEXT,
+                                        self.sub_course_forensics_investigation_and_incident_response_by_txt)
 
     def sub_course_docker(self):
         return self.driver.find_element(By.LINK_TEXT, self.sub_course_docker_by_txt)
