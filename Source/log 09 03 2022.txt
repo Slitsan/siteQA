@@ -1,0 +1,225 @@
+-----------------------------------TESTING HEADER-----------------------------------------------
+---Inside maslul_real_time function---
+---Checking The קורס Real-Time Bootcamp | הכשרה מקוצרת לפיתוח מערכות משובצות מחשב Page...---
+---The page is correct---
+---Checking The קורס Embedded Systems | מסלול הכשרה והשמה בפיתוח bare board Page...---
+---The page is correct---
+---Checking The קורס Real Time Embedded Linux » Real Time College Page...---
+---The page is correct---
+---Checking The מסלול Embedded Linux | פיתוח מערכות משובצות » Real Time Group Page...---
+---The page is correct---
+---Outside maslul_real_time function---
+---Inside maslul_full_stack function---
+---Checking The קורס Full Stack | לימודי Full Stack | קורס Web Development Page...---
+---The page is correct---
+---Outside maslul_full_stack function---
+---Inside maslul_cyber function---
+---Checking The קורס Cyber אבטחת מידע וסייבר | Cyber Security » Real Time Group Page...---
+---The page is correct---
+---Outside maslul_cyber function---
+---Inside maslul_machine_learning function---
+---Checking The Data Analyst » Real Time College Page...---
+---The page is correct---
+---Checking The קורס machine learning | הכשרה והשמה :Real Time Group Page...---
+---The page is correct---
+---Checking The קורס עיבוד תמונה Image Processing | השתלבות בחזית העשייה החדשנית Page...---
+---The page is correct---
+---Outside maslul_machine_learning function---
+---Inside maslul_qa function---
+---Checking The קורס אוטומציה QA | לימודי המשך לקורס QA ואוטומציה » Real Time College Page...---
+---The page is correct---
+---Checking The קורס QA | קורס בודק תוכנה - כולל סטאז' מעשי » Real Time College Page...---
+---The page is correct---
+---Outside maslul_qa function---
+---Inside maslul_dev_ops function---
+---Checking The קורס DevOps | קורס דאבאופס ניהול פרויקטים בפיתוח » Real Time Group Page...---
+---The page is correct---
+---Outside maslul_dev_ops function---
+---Inside maslul_linux_servers function---
+---Checking The קורס לינוקס | לימודי ניהול שרתים בענן (Linux) | קורס לימודי IT / AWS >>> Page...---
+---The page is correct---
+---Outside maslul_linux_servers function---
+---Inside course_real_time function---
+---Checking The  RT Concepts Page...---
+---The page is correct---
+---Checking The  שפת C Page...---
+---The page is correct---
+---Checking The  Linux Kernel And Device Drivers Page...---
+---The page is correct---
+---Checking The  ARM - Embedded Systems Page...---
+---The page is correct---
+---Checking The  Internet Of Things Page...---
+---The page is correct---
+---Checking The  FreeRTOS Page...---
+---The page is correct---
+---Checking The  שפת ++C Page...---
+---The page is correct---
+---Checking The Yocto Programming Page...---
+---The page is correct---
+---Checking The  Embedded Linux Page...---
+---The page is correct---
+---Outside course_real_time function---
+---Inside course_web_development function---
+---Checking The  Web Foundations Page...---
+---The page is correct---
+---Checking The  AngularJS | אנגולר Page...---
+---Not the right page---
+---Checking The  פייתון |  Python Page...---
+---The page is correct---
+---Checking The  CSS3 Page...---
+---The page is correct---
+---Checking The  NodeJS Page...---
+---The page is correct---
+---Checking The  Javascript Page...---
+---The page is correct---
+---Checking The  TypeScript Page...---
+---The page is correct---
+---Checking The  MongoDB Page...---
+---The page is correct---
+---Checking The  HTML5 Page...---
+---The page is correct---
+---Checking The  React |  ריאקט Page...---
+---The page is correct---
+---Checking The  Java Page...---
+---The page is correct---
+---Checking The  Bootstrap Page...---
+---The page is correct---
+---Checking The  פיתוח אפליקציות לאנדרואיד Page...---
+---The page is correct---
+---Checking The  GIT (Version Control) Page...---
+---The page is correct---
+---Checking The  SQL Page...---
+---The page is correct---
+---Outside course_web_development function---
+---Inside course_cyber_security function---
+---Checking The הכנה לבחינת הסמכה C | EH Page...---
+---The page is correct---
+---Checking The  Cyber Attack Infrastructure Page...---
+---The page is correct---
+---Checking The  Malware Analysis Page...---
+---The page is correct---
+---Checking The  Penetration Testing Page...---
+---The page is correct---
+---Checking The  Linux Fundamentals Page...---
+---The page is correct---
+---Checking The  Cyber Security Fundamentals Page...---
+---The page is correct---
+---Checking The  Networking Page...---
+---The page is correct---
+---Checking The  Forensics Investigation & Incident Response Page...---
+---The page is correct---
+---Outside course_cyber_security function---
+---Inside course_devops function---
+---Checking The  Docker Page...---
+---The page is correct---
+---Checking The  לינוקס | Linux Admin Page...---
+---The page is correct---
+---Checking The  Kubernetes Page...---
+---The page is correct---
+---Checking The  פייתון |  Python Page...---
+---The page is correct---
+---Checking The  Zabbix Page...---
+---The page is correct---
+---Checking The  Terraform Page...---
+---The page is correct---
+---Checking The  Networking Page...---
+---The page is correct---
+---Checking The  ANSIBLE Page...---
+---The page is correct---
+---Checking The  Bash Scripting Page...---
+---The page is correct---
+---Checking The  AWS Page...---
+---The page is correct---
+---Checking The  Jenkins Page...---
+---The page is correct---
+---Outside course_devops function---
+---Inside course_data_science function---
+---Checking The  Machine Learning Fundamentals Page...---
+---The page is correct---
+---Checking The  Machine Learning With Python Page...---
+---The page is correct---
+---Checking The  Deep Learning With Tensorflow Page...---
+---The page is correct---
+---Outside course_data_science function---
+---Inside course_software_testing function---
+---Checking The  Selenium Page...---
+---The page is correct---
+---Checking The  LabView Page...---
+---The page is correct---
+---Checking The  JIRA | ג'ירה Page...---
+---The page is correct---
+---Checking The  מתודולוגיות QA Page...---
+---The page is correct---
+---Checking The  Java Page...---
+---The page is correct---
+---Outside course_software_testing function---
+---Inside course_network_and_sysadmin function---
+---Checking The  לינוקס | Linux Admin Page...---
+---The page is correct---
+---Checking The  LPIC-2 Page...---
+---The page is correct---
+---Checking The  Linux Fundamentals Page...---
+---The page is correct---
+---Checking The  LPIC-1 Page...---
+---The page is correct---
+---Checking The  Networking Page...---
+---The page is correct---
+---Outside course_network_and_sysadmin function---
+---Inside course_programming_language function---
+---Checking The  Java Page...---
+---The page is correct---
+---Checking The  שפת C Page...---
+---The page is correct---
+---Checking The  Javascript Page...---
+---The page is correct---
+---Checking The  פייתון |  Python Page...---
+---The page is correct---
+---Checking The  שפת ++C Page...---
+---The page is correct---
+---Outside course_programming_language function---
+---Inside course_cloud_computing function---
+---Checking The  AWS Page...---
+---The page is correct---
+---Checking The  Microsoft Azure Page...---
+---The page is correct---
+---Outside course_cloud_computing function---
+---Inside course_image_processing function---
+---Checking The  Machine Learning Fundamentals Page...---
+---The page is correct---
+---Checking The  OpenCV Page...---
+---The page is correct---
+---Checking The  CUDA Page...---
+---The page is correct---
+---Checking The  Machine Learning With Python Page...---
+---The page is correct---
+---Checking The  Deep Learning With Tensorflow Page...---
+---The page is correct---
+---Checking The  Nvidia GPUs Page...---
+---The page is correct---
+---Outside course_image_processing function---
+---Inside course_database_management function---
+---Checking The  SQL Page...---
+---The page is correct---
+---Checking The  MongoDB Page...---
+---The page is correct---
+---Outside course_database_management function---
+---Inside go_to_page_courses_for_companies function---
+---Checking The Courses For Companies Page...---
+---The page is correct---
+---Outside go_to_page_courses_for_companies function---
+---Inside go_to_page_articles function---
+---Checking The Articles Page...---
+---The page is correct---
+---Outside go_to_page_articles function---
+---Inside go_to_page_about_us function---
+---Checking The About Us Page...---
+---The page is correct---
+---Outside go_to_page_about_us function---
+---Inside go_to_page_declaration_of_accessibility function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+---Outside go_to_page_declaration_of_accessibility function---
+---Inside go_to_page_jobs function---
+---Checking The Jobs Page...---
+---The page is correct---
+---Outside go_to_page_jobs function---

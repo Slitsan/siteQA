@@ -28,7 +28,7 @@ class Header:
         # ----------------------- MASLULIM --------------------------
         self.maslulim_categories_by_xpath = "//*[@id=\"primar-menu\"]/li[7]/ul/li"
         self.maslul_real_time_by_xpath = "//*[@id=\"RT\"]"
-        self.course_real_time_by_xpath = "//*[@id=\"RT\"]/ul/li"
+        self.maslul_real_time_courses_by_xpath = "//*[@id=\"RT\"]/ul/li"
         self.maslul_full_stack_by_xpath = "//*[@id=\"FS\"]"
         self.full_stack_courses_by_xpath = "//*[@id=\"FS\"]/ul/li"
         self.maslul_cyber_by_xpath = "//*[@id=\"Cyber\"]"
@@ -43,7 +43,7 @@ class Header:
         self.linux_servers_courses_by_xpath = "//*[@id='IT']/ul/li"
         # ----------------------- COURSES -----------------------------
         self.courses_tab_by_xpath = "//*[@id=\"primar-menu\"]/li[6]"
-        self.course_real_time_by_xpath = "//*[@id=\"Real time\"]"
+        self.real_time_course_by_xpath = "//*[@id=\"Real time\"]"
         self.real_time_sub_courses_by_xpath = "//*[@id=\"Real time\"]/ul/li"
         self.course_web_development_by_xpath = "//*[@id=\"Web Development\"]/a"
         self.web_development_sub_courses_by_xpath = "//*[@id=\"Web Development\"]/ul/li"
@@ -124,8 +124,8 @@ class Header:
     def get_title(self) -> str:
         return self.driver.title
 
-    def goToMaslul(self):
-        self.driver.find_element(By.LINK_TEXT, self.maslulim_byTXT).click()
+    def maslul(self):
+        return self.driver.find_element(By.LINK_TEXT, self.maslulim_byTXT)
 
     def goToStudentPortal(self) -> WebDriver:
         self.driver.find_element(By.ID, self.studentPortal_id).click()
@@ -152,43 +152,43 @@ class Header:
         return self.driver.find_elements(By.XPATH, self.maslulim_categories_by_xpath)
 
     def click_on_maslul_real_time(self):
-        self.driver.find_element(By.XPATH, self.maslul_real_time_by_xpath).click()
+        return self.driver.find_element(By.XPATH, self.maslul_real_time_by_xpath)
 
     def list_of_courses_on_real_time(self):
-        return self.driver.find_elements(By.XPATH, self.course_real_time_by_xpath)
+        return self.driver.find_elements(By.XPATH, self.maslul_real_time_courses_by_xpath)
 
-    def click_on_maslul_full_stack(self):
-        self.driver.find_element(By.XPATH, self.maslul_full_stack_by_xpath).click()
+    def maslul_full_stack(self):
+        return self.driver.find_element(By.XPATH, self.maslul_full_stack_by_xpath)
 
     def list_of_courses_on_full_stack(self):
         return self.driver.find_elements(By.XPATH, self.full_stack_courses_by_xpath)
 
-    def click_on_maslul_cyber(self):
-        self.driver.find_element(By.XPATH, self.maslul_cyber_by_xpath).click()
+    def maslul_cyber(self):
+        return self.driver.find_element(By.XPATH, self.maslul_cyber_by_xpath)
 
     def list_of_courses_on_cyber(self):
         return self.driver.find_elements(By.XPATH, self.cyber_courses_by_xpath)
 
-    def click_on_maslul_machine_learning(self):
-        self.driver.find_element(By.XPATH, self.maslul_machine_learning_by_xpath).click()
+    def maslul_machine_learning(self):
+        return self.driver.find_element(By.XPATH, self.maslul_machine_learning_by_xpath)
 
     def list_of_courses_on_machine_learning(self):
         return self.driver.find_elements(By.XPATH, self.machine_learning_courses_by_xpath)
 
-    def click_on_maslul_qa(self):
-        self.driver.find_element(By.XPATH, self.maslul_qa_by_xpath).click()
+    def maslul_qa(self):
+        return self.driver.find_element(By.XPATH, self.maslul_qa_by_xpath)
 
     def list_of_courses_on_qa(self):
         return self.driver.find_elements(By.XPATH, self.qa_courses_by_xpath)
 
-    def click_on_maslul_dev_ops(self):
-        self.driver.find_element(By.XPATH, self.maslul_dev_ops_by_xpath).click()
+    def maslul_dev_ops(self):
+        return self.driver.find_element(By.XPATH, self.maslul_dev_ops_by_xpath)
 
     def list_of_courses_on_dev_ops(self):
         return self.driver.find_elements(By.XPATH, self.dev_ops_courses_by_xpath)
 
-    def click_on_maslul_linux_servers(self):
-        self.driver.find_element(By.XPATH, self.maslul_linux_servers_by_xpath).click()
+    def maslul_linux_servers(self):
+        return self.driver.find_element(By.XPATH, self.maslul_linux_servers_by_xpath)
 
     def list_of_courses_on_linux_servers(self):
         return self.driver.find_elements(By.XPATH, self.linux_servers_courses_by_xpath)
@@ -199,7 +199,7 @@ class Header:
         return self.driver.find_element(By.XPATH, self.courses_tab_by_xpath)
 
     def course_real_time(self):
-        return self.driver.find_element(By.XPATH, self.course_real_time_by_xpath)
+        return self.driver.find_element(By.XPATH, self.real_time_course_by_xpath)
 
     def list_of_sub_courses_on_real_time_course(self):
         return self.driver.find_elements(By.XPATH, self.real_time_sub_courses_by_xpath)
