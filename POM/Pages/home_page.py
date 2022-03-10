@@ -31,7 +31,7 @@ class HomePage:
         # -----------------------------------------FLOATING FORM---------------------------------------------------
         self.floating_menu_by_xpath = "//*[@id=\"floating-form\"]"
         self.about_us_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[2]"
-        self.form_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[3]"
+        self.form_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[2]"
         self.last_name_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@id='lname']"
         self.first_name_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@id='fname']"
         self.phone_number_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@id='phone']"
@@ -89,7 +89,7 @@ class HomePage:
         return self.driver.find_element(By.XPATH, self.choose_maslul_in_main_form_by_xpath)
 
     def choose_maslul_real_time_in_main_form(self):
-        return self.driver.find_element(By.XPATH, self.choose_maslul_real_time_in_main_form())
+        return self.driver.find_element(By.XPATH, self.maslul_real_time_in_main_form_by_xpath)
 
     def terms_of_agreement_field_in_main_form(self):
         return self.driver.find_element(By.XPATH, self.terms_of_agreement_field_in_main_form_by_xpath)

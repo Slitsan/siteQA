@@ -8,6 +8,9 @@ class Block:
 
         # ------------------------------------DOWNLOAD SYLLABUS BUTTON--------------------------------------
         self.download_syllabus_button_by_xpath = "//*[contains(text(), 'להורדת הסילבוס')]"
+        self.choose_language_of_syllabus_by_xpath = "//*[@id=\"choose-language\"]/div"
+        self.languages_of_syllabus_by_xpath = "//*[@id=\"choose-language\"]/div/div[2]/button"
+        self.close_button_of_choosing_languange_of_syllabus_by_xpath = "//*[@id=\"choose-language\"]/span"
 
         # -----------------------------------SIDE FORM UNDER SYLLABUS----------------------------
         self.form_after_clicking_on_syllabus_by_xpath = "//*[@id=\"lead-form-modal\"]/div/div[2]"
@@ -59,3 +62,12 @@ class Block:
     # --------------------------------------------SYLLABUS METHODS---------------------------------
     def download_syllabus(self):
         return self.driver.find_element(By.XPATH, self.download_syllabus_button_by_xpath)
+
+    def choose_language_of_syllabus(self):
+        return self.driver.find_element(By.XPATH, self.choose_language_of_syllabus_by_xpath)
+
+    def languages_of_syllabus(self):
+        return self.driver.find_elements(By.XPATH, self.languages_of_syllabus_by_xpath)
+
+    def close_button_of_choosing_languange_of_syllabus(self):
+        return self.driver.find_element(By.XPATH, self.close_button_of_choosing_languange_of_syllabus_by_xpath)

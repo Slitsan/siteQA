@@ -78,7 +78,7 @@ class HeaderTest(unittest.TestCase):
         while running:
             for length in range(len(header.list_of_courses_on_real_time())):
                 header.maslul().click()
-                header.click_on_maslul_real_time().click()
+                header.maslul_real_time().click()
                 header.list_of_courses_on_real_time()[index].click()
                 title = header.get_title()
                 expected_title = list(dict_of_titles.values())[index]

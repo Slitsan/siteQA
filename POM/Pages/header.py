@@ -151,7 +151,7 @@ class Header:
     def list_of_maslulim_categories(self):
         return self.driver.find_elements(By.XPATH, self.maslulim_categories_by_xpath)
 
-    def click_on_maslul_real_time(self):
+    def maslul_real_time(self):
         return self.driver.find_element(By.XPATH, self.maslul_real_time_by_xpath)
 
     def list_of_courses_on_real_time(self):
