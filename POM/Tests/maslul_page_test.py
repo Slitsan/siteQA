@@ -32,10 +32,10 @@ class MaslulPageTest(unittest.TestCase):
         cls.test_user_first_name = "test"
         cls.test_user_mail = current_time + "@test.com"
         cls.test_user_phone_number = current_time
-        cls.string_result = "-----------------------------------TESTING SYLLABUS-----------------------------------------------\n"
+        cls.string_result = "-----------------------------------TESTING MASLUL'S SYLLABUS-----------------------------------------------\n"
 
     # Compares the syllabus url with a given url inside the 'maslul functions'
-    def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
+    def compare_syllabus_url(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
         print(f"---Checking The {button_name} Syllabus...---")
         self.string_result += f"---Checking The {button_name} Syllabus...---\n"
@@ -62,7 +62,7 @@ class MaslulPageTest(unittest.TestCase):
         # maslul_page.tick_terms_of_agreement_in_side_form_after_clicking_on_syllabus().click()
         maslul_page.send_button_in_side_form_after_clicking_on_syllabus().click()
 
-    # --------------------------------------Maslul Functions---------------------------------------------
+    # --------------------------------------MASLUL'S METHODS---------------------------------------------
     def maslul_real_time(self):
         print("-----Inside maslul_real_time function-----")
         self.string_result += "-----Inside maslul_real_time function-----\n"
@@ -95,8 +95,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -116,8 +116,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()
@@ -159,8 +159,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -180,8 +180,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()
@@ -223,8 +223,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -244,8 +244,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()
@@ -289,8 +289,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -310,8 +310,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()
@@ -357,8 +357,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -378,8 +378,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()
@@ -422,8 +422,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -443,8 +443,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()
@@ -487,8 +487,8 @@ class MaslulPageTest(unittest.TestCase):
                             main_tab = tabs.pop(0)
                             url_of_tab_syllabus = self.driver.current_url
                             expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                            self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                     list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                            self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                      list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                             for tab in tabs:  # Closes the syllabus tab after comparing the URLs
                                 self.driver.switch_to.window(tab)
                                 self.driver.close()
@@ -508,8 +508,8 @@ class MaslulPageTest(unittest.TestCase):
                         main_tab = tabs.pop(0)
                         url_of_tab_syllabus = self.driver.current_url
                         expected_url = list(dict_of_urls_of_syllabus.values())[index_of_dict]
-                        self.compare_title_pages(expected_url, url_of_tab_syllabus,
-                                                 list(dict_of_urls_of_syllabus.keys())[index_of_dict])
+                        self.compare_syllabus_url(expected_url, url_of_tab_syllabus,
+                                                  list(dict_of_urls_of_syllabus.keys())[index_of_dict])
                         for tab in tabs:
                             self.driver.switch_to.window(tab)
                             self.driver.close()

@@ -562,7 +562,6 @@ class HeaderTest(unittest.TestCase):
         print("---Outside course_devops function---")
         self.string_result += "---Outside course_devops function---\n"
 
-
     def course_data_science(self):
         print("---Inside course_data_science function---")
         self.string_result += "---Inside course_data_science function---\n"
@@ -599,8 +598,7 @@ class HeaderTest(unittest.TestCase):
         print("---Outside course_data_science function---")
         self.string_result += "---Outside course_data_science function---\n"
 
-
-    def coure_software_testing(self):
+    def course_software_testing(self):
         print("---Inside course_software_testing function---")
         self.string_result += "---Inside course_software_testing function---\n"
         header = Header(self.driver)
@@ -647,7 +645,6 @@ class HeaderTest(unittest.TestCase):
             run = False
         print("---Outside course_software_testing function---")
         self.string_result += "---Outside course_software_testing function---\n"
-
 
     def course_network_and_sysadmin(self):
         print("---Inside course_network_and_sysadmin function---")
@@ -698,7 +695,6 @@ class HeaderTest(unittest.TestCase):
         print("---Outside course_network_and_sysadmin function---")
         self.string_result += "---Outside course_network_and_sysadmin function---\n"
 
-
     def course_programming_language(self):
         print("---Inside course_programming_language function---")
         self.string_result += "---Inside course_programming_language function---\n"
@@ -747,7 +743,6 @@ class HeaderTest(unittest.TestCase):
         print("---Outside course_programming_language function---")
         self.string_result += "---Outside course_programming_language function---\n"
 
-
     def course_cloud_computing(self):
         print("---Inside course_cloud_computing function---")
         self.string_result += "---Inside course_cloud_computing function---\n"
@@ -777,7 +772,6 @@ class HeaderTest(unittest.TestCase):
             run = False
         print("---Outside course_cloud_computing function---")
         self.string_result += "---Outside course_cloud_computing function---\n"
-
 
     def course_image_processing(self):
         print("---Inside course_image_processing function---")
@@ -938,7 +932,7 @@ class HeaderTest(unittest.TestCase):
         self.course_cyber_security()
         self.course_devops()
         self.course_data_science()
-        self.coure_software_testing()
+        self.course_software_testing()
         self.course_network_and_sysadmin()
         self.course_programming_language()
         self.course_cloud_computing()
