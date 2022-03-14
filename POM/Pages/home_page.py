@@ -28,6 +28,7 @@ class HomePage:
         self.choose_maslul_in_main_form_by_xpath = "//*[@id='rt-leads-form-2'] /descendant::select"
         self.maslul_real_time_in_main_form_by_xpath = "//*[@id='rt-leads-form-2'] /descendant::select/option[2]"
         self.send_button_in_main_form_by_xpath = "//*[@id='rt-leads-form-2'] /descendant::button"
+        self.close_button_after_filling_the_main_form_by_xpath = "//*[@id=\"modal-2\"]/div/span"
         # -----------------------------------------FLOATING FORM---------------------------------------------------
         self.floating_menu_by_xpath = "//*[@id=\"floating-form\"]"
         self.about_us_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[2]"
@@ -97,6 +98,8 @@ class HomePage:
     def send_button_in_main_form(self):
         return self.driver.find_element(By.XPATH, self.send_button_in_main_form_by_xpath)
 
+    def close_button_after_filling_the_main_form(self):
+        return self.driver.find_element(By.XPATH, self.close_button_after_filling_the_main_form_by_xpath)
     # --------------------------------------FLOATING FORM METHODS-----------------------------------------
 
     def floating_menu(self):
