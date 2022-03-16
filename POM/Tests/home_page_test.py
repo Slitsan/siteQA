@@ -10,8 +10,6 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
 from POM.Pages.home_page import HomePage
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
 
 
 # ---------------------------------------------------------
@@ -32,7 +30,17 @@ class HomePageTest(unittest.TestCase):
         cls.test_user_first_name = "test"
         cls.test_user_mail = current_time + "@test.com"
         cls.test_user_phone_number = current_time
-        cls.string_result = "-----------------------------------TESTING HOME PAGE REGISTRATION-----------------------------------------------\n"
+        cls.string_result = "-----------------------------------TESTING HOME PAGE-----------------------------------------------\n"
+
+    def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
+        actual_title_of_page = actual_page_title
+        self.string_message(f"---Checking The {button_name} Page...---\n")
+        if title == actual_title_of_page:
+            self.string_message("---The page is correct---\n")
+            return True
+        else:
+            self.string_message("---Not the right page---\n")
+            return False
 
     def string_message(self, message):
         print(message)
@@ -365,10 +373,10 @@ class HomePageTest(unittest.TestCase):
         print("---Outside click_on_send_button_in_floating_form function---")
         self.string_result += "---Outside click_on_send_button_in_floating_form function---\n"
 
-    def test_floating_menu(self):
-        self.close_popup()
-        self.floating_form()
-        self.open_file_and_append_string_message()
+    # def test_floating_menu(self):
+    #     self.close_popup()
+    #     self.floating_form()
+    #     self.open_file_and_append_string_message()
     #     # self.hover_on_floating_menu()
     #     self.click_on_form_in_floating_menu()
     #     self.send_keys_to_last_name_field_in_floating_form()
@@ -381,15 +389,186 @@ class HomePageTest(unittest.TestCase):
     # -----------------------------------FLOATING ABOUT US TEST----------------------------
 
     def click_on_about_us_in_floating_menu(self):
-        print("---Inside click_on_about_us_in_floating_menu function...---")
-        self.string_result += "---Inside click_on_about_us_in_floating_menu function---\n"
+        self.string_message("---Inside click_on_about_us_in_floating_menu function---\n")
         home_page = HomePage(self.driver)
         home_page.about_us_in_floating_menu().click()
-        print("---Outside click_on_about_us_in_floating_menu function...---")
-        self.string_result += "---Outside click_on_about_us_in_floating_menu function---\n"
+        self.string_message("---Outside click_on_about_us_in_floating_menu function---\n")
 
     # def test_floating_about_us(self):
-    #     self.hover_on_floating_menu()
-    #     self.click_on_about_us_in_floating_menu()
+        # self.hover_on_floating_menu()
+        # self.click_on_about_us_in_floating_menu()
+        # self.open_file_and_append_string_message()
+    # ----------------------------------TRAINING TEST-------------------------------------
+    def opens_tab_and_compares_title(self, course, dict_of_titles, index):
+        href = course.get_attribute("href")
+        self.driver.execute_script("window.open('');")
+        tabs = self.driver.window_handles
+        self.driver.switch_to.window(tabs[1])
+        self.driver.get(href)
+        title = self.driver.title
+        expected_title = list(dict_of_titles.values())[index]
+        self.compare_title_pages(title, expected_title, list(dict_of_titles.keys())[index])
+        self.driver.close()
+        self.driver.switch_to.window(tabs[0])
 
+    def enter_each_training_and_compare_title(self):
+        self.string_message("---Inside enter_each_training_and_compare_title function---\n")
+        home_page = HomePage(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "Real-Time Embedded": "קורס Real Time Embedded Linux » Real Time College",
+            "Cyber Security": "קורס Cyber אבטחת מידע וסייבר | Cyber Security » Real Time Group",
+            "Fullstack Developer": "קורס Full Stack | לימודי Full Stack | קורס Web Development",
+            "DevOps": "קורס DevOps | קורס דאבאופס ניהול פרויקטים בפיתוח » Real Time Group",
+            "Automation and QA": "קורס QA | קורס בודק תוכנה - כולל סטאז' מעשי » Real Time College",
+            "Machine Learning": "קורס machine learning | הכשרה והשמה :Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
 
+        while run:
+            for course in home_page.training_and_placement_tracks_for_high_tech_professions():
+                self.opens_tab_and_compares_title(course, dict_of_titles, index)
+                index += 1
+            run = False
+        self.string_message("---Outside enter_each_training_and_compare_title function---\n")
+
+    # -----------------------------------LIST OF COURSES ON HOME PAGE----------------------
+
+    def enter_each_course_on_bootcamp_real_time_and_compare_title(self):
+        self.string_message("---Inside enter_each_course_on_bootcamp_real_time_and_compare_title function---\n")
+        home_page = HomePage(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "C language": "קורס שפת C | לימודים שפת | C למתחילים :Real Time Group",
+            "Linux Admin": "קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College",
+            "Bash Scripting": "קורס Bash Scripting | תיכנות בסביבת לינוקס » Real Time Group",
+            "RT Concepts": "קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group",
+            "Python language": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            "ARM Embedded Systems": "קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College",
+            "Embedded Linux": "קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group",
+            "Networking": "קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College",
+            "C++ Language": "קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College",
+            "Linux Kernel And Device Driver": "קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for course in home_page.list_of_courses_on_bootcamp_real_time_on_home_page():
+                self.opens_tab_and_compares_title(course, dict_of_titles, index)
+                index += 1
+            run = False
+        self.string_message("---Outside enter_each_course_on_bootcamp_real_time_and_compare_title function---\n")
+
+    def enter_each_course_on_bootcamp_fullstack_and_compare_title(self):
+        self.string_message("---Inside enter_each_course_on_bootcamp_fullstack_and_compare_title function---\n")
+        home_page = HomePage(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "Web Foundations": "קורס Web Foundations להכיר את היסודות של בניית אתרים» Real Time College",
+            "HTML5": "קורס HTML | למד HTML5 עם המומחים של Real Time College",
+            "CSS3": "קורס CSS3 | ללמוד הצגה ועיצוב של דפי אינטרנט :Real Time Group",
+            "JavaScript": "קורס JavaScript & jQuery של Real Time College מקבוצה של RTG",
+            "SQL": "קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group",
+            "MongoDB": "קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group",
+            "NodeJS": "קורס NodeJS | הקורס המקיף והמעשי ביותר בארץ :Real Time Group",
+            "TypeScript": "קורס TypeScript | התמחות בכלים של Google » Real Time Group",
+            "AngularJS": "קורס AngularJS | לימודי אנגולר למתחילים » Real Time College",
+            "GIT (Version Control)": "קורס Version Control עם המומחים » Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for course in home_page.list_of_courses_on_bootcamp_fullstack_on_home_page():
+                self.opens_tab_and_compares_title(course, dict_of_titles, index)
+                index += 1
+            run = False
+        self.string_message("---Outside enter_each_course_on_bootcamp_fullstack_and_compare_title function---\n")
+
+    def enter_each_course_on_bootcamp_qa_and_compare_title(self):
+        self.string_message("---Inside enter_each_course_on_bootcamp_qa_and_compare_title function---\n")
+        home_page = HomePage(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "Computer Architecture": "קורס Computer Architecture - קורס מבנה מחשבים | Real Time Group",
+            "QA Methodologies": "קורס מתודולוגיות QA עם המומחים של Real Time College",
+            "Linux Admin": "קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College",
+            "Bash Scripting": "קורס Bash Scripting | תיכנות בסביבת לינוקס » Real Time Group",
+            "Python Language": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            "SQL": "קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group",
+            "Java Language": "קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group",
+            "GIT (Version Control)": "קורס Version Control עם המומחים » Real Time Group",
+            "Jenkins": "קורס Jenkins - למד לעבוד עם ג'נקינס בצורה הטובה ביותר! | Real Time Group",
+            "JIRA": "קורס JIRA | בואו להתמקצע ולצבור ניסיון בכלי המוביל למעקב באגים",
+            "Networking": "קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for course in home_page.list_of_courses_on_bootcamp_qa_on_home_page():
+                self.opens_tab_and_compares_title(course, dict_of_titles, index)
+                index += 1
+            run = False
+        self.string_message("---Outside enter_each_course_on_bootcamp_qa_and_compare_title function---\n")
+
+    def enter_each_course_on_bootcamp_cyber_security_and_compare_title(self):
+        self.string_message("---Inside enter_each_course_on_bootcamp_cyber_security_and_compare_title function---\n")
+        home_page = HomePage(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "Linux Admin": "קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College",
+            "Bash Scripting": "קורס Bash Scripting | תיכנות בסביבת לינוקס » Real Time Group",
+            "Python Language": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            "GIT (Version Control)": "קורס Version Control עם המומחים » Real Time Group",
+            "Networking": "קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College",
+            "Cyber Security Fundamentals": "קורס Cyber Security Fundamentals | סייבר ואבטחת מידע :Real Time Group",
+            "Cyber Attack Infrastructure": "קורס Cyber Attack Infrastructure - לזהות נקודות תורפה | Real Time College",
+            "SOC Analyst with SIEM": "קורס SOC Analyst with SIEM | לימודי אנליסט סייבר » Real Time College",
+            "Malware Analysis": "קורס Malware Analysis לפרק ולהבין איומים פוטנציאלים » Real Time College",
+            "Forensics Investigation & Incident Response": "קורס Forensics Investigation & Incident Response » Real Time College",
+            "Penetration Testing": "קורס Penetration Testing - מבחני חדירות » Real Time College",
+            "CEH": "הכנה לבחינת הסמכה CEH » Real Time College"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for course in home_page.list_of_courses_on_bootcamp_cyber_security_on_home_page():
+                self.opens_tab_and_compares_title(course, dict_of_titles, index)
+                index += 1
+            run = False
+        self.string_message("---Outside enter_each_course_on_bootcamp_cyber_security_and_compare_title function---\n")
+
+    def enter_each_course_on_bootcamp_machine_learning_and_compare_title(self):
+        self.string_message("---Inside enter_each_course_on_bootcamp_machine_learning_and_compare_title function---\n")
+        home_page = HomePage(self.driver)
+        index = 0
+        run = True
+        dict_of_titles = {
+            "Python Language": "קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם",
+            "SQL": "קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group",
+            "Machine Learning Fundamentals": "קורס Machine Learning Fundamentals » Real Time College",
+            "Scientific Python": "קורס Scientific Python במכללת Real Time College RTG",
+            "Machine Learning With Python": "קורס Machine Learning with Python » Real Time College",
+            "Deep Learning With Tensorflow": "קורס פיתוח Deep Learning with Tensorflow » Real Time College",
+            "AWS": "קורס AWS | התמחות בכלי שירותי הענן של אמזון :Real Time Group"}
+        keys_of_dict_of_titles = dict_of_titles.keys()
+
+        while run:
+            for course in home_page.list_of_courses_on_bootcamp_machine_learning_on_home_page():
+                self.opens_tab_and_compares_title(course, dict_of_titles, index)
+                index += 1
+            run = False
+        self.string_message("---Outside enter_each_course_on_bootcamp_machine_learning_and_compare_title function---\n")
+
+    # -------------------------------------------------TEST-------------------------------------------------------------------
+
+    def test_run_all(self):
+        # self.popup_form()
+        # self.main_form()
+        # self.floating_form()
+        self.enter_each_training_and_compare_title()
+        self.enter_each_course_on_bootcamp_real_time_and_compare_title()
+        self.enter_each_course_on_bootcamp_fullstack_and_compare_title()
+        self.enter_each_course_on_bootcamp_qa_and_compare_title()
+        self.enter_each_course_on_bootcamp_cyber_security_and_compare_title()
+        self.enter_each_course_on_bootcamp_machine_learning_and_compare_title()
+        self.open_file_and_append_string_message()

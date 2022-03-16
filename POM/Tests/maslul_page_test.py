@@ -34,18 +34,29 @@ class MaslulPageTest(unittest.TestCase):
         cls.test_user_phone_number = current_time
         cls.string_result = "-----------------------------------TESTING MASLUL'S SYLLABUS-----------------------------------------------\n"
 
+    # Appends the message parameter to the string_result
+    def string_message(self, message):
+        print(message)
+        self.string_result += message
+
+    # Opens a new file if there is not one. Appends the string to it
+    def open_file_and_append_string_message(self):
+        try:
+            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file.write(self.string_result)
+            file.close()
+        except FileNotFoundError:
+            print("Did not found a file")
+
     # Compares the syllabus url with a given url inside the 'maslul functions'
     def compare_syllabus_url(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
-        print(f"---Checking The {button_name} Syllabus...---")
-        self.string_result += f"---Checking The {button_name} Syllabus...---\n"
+        self.string_message(f"---Checking The {button_name} Syllabus...---\n")
         if title == actual_title_of_page:
-            print("---The syllabus is correct---")
-            self.string_result += "---The syllabus is correct---\n"
+            self.string_message("---The syllabus is correct---\n")
             return True
         else:
-            print("---Not the right syllabus---")
-            self.string_result += "---Not the right syllabus---\n"
+            self.string_message("---Not the right syllabus---\n")
             return False
 
     # Filling the form that pops ups after clicking on the 'download syllabus'
@@ -64,8 +75,7 @@ class MaslulPageTest(unittest.TestCase):
 
     # --------------------------------------MASLUL'S METHODS---------------------------------------------
     def maslul_real_time(self):
-        print("-----Inside maslul_real_time function-----")
-        self.string_result += "-----Inside maslul_real_time function-----\n"
+        self.string_message("-----Inside maslul_real_time function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -87,8 +97,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -126,12 +135,10 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_real_time function-----")
-        self.string_result += "-----Outside maslul_real_time function-----\n"
+        self.string_message("-----Outside maslul_real_time function-----\n")
 
     def maslul_full_stack(self):
-        print("-----Inside maslul_full_stack function-----")
-        self.string_result += "-----Inside maslul_full_stack function-----\n"
+        self.string_message("-----Inside maslul_full_stack function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -151,8 +158,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -190,12 +196,10 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_full_stack function-----")
-        self.string_result += "-----Outside maslul_full_stack function-----\n"
+        self.string_message("-----Outside maslul_full_stack function-----\n")
 
     def maslul_cyber(self):
-        print("-----Inside maslul_cyber function-----")
-        self.string_result += "-----Inside maslul_cyber function-----\n"
+        self.string_message("-----Inside maslul_cyber function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -215,8 +219,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -254,12 +257,10 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_cyber function-----")
-        self.string_result += "-----Outside maslul_cyber function-----\n"
+        self.string_message("-----Outside maslul_cyber function-----\n")
 
     def maslul_machine_learning(self):
-        print("-----Inside maslul_machine_learning function-----")
-        self.string_result += "-----Inside maslul_machine_learning function-----\n"
+        self.string_message("-----Inside maslul_machine_learning function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -281,8 +282,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -320,12 +320,10 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_machine_learning function-----")
-        self.string_result += "-----Outside maslul_machine_learning function-----\n"
+        self.string_message("-----Outside maslul_machine_learning function-----\n")
 
     def maslul_qa(self):
-        print("-----Inside maslul_qa function-----")
-        self.string_result += "-----Inside maslul_qa function-----\n"
+        self.string_message("-----Inside maslul_qa function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -349,8 +347,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -388,12 +385,10 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_qa function-----")
-        self.string_result += "-----Outside maslul_qa function-----\n"
+        self.string_message("-----Outside maslul_qa function-----\n")
 
     def maslul_dev_ops(self):
-        print("-----Inside maslul_dev_ops function-----")
-        self.string_result += "-----Inside maslul_dev_ops function-----\n"
+        self.string_message("-----Inside maslul_dev_ops function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -414,8 +409,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -453,12 +447,10 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_dev_ops function-----")
-        self.string_result += "-----Outside maslul_dev_ops function-----\n"
+        self.string_message("-----Outside maslul_dev_ops function-----\n")
 
     def maslul_linux_servers(self):
-        print("-----Inside maslul_linux_servers function-----")
-        self.string_result += "-----Inside maslul_linux_servers function-----\n"
+        self.string_message("-----Inside maslul_linux_servers function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         index = 0
@@ -479,8 +471,7 @@ class MaslulPageTest(unittest.TestCase):
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
                         for lan in maslul_page.languages_of_syllabus():
-                            print(f"--Choosing The {lan.text} Version Of The Syllabus--")
-                            self.string_result += f"--Choosing The {lan.text} Version Of The Syllabus--\n"
+                            self.string_message(f"--Choosing The {lan.text} Version Of The Syllabus--\n")
                             lan.click()
                             tabs = self.driver.window_handles  # Takes all the tabs that are currently presented
                             self.driver.switch_to.window(tabs[1])
@@ -518,8 +509,7 @@ class MaslulPageTest(unittest.TestCase):
                         maslul_page.close_button_of_form_after_syllabus().click()
                 index += 1
             running = False
-        print("-----Outside maslul_linux_servers function-----")
-        self.string_result += "-----Outside maslul_linux_servers function-----\n"
+        self.string_message("-----Outside maslul_linux_servers function-----\n")
 
     def test_run_maslulim(self):
         self.maslul_real_time()
@@ -530,9 +520,3 @@ class MaslulPageTest(unittest.TestCase):
         self.maslul_dev_ops()
         self.maslul_linux_servers()
 
-        try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
-            file.write(self.string_result)
-            file.close()
-        except FileNotFoundError:
-            print("Did not found a file")

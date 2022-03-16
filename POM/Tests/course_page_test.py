@@ -29,16 +29,27 @@ class CoursePageTest(unittest.TestCase):
     # Compares the syllabus url with a given url inside the 'maslul functions'
     def compare_syllabus_url(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
-        print(f"---Checking The {button_name} Syllabus...---")
-        self.string_result += f"---Checking The {button_name} Syllabus...---\n"
+        self.string_message(f"---Checking The {button_name} Syllabus...---\n")
         if title == actual_title_of_page:
-            print("---The syllabus is correct---")
-            self.string_result += "---The syllabus is correct---\n"
+            self.string_message("---The syllabus is correct---\n")
             return True
         else:
-            print("---Not the right syllabus---")
-            self.string_result += "---Not the right syllabus---\n"
+            self.string_message("---Not the right syllabus---\n")
             return False
+
+    # Appends the message parameter to the string_result
+    def string_message(self, message):
+        print(message)
+        self.string_result += message
+
+    # Opens a new file if there is not one. Appends the string to it
+    def open_file_and_append_string_message(self):
+        try:
+            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file.write(self.string_result)
+            file.close()
+        except FileNotFoundError:
+            print("Did not found a file")
 
     # Switches tabs and gets the syllabus url and compares it
     def switching_tabs_and_comparing_urls(self, dict_of_titles, index, key):
@@ -55,8 +66,7 @@ class CoursePageTest(unittest.TestCase):
 
     # ----------------------------------------------COURSE'S METHODS-----------------------------------------------------
     def course_real_time(self):
-        print("---Inside course_real_time function---")
-        self.string_result += "---Inside course_real_time function---\n"
+        self.string_message("---Inside course_real_time function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -116,12 +126,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_real_time function---")
-        self.string_result += "---Outside course_real_time function---\n"
+        self.string_message("---Outside course_real_time function---\n")
 
     def course_web_development(self):
-        print("---Inside course_web_development function---")
-        self.string_result += "---Inside course_web_development function---\n"
+        self.string_message("---Inside course_web_development function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -212,12 +220,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_web_development function---")
-        self.string_result += "---Outside course_web_development function---\n"
+        self.string_message("---Outside course_web_development function---\n")
 
     def course_cyber(self):
-        print("---Inside course_cyber function---")
-        self.string_result += "---Inside course_cyber function---\n"
+        self.string_message("---Inside course_cyber function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -273,12 +279,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_cyber function---")
-        self.string_result += "---Outside course_cyber function---\n"
+        self.string_message("---Outside course_cyber function---\n")
 
     def course_devops(self):
-        print("---Inside course_devops function---")
-        self.string_result += "---Inside course_devops function---\n"
+        self.string_message("---Inside course_devops function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -349,12 +353,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_devops function---")
-        self.string_result += "---Outside course_devops function---\n"
+        self.string_message("---Outside course_devops function---\n")
 
     def course_data_science(self):
-        print("---Inside course_data_science function---")
-        self.string_result += "---Inside course_data_science function---\n"
+        self.string_message("---Inside course_data_science function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -386,12 +388,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_data_science function---")
-        self.string_result += "---Outside course_data_science function---\n"
+        self.string_message("---Outside course_data_science function---\n")
 
     def course_software_testing(self):
-        print("---Inside course_software_testing function---")
-        self.string_result += "---Inside course_software_testing function---\n"
+        self.string_message("---Inside course_software_testing function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -432,12 +432,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_software_testing function---")
-        self.string_result += "---Outside course_software_testing function---\n"
+        self.string_message("---Outside course_software_testing function---\n")
 
     def course_network_and_sysadmin(self):
-        print("---Inside course_network_and_sysadmin function---")
-        self.string_result += "---Inside course_network_and_sysadmin function---\n"
+        self.string_message("---Inside course_network_and_sysadmin function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -478,12 +476,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_network_and_sysadmin function---")
-        self.string_result += "---Outside course_network_and_sysadmin function---\n"
+        self.string_message("---Outside course_network_and_sysadmin function---\n")
 
     def course_programming_language(self):
-        print("---Inside course_programming_language function---")
-        self.string_result += "---Inside course_programming_language function---\n"
+        self.string_message("---Inside course_programming_language function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -524,12 +520,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_programming_language function---")
-        self.string_result += "---Outside course_programming_language function---\n"
+        self.string_message("---Outside course_programming_language function---\n")
 
     def course_cloud_composing(self):
-        print("---Inside course_cloud_composing function---")
-        self.string_result += "---Inside course_cloud_composing function---\n"
+        self.string_message("---Inside course_cloud_composing function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -556,12 +550,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_cloud_composing function---")
-        self.string_result += "---Outside course_cloud_composing function---\n"
+        self.string_message("---Outside course_cloud_composing function---\n")
 
     def course_image_processing(self):
-        print("---Inside course_image_processing function---")
-        self.string_result += "---Inside course_image_processing function---\n"
+        self.string_message("---Inside course_image_processing function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -607,12 +599,10 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_image_processing function---")
-        self.string_result += "---Outside course_image_processing function---\n"
+        self.string_message("---Outside course_image_processing function---\n")
 
     def course_database_management(self):
-        print("---Inside course_database_management function---")
-        self.string_result += "---Inside course_database_management function---\n"
+        self.string_message("---Inside course_database_management function---\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
         index = 0
@@ -639,8 +629,7 @@ class CoursePageTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_database_management function---")
-        self.string_result += "---Outside course_database_management function---\n"
+        self.string_message("---Outside course_database_management function---\n")
 
     def test_run_maslulim(self):
         self.course_real_time()

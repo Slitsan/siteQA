@@ -54,20 +54,28 @@ class HeaderTest(unittest.TestCase):
 
     def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
-        print(f"---Checking The {button_name} Page...---")
-        self.string_result += f"---Checking The {button_name} Page...---\n"
+        self.string_message(f"---Checking The {button_name} Page...---\n")
         if title == actual_title_of_page:
-            print("---The page is correct---")
-            self.string_result += "---The page is correct---\n"
+            self.string_message("---The page is correct---\n")
             return True
         else:
-            print("---Not the right page---")
-            self.string_result += "---Not the right page---\n"
+            self.string_message("---Not the right page---\n")
             return False
 
+    def string_message(self, message):
+        print(message)
+        self.string_result += message
+
+    def open_file_and_append_string_message(self):
+        try:
+            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file.write(self.string_result)
+            file.close()
+        except FileNotFoundError:
+            print("Did not found a file")
+
     def maslul_real_time(self):
-        print("---Inside maslul_real_time function---")
-        self.string_result += "---Inside maslul_real_time function---\n"
+        self.string_message("---Inside maslul_real_time function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -87,12 +95,10 @@ class HeaderTest(unittest.TestCase):
                 # time.sleep(3)
             running = False
 
-        print("---Outside maslul_real_time function---")
-        self.string_result += "---Outside maslul_real_time function---\n"
+        self.string_message("---Outside maslul_real_time function---\n")
 
     def maslul_full_stack(self):
-        print("---Inside maslul_full_stack function---")
-        self.string_result += "---Inside maslul_full_stack function---\n"
+        self.string_message("---Inside maslul_full_stack function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -109,12 +115,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             running = False
 
-        print("---Outside maslul_full_stack function---")
-        self.string_result += "---Outside maslul_full_stack function---\n"
+        self.string_message("---Outside maslul_full_stack function---\n")
 
     def maslul_cyber(self):
-        print("---Inside maslul_cyber function---")
-        self.string_result += "---Inside maslul_cyber function---\n"
+        self.string_message("---Inside maslul_cyber function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -132,12 +136,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             running = False
 
-        print("---Outside maslul_cyber function---")
-        self.string_result += "---Outside maslul_cyber function---\n"
+        self.string_message("---Outside maslul_cyber function---\n")
 
     def maslul_machine_learning(self):
-        print("---Inside maslul_machine_learning function---")
-        self.string_result += "---Inside maslul_machine_learning function---\n"
+        self.string_message("---Inside maslul_machine_learning function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -157,12 +159,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             running = False
 
-        print("---Outside maslul_machine_learning function---")
-        self.string_result += "---Outside maslul_machine_learning function---\n"
+        self.string_message("---Outside maslul_machine_learning function---\n")
 
     def maslul_qa(self):
-        print("---Inside maslul_qa function---")
-        self.string_result += "---Inside maslul_qa function---\n"
+        self.string_message("---Inside maslul_qa function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -181,12 +181,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             running = False
 
-        print("---Outside maslul_qa function---")
-        self.string_result += "---Outside maslul_qa function---\n"
+        self.string_message("---Outside maslul_qa function---\n")
 
     def maslul_dev_ops(self):
-        print("---Inside maslul_dev_ops function---")
-        self.string_result += "---Inside maslul_dev_ops function---\n"
+        self.string_message("---Inside maslul_dev_ops function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -204,12 +202,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             running = False
 
-        print("---Outside maslul_dev_ops function---")
-        self.string_result += "---Outside maslul_dev_ops function---\n"
+        self.string_message("---Outside maslul_dev_ops function---\n")
 
     def maslul_linux_servers(self):
-        print("---Inside maslul_linux_servers function---")
-        self.string_result += "---Inside maslul_linux_servers function---\n"
+        self.string_message("---Inside maslul_linux_servers function---\n")
         header = Header(self.driver)
         index = 0
         running = True
@@ -227,12 +223,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             running = False
 
-        print("---Outside maslul_linux_servers function---")
-        self.string_result += "---Outside maslul_linux_servers function---\n"
+        self.string_message("---Outside maslul_linux_servers function---\n")
 
     def course_real_time(self):
-        print("---Inside course_real_time function---")
-        self.string_result += "---Inside course_real_time function---\n"
+        self.string_message("---Inside course_real_time function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -300,12 +294,10 @@ class HeaderTest(unittest.TestCase):
                 index += 1
             run = False
 
-        print("---Outside course_real_time function---")
-        self.string_result += "---Outside course_real_time function---\n"
+        self.string_message("---Outside course_real_time function---\n")
 
     def course_web_development(self):
-        print("---Inside course_web_development function---")
-        self.string_result += "---Inside course_web_development function---\n"
+        self.string_message("---Inside course_web_development function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -409,12 +401,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_web_development function---")
-        self.string_result += "---Outside course_web_development function---\n"
+        self.string_message("---Outside course_web_development function---\n")
 
     def course_cyber_security(self):
-        print("---Inside course_cyber_security function---")
-        self.string_result += "---Inside course_cyber_security function---\n"
+        self.string_message("---Inside course_cyber_security function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -475,12 +465,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_cyber_security function---")
-        self.string_result += "---Outside course_cyber_security function---\n"
+        self.string_message("---Outside course_cyber_security function---\n")
 
     def course_devops(self):
-        print("---Inside course_devops function---")
-        self.string_result += "---Inside course_devops function---\n"
+        self.string_message("---Inside course_devops function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -559,12 +547,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_devops function---")
-        self.string_result += "---Outside course_devops function---\n"
+        self.string_message("---Outside course_devops function---\n")
 
     def course_data_science(self):
-        print("---Inside course_data_science function---")
-        self.string_result += "---Inside course_data_science function---\n"
+        self.string_message("---Inside course_data_science function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -595,12 +581,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_data_science function---")
-        self.string_result += "---Outside course_data_science function---\n"
+        self.string_message("---Outside course_data_science function---\n")
 
     def course_software_testing(self):
-        print("---Inside course_software_testing function---")
-        self.string_result += "---Inside course_software_testing function---\n"
+        self.string_message("---Inside course_software_testing function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -643,13 +627,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_software_testing function---")
-        self.string_result += "---Outside course_software_testing function---\n"
+        self.string_message("---Outside course_software_testing function---\n")
 
     def course_network_and_sysadmin(self):
-        print("---Inside course_network_and_sysadmin function---")
-        self.string_result += "---Inside course_network_and_sysadmin function---\n"
-
+        self.string_message("---Inside course_network_and_sysadmin function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -692,12 +673,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_network_and_sysadmin function---")
-        self.string_result += "---Outside course_network_and_sysadmin function---\n"
+        self.string_message("---Outside course_network_and_sysadmin function---\n")
 
     def course_programming_language(self):
-        print("---Inside course_programming_language function---")
-        self.string_result += "---Inside course_programming_language function---\n"
+        self.string_message("---Inside course_programming_language function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -740,12 +719,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_programming_language function---")
-        self.string_result += "---Outside course_programming_language function---\n"
+        self.string_message("---Outside course_programming_language function---\n")
 
     def course_cloud_computing(self):
-        print("---Inside course_cloud_computing function---")
-        self.string_result += "---Inside course_cloud_computing function---\n"
+        self.string_message("---Inside course_cloud_computing function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -770,12 +747,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_cloud_computing function---")
-        self.string_result += "---Outside course_cloud_computing function---\n"
+        self.string_message("---Outside course_cloud_computing function---\n")
 
     def course_image_processing(self):
-        print("---Inside course_image_processing function---")
-        self.string_result += "---Inside course_image_processing function---\n"
+        self.string_message("---Inside course_image_processing function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -824,12 +799,10 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_image_processing function---")
-        self.string_result += "---Outside course_image_processing function---\n"
+        self.string_message("---Outside course_image_processing function---\n")
 
     def course_database_management(self):
-        print("---Inside course_database_management function---")
-        self.string_result += "---Inside course_database_management function---\n"
+        self.string_message("---Inside course_database_management function---\n")
         header = Header(self.driver)
         index = 0
         run = True
@@ -854,68 +827,57 @@ class HeaderTest(unittest.TestCase):
                     self.compare_title_pages(title, expected_title, key)
                 index += 1
             run = False
-        print("---Outside course_database_management function---")
-        self.string_result += "---Outside course_database_management function---\n"
+        self.string_message("---Outside course_database_management function---\n")
 
     def go_to_page_courses_for_companies(self):
-        print("---Inside go_to_page_courses_for_companies function---")
-        self.string_result += "---Inside go_to_page_courses_for_companies function---\n"
+        self.string_message("---Inside go_to_page_courses_for_companies function---\n")
         header = Header(self.driver)
         header.courses_for_companies().click()
         title = header.get_title()
         actual_page_title = "Real Time College » Real Time Group's Training Center"
         button_name = 'Courses For Companies'
         self.compare_title_pages(title, actual_page_title, button_name)
-        print("---Outside go_to_page_courses_for_companies function---")
-        self.string_result += "---Outside go_to_page_courses_for_companies function---\n"
+        self.string_message("---Outside go_to_page_courses_for_companies function---\n")
 
     def go_to_page_articles(self):
-        print("---Inside go_to_page_articles function---")
-        self.string_result += "---Inside go_to_page_articles function---\n"
+        self.string_message("---Inside go_to_page_articles function---\n")
         header = Header(self.driver)
         header.articles().click()
         title = header.get_title()
         actual_page_title = "Realtime Group - מאמרים"
         button_name = 'Articles'
         self.compare_title_pages(title, actual_page_title, button_name)
-        print("---Outside go_to_page_articles function---")
-        self.string_result += "---Outside go_to_page_articles function---\n"
+        self.string_message("---Outside go_to_page_articles function---\n")
 
     def go_to_page_about_us(self):
-        print("---Inside go_to_page_about_us function---")
-        self.string_result += "---Inside go_to_page_about_us function---\n"
+        self.string_message("---Inside go_to_page_about_us function---\n")
         header = Header(self.driver)
         header.about_us().click()
         title = header.get_title()
         actual_page_title = "אודות Real Time Group - חטיבת הדרכה | חטיבת השמה | מיקור חוץ"
         button_name = "About Us"
         self.compare_title_pages(title, actual_page_title, button_name)
-        print("---Outside go_to_page_about_us function---")
-        self.string_result += "---Outside go_to_page_about_us function---\n"
+        self.string_message("---Outside go_to_page_about_us function---\n")
 
     def go_to_page_declaration_of_accessibility(self):
-        print("---Inside go_to_page_declaration_of_accessibility function---")
-        self.string_result += "---Inside go_to_page_declaration_of_accessibility function---\n"
+        self.string_message("---Inside go_to_page_declaration_of_accessibility function---\n")
         header = Header(self.driver)
         header.declaration_of_accessibility().click()
         title = header.get_title()
         actual_page_title = "הצהרת נגישות » Real Time College"
         button_name = "Declaration Of Accessibility"
         self.compare_title_pages(title, actual_page_title, button_name)
-        print("---Outside go_to_page_declaration_of_accessibility function---")
-        self.string_result += "---Outside go_to_page_declaration_of_accessibility function---\n"
+        self.string_message("---Outside go_to_page_declaration_of_accessibility function---\n")
 
     def go_to_page_jobs(self):
-        print("---Inside go_to_page_jobs function---")
-        self.string_result += "---Inside go_to_page_jobs function---\n"
+        self.string_message("---Inside go_to_page_jobs function---\n")
         header = Header(self.driver)
         header.jobs().click()
         title = header.get_title()
         actual_page_title = "Real Time College » Real Time Group's Training Center"
         button_name = "Jobs"
         self.compare_title_pages(title, actual_page_title, button_name)
-        print("---Outside go_to_page_jobs function---")
-        self.string_result += "---Outside go_to_page_jobs function---\n"
+        self.string_message("---Outside go_to_page_jobs function---\n")
 
     def run_maslulim(self):
         self.maslul_real_time()
@@ -950,12 +912,6 @@ class HeaderTest(unittest.TestCase):
         self.run_maslulim()
         self.run_courses()
         self.run_five_buttons()
-        try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
-            file.write(self.string_result)
-            file.close()
-        except FileNotFoundError:
-            print("Did not found a file")
 
     # def test_get_maslul_and_check_title(self):
     #     print("-----Start get_maslul_and_check_title-----")
