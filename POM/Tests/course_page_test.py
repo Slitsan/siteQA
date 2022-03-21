@@ -2,9 +2,11 @@
 #   Created By Pablik
 #   Courses Page Syllabus Test
 # -----------------------------------------------------
-
+import time
 import unittest
 from selenium import webdriver
+from selenium.common.exceptions import ElementNotVisibleException, NoSuchElementException
+from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.webdriver import WebDriver
 from datetime import datetime
 from POM.Pages.course_page import CoursePage
@@ -19,12 +21,12 @@ class CoursePageTest(unittest.TestCase):
                                                  'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
         cls.driver.maximize_window()
         cls.driver.delete_all_cookies()
-        cls.driver.implicitly_wait(20)
-        cls.driver.set_page_load_timeout(30)
+        cls.driver.implicitly_wait(5)
+        cls.driver.set_page_load_timeout(10)
         cls.driver.get('https://rt-ed.co.il/')
         now = datetime.now()
         cls.date_for_log = now.strftime("%d %m %Y")
-        cls.string_result = "-----------------------------------TESTING COURSE'S SYLLABUS-----------------------------------------------\n"
+        cls.string_result = "*\n-----------------------------------TESTING COURSE PAGE-----------------------------------------------\n"
 
     # Compares the syllabus url with a given url inside the 'maslul functions'
     def compare_syllabus_url(self, title: str, actual_page_title: str, button_name: str):
@@ -34,7 +36,7 @@ class CoursePageTest(unittest.TestCase):
             self.string_message("---The syllabus is correct---\n")
             return True
         else:
-            self.string_message("---Not the right syllabus---\n")
+            self.string_message("!\nNot the right syllabus\n")
             return False
 
     # Appends the message parameter to the string_result
@@ -64,11 +66,83 @@ class CoursePageTest(unittest.TestCase):
             self.driver.close()
         self.driver.switch_to.window(main_tab)
 
+    # Prepares a dictionary of nav buttons according to page
+    def prepares_dictionary_of_div_block(self, course_page):
+        dict_of_nav_buttons_blocks = {}
+        for div in range(len(course_page.list_of_buttons_in_navigation())):
+            if div == 0:
+                try:
+                    dict_of_nav_buttons_blocks["אודות המסלול"] = course_page.about_block()
+                except NoSuchElementException:
+                    self.string_message("!\nThe button 'אודות המסלול' does not work\n")
+                    continue
+            if div == 1:
+                try:
+                    dict_of_nav_buttons_blocks["נושאים"] = course_page.course_topics_block()
+                except NoSuchElementException:
+                    self.string_message("!\nThe button 'נושאים' does not work\n")
+                    continue
+            if div == 2:
+                try:
+                    dict_of_nav_buttons_blocks["קהל יעד ודרישות קדם"] = course_page.target_audience_block()
+                except NoSuchElementException:
+                    self.string_message("!\nThe button 'קהל יעד ודרישות קדם' does not work\n")
+                    continue
+            if div == 3:
+                try:
+                    dict_of_nav_buttons_blocks["קורסי המשך"] = course_page.follow_up_courses_block()
+                except NoSuchElementException:
+                    self.string_message("!\nThe button 'קורסי המשך' does not work\n")
+                    continue
+            if div == 4:
+                try:
+                    dict_of_nav_buttons_blocks["חוות דעת סטודנטים"] = course_page.videos_block()
+                except NoSuchElementException:
+                    self.string_message("!\nThe button 'חוות דעת סטודנטים' does not work\n")
+                    continue
+            if div == 5:
+                try:
+                    dict_of_nav_buttons_blocks["מאמרים"] = course_page.articles_block()
+                except NoSuchElementException:
+                    self.string_message("!\nThe button 'מאמרים' does not work\n")
+                    continue
+        return dict_of_nav_buttons_blocks
+
+    # Checks each of the navigation buttons if they lead to the correct 'div' block
+    def checks_navigation_buttons(self, actions, btn, dict_of_nav_buttons_blocks, index):
+        index_of_btn = 0
+        try:
+            btn_id_split = btn.get_attribute("href").split("#")  # Separates the href link of the nav button
+            btn_id = str(btn_id_split[-1])  # Takes the 'id' from the end of the list and converts to string
+            actions.move_to_element(btn).click().perform()  # Click on the nav button according to the loop iteration
+            block = list(dict_of_nav_buttons_blocks.values())[index]  # Value of dictionary
+            block_key = list(dict_of_nav_buttons_blocks.keys())[index]  # Key of dictionary
+            block_id = block.get_attribute("id")  # 'id' of the current block
+            self.string_message(f"---Comparing Between The '{btn.text}' Nav Button And The '{block_key}' Div Block---\n")
+            if btn_id == block_id:
+                self.string_message("---Element Matches!---\n")
+        except ElementNotVisibleException:
+            self.string_message("!\n---Element Not Found...---\n")
+        except IndexError:
+            print("Out of bounds")
+
+    # Confirm which nav buttons does not works, and clicks the one that works and confirm if its the same id with the nav button's href
+    def confirm_which_nav_buttons_works(self, actions, course_page, index_of_btn):
+        div_blocks = self.prepares_dictionary_of_div_block(course_page)
+        for btn in course_page.list_of_buttons_in_navigation():
+            if index_of_btn == len(div_blocks):
+                break
+            if btn.text == list(div_blocks.keys())[index_of_btn]:
+                self.checks_navigation_buttons(actions, btn, div_blocks, index_of_btn)
+                index_of_btn += 1
+        return index_of_btn
+
     # ----------------------------------------------COURSE'S METHODS-----------------------------------------------------
     def course_real_time(self):
-        self.string_message("---Inside course_real_time function---\n")
+        self.string_message("@\nInside course_real_time function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -82,56 +156,66 @@ class CoursePageTest(unittest.TestCase):
             "Yocto Programming": "NO SYLLABUS FOR NOW",
             "Embedded Linux (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Courses/RT/Linux%D6%B9%D6%B9_System_Programming.pdf"}
         keys_of_dict_of_urls = dict_of_urls.keys()
-
         while run:
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_real_time().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_rt_concepts().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 1:
                     header.sub_course_c_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 2:
                     header.sub_course_linux_kernel_and_device_drivers().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 3:
                     header.sub_course_arm_embedded_systems().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 4:
                     header.sub_course_internet_of_things().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 5:
                     header.sub_course_free_rtos().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 6:
                     header.sub_course_c_plus_plus_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 7:
                     header.sub_course_yocto_programming().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 elif index == 8:
                     header.sub_course_linux_embedded().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_real_time function---\n")
+        self.string_message("@\nOutside course_real_time function\n")
 
     def course_web_development(self):
-        self.string_message("---Inside course_web_development function---\n")
+        self.string_message("@\nInside course_web_development function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -157,75 +241,92 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_web_development().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_web_foundations().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 1:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 1:
                     header.sub_course_angular_js().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 2:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 2:
                     header.sub_course_python_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 3:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 3:
                     header.sub_course_css_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 4:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 4:
                     header.sub_course_node_js().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 5:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 5:
                     header.sub_course_javascript_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 6:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 6:
                     header.sub_course_typescript_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 7:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 7:
                     header.sub_course_mongodb().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 8:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 8:
                     header.sub_course_html5().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 9:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 9:
                     header.sub_course_react().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 10:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 10:
                     header.sub_course_java_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 11:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 11:
                     header.sub_course_bootstrap().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 12:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 12:
                     header.sub_course_app_development_for_android().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 13:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 13:
                     header.sub_course_git().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
-                if index == 14:
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                elif index == 14:
                     header.sub_course_sql().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_web_development function---\n")
+        self.string_message("@\nOutside course_web_development function\n")
 
     def course_cyber(self):
-        self.string_message("---Inside course_cyber function---\n")
+        self.string_message("@\nInside course_cyber function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -244,47 +345,57 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_cyber_security().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_preparations_for_certification_exam().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_cyber_attack_infrastructure().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 2:
                     header.sub_course_malware_analysis().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 3:
                     header.sub_course_penetration_testing().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 4:
                     header.sub_course_linux_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 5:
                     header.sub_course_cyber_security_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 6:
                     header.sub_course_networking().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 7:
                     header.sub_course_forensics_investigation_and_incident_response().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_cyber function---\n")
+        self.string_message("@\nOutside course_cyber function\n")
 
     def course_devops(self):
-        self.string_message("---Inside course_devops function---\n")
+        self.string_message("@\nInside course_devops function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -306,59 +417,72 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_devops().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_docker().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_linux_admin().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 2:
                     header.sub_course_kubernetes().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 3:
                     header.sub_course_python_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 4:
                     header.sub_course_zabbix().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 5:
                     header.sub_course_terraform().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 6:
                     header.sub_course_networking().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 7:
                     header.sub_course_ansible().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 8:
                     header.sub_course_bash_scripting().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 9:
                     header.sub_course_aws().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 10:
                     header.sub_course_jenkins().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_devops function---\n")
+        self.string_message("@\nOutside course_devops function\n")
 
     def course_data_science(self):
-        self.string_message("---Inside course_data_science function---\n")
+        self.string_message("@\nInside course_data_science function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -372,28 +496,35 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_data_science().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_machine_learning_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+
                 if index == 1:
                     header.sub_course_machine_learning_with_python().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+
                 if index == 2:
                     header.sub_course_deep_learning_with_tensorflow().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
 
                 index += 1
             run = False
 
-        self.string_message("---Outside course_data_science function---\n")
+        self.string_message("@\nOutside course_data_science function\n")
 
     def course_software_testing(self):
-        self.string_message("---Inside course_software_testing function---\n")
+        self.string_message("@\nInside course_software_testing function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -409,35 +540,42 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_software_testing().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_selenium().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_labview().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 2:
                     header.sub_course_jira().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 3:
                     header.sub_course_qa_methodologies().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 4:
                     header.sub_course_java_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_software_testing function---\n")
+        self.string_message("@\nOutside course_software_testing function\n")
 
     def course_network_and_sysadmin(self):
-        self.string_message("---Inside course_network_and_sysadmin function---\n")
+        self.string_message("@\nInside course_network_and_sysadmin function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -453,35 +591,42 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_network_and_sysadmin().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_linux_admin().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_lpic_2().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 2:
                     header.sub_course_linux_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 3:
                     header.sub_course_lpic_1().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 4:
                     header.sub_course_networking().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
         self.string_message("---Outside course_network_and_sysadmin function---\n")
 
     def course_programming_language(self):
-        self.string_message("---Inside course_programming_language function---\n")
+        self.string_message("@\nInside course_programming_language function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -497,35 +642,42 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_programming_language().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_java_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_c_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 2:
                     header.sub_course_javascript_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 3:
                     header.sub_course_python_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 4:
                     header.sub_course_c_plus_plus_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_programming_language function---\n")
+        self.string_message("@\nOutside course_programming_language function\n")
 
     def course_cloud_composing(self):
-        self.string_message("---Inside course_cloud_composing function---\n")
+        self.string_message("@\nInside course_cloud_composing function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -538,24 +690,28 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_cloud_computing().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_aws().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_microsoft_azure().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
 
                 index += 1
             run = False
 
-        self.string_message("---Outside course_cloud_composing function---\n")
+        self.string_message("@\nOutside course_cloud_composing function\n")
 
     def course_image_processing(self):
-        self.string_message("---Inside course_image_processing function---\n")
+        self.string_message("@\nInside course_image_processing function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -572,39 +728,47 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_image_processing().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_machine_learning_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_open_cv().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 2:
                     header.sub_course_cuda().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 3:
                     header.sub_course_machine_learning_with_python().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 4:
                     header.sub_course_deep_learning_with_tensorflow().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 5:
                     header.sub_course_nvidia_gpus().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 index += 1
             run = False
 
-        self.string_message("---Outside course_image_processing function---\n")
+        self.string_message("@\nOutside course_image_processing function\n")
 
     def course_database_management(self):
-        self.string_message("---Inside course_database_management function---\n")
+        self.string_message("@\nInside course_database_management function\n")
         header = Header(self.driver)
         course_page = CoursePage(self.driver)
+        actions = ActionChains(self.driver)
         index = 0
         run = True
         dict_of_urls = {
@@ -617,19 +781,24 @@ class CoursePageTest(unittest.TestCase):
             for key in keys_of_dict_of_urls:
                 header.courses_tab().click()
                 header.course_database_management().click()
+                index_of_btn = 0
                 if index == 0:
                     header.sub_course_sql().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                 if index == 1:
                     header.sub_course_mongodb().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
+                    index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
 
                 index += 1
             run = False
 
-        self.string_message("---Outside course_database_management function---\n")
+        self.string_message("@\nOutside course_database_management function\n")
+
+    # ----------------------------------------------------TEST----------------------------------------------------
 
     def test_run_maslulim(self):
         self.course_real_time()
@@ -643,9 +812,5 @@ class CoursePageTest(unittest.TestCase):
         self.course_cloud_composing()
         self.course_image_processing()
         self.course_database_management()
-        try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
-            file.write(self.string_result)
-            file.close()
-        except FileNotFoundError:
-            print("Did not found a file")
+
+

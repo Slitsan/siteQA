@@ -74,6 +74,8 @@ class HeaderTest(unittest.TestCase):
         except FileNotFoundError:
             print("Did not found a file")
 
+    # -------------------------------------------MASLULIM-------------------------------------------
+
     def maslul_real_time(self):
         self.string_message("---Inside maslul_real_time function---\n")
         header = Header(self.driver)
@@ -224,6 +226,8 @@ class HeaderTest(unittest.TestCase):
             running = False
 
         self.string_message("---Outside maslul_linux_servers function---\n")
+
+    # -------------------------------------------COURSES-------------------------------------------
 
     def course_real_time(self):
         self.string_message("---Inside course_real_time function---\n")
@@ -829,6 +833,8 @@ class HeaderTest(unittest.TestCase):
             run = False
         self.string_message("---Outside course_database_management function---\n")
 
+    # -------------------------------------------5 BUTTONS-------------------------------------------
+
     def go_to_page_courses_for_companies(self):
         self.string_message("---Inside go_to_page_courses_for_companies function---\n")
         header = Header(self.driver)
@@ -878,6 +884,8 @@ class HeaderTest(unittest.TestCase):
         button_name = "Jobs"
         self.compare_title_pages(title, actual_page_title, button_name)
         self.string_message("---Outside go_to_page_jobs function---\n")
+
+    # -------------------------------------------TEST-------------------------------------------
 
     def run_maslulim(self):
         self.maslul_real_time()

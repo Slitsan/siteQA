@@ -511,6 +511,8 @@ class MaslulPageTest(unittest.TestCase):
             running = False
         self.string_message("-----Outside maslul_linux_servers function-----\n")
 
+    # ----------------------------------------------------TEST------------------------------------------
+
     def test_run_maslulim(self):
         self.maslul_real_time()
         self.maslul_full_stack()

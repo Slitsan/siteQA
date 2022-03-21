@@ -386,6 +386,7 @@ class HomePageTest(unittest.TestCase):
     #     self.choose_maslul_real_time_in_floating_form()
     #     self.tick_terms_and_services_button_in_floating_form()
     # self.click_on_send_button_in_floating_form()
+
     # -----------------------------------FLOATING ABOUT US TEST----------------------------
 
     def click_on_about_us_in_floating_menu(self):
@@ -398,6 +399,7 @@ class HomePageTest(unittest.TestCase):
         # self.hover_on_floating_menu()
         # self.click_on_about_us_in_floating_menu()
         # self.open_file_and_append_string_message()
+
     # ----------------------------------TRAINING TEST-------------------------------------
     def opens_tab_and_compares_title(self, course, dict_of_titles, index):
         href = course.get_attribute("href")
