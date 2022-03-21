@@ -122,7 +122,7 @@ class CoursePageTest(unittest.TestCase):
             if btn_id == block_id:
                 self.string_message("---Element Matches!---\n")
         except ElementNotVisibleException:
-            self.string_message("!\n---Element Not Found...---\n")
+            self.string_message("!\nElement Not Found...\n")
         except IndexError:
             print("Out of bounds")
 
@@ -136,6 +136,38 @@ class CoursePageTest(unittest.TestCase):
                 self.checks_navigation_buttons(actions, btn, div_blocks, index_of_btn)
                 index_of_btn += 1
         return index_of_btn
+
+    # Fills the form under the syllabus
+    def form_under_syllabus(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
+                            choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
+        self.string_message("@\nInside form_under_syllabus function\n")
+        now = datetime.now()
+        current_time = now.strftime("%d%m%H%M%S")
+        course_page = CoursePage(self.driver)
+        self.string_message("---Entering last name---\n")
+        course_page.last_name_field_in_form_under_syllabus().send_keys(last_name)
+        self.string_message("---Entering first name---\n")
+        course_page.first_name_field_in_form_under_syllabus().send_keys(first_name)
+        self.string_message("---Entering mail---\n")
+        course_page.email_field_in_form_under_syllabus().send_keys(current_time + ending_of_mail)
+        if phone_number == "":
+            phone_number = current_time
+        self.string_message("---Entering phone number---\n")
+        course_page.phone_field_in_form_under_syllabus().send_keys(phone_number)
+        if choose_maslul == "yes":
+            self.string_message("---Choosing maslul---\n")
+            course_page.choose_maslul_field_in_form_under_syllabus().click()
+            course_page.choose_maslul_real_time_field_in_form_under_syllabus().click()
+        if tick_terms_and_services == "yes":
+            self.string_message("---Ticking the terms of agreement and services---\n")
+            course_page.agreement_of_terms_and_services_field_in_form_under_syllabus().click()
+        if send_button == "yes":
+            self.string_message("---Clicking on the 'send' button---\n")
+            course_page.send_button_in_form_under_syllabus().click()
+        if close_button == "yes":
+            self.string_message("---Clicking on the close button---\n")
+            course_page.close_button_after_filling_details_in_form_under_syllabus().click()
+        self.string_message("@\nOutside form_under_syllabus function\n")
 
     # ----------------------------------------------COURSE'S METHODS-----------------------------------------------------
     def course_real_time(self):
@@ -166,46 +198,55 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 1:
                     header.sub_course_c_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 2:
                     header.sub_course_linux_kernel_and_device_drivers().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 3:
                     header.sub_course_arm_embedded_systems().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 4:
                     header.sub_course_internet_of_things().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 5:
                     header.sub_course_free_rtos().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 6:
                     header.sub_course_c_plus_plus_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 7:
                     header.sub_course_yocto_programming().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 8:
                     header.sub_course_linux_embedded().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -247,76 +288,91 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 1:
                     header.sub_course_angular_js().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 2:
                     header.sub_course_python_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 3:
                     header.sub_course_css_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 4:
                     header.sub_course_node_js().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 5:
                     header.sub_course_javascript_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 6:
                     header.sub_course_typescript_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 7:
                     header.sub_course_mongodb().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 8:
                     header.sub_course_html5().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 9:
                     header.sub_course_react().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 10:
                     header.sub_course_java_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 11:
                     header.sub_course_bootstrap().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 12:
                     header.sub_course_app_development_for_android().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 13:
                     header.sub_course_git().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 elif index == 14:
                     header.sub_course_sql().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -351,41 +407,49 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_cyber_attack_infrastructure().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_malware_analysis().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 3:
                     header.sub_course_penetration_testing().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 4:
                     header.sub_course_linux_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 5:
                     header.sub_course_cyber_security_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 6:
                     header.sub_course_networking().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 7:
                     header.sub_course_forensics_investigation_and_incident_response().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -423,56 +487,67 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_linux_admin().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_kubernetes().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 3:
                     header.sub_course_python_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 4:
                     header.sub_course_zabbix().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 5:
                     header.sub_course_terraform().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 6:
                     header.sub_course_networking().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 7:
                     header.sub_course_ansible().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 8:
                     header.sub_course_bash_scripting().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 9:
                     header.sub_course_aws().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 10:
                     header.sub_course_jenkins().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -502,19 +577,19 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
-
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_machine_learning_with_python().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
-
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_deep_learning_with_tensorflow().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
-
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -546,26 +621,31 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_labview().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_jira().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 3:
                     header.sub_course_qa_methodologies().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 4:
                     header.sub_course_java_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -597,26 +677,31 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_lpic_2().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_linux_fundamentals().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 3:
                     header.sub_course_lpic_1().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 4:
                     header.sub_course_networking().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -648,26 +733,31 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_c_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_javascript_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 3:
                     header.sub_course_python_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 4:
                     header.sub_course_c_plus_plus_language().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -696,11 +786,13 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_microsoft_azure().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
 
                 index += 1
             run = False
@@ -734,31 +826,37 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_open_cv().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 2:
                     header.sub_course_cuda().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 3:
                     header.sub_course_machine_learning_with_python().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 4:
                     header.sub_course_deep_learning_with_tensorflow().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 5:
                     header.sub_course_nvidia_gpus().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 index += 1
             run = False
 
@@ -787,11 +885,13 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
                 if index == 1:
                     header.sub_course_mongodb().click()
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    # self.form_under_syllabus()
 
                 index += 1
             run = False
@@ -802,15 +902,15 @@ class CoursePageTest(unittest.TestCase):
 
     def test_run_maslulim(self):
         self.course_real_time()
-        self.course_web_development()
-        self.course_cyber()
-        self.course_devops()
-        self.course_data_science()
-        self.course_software_testing()
-        self.course_network_and_sysadmin()
-        self.course_programming_language()
-        self.course_cloud_composing()
-        self.course_image_processing()
-        self.course_database_management()
+        # self.course_web_development()
+        # self.course_cyber()
+        # self.course_devops()
+        # self.course_data_science()
+        # self.course_software_testing()
+        # self.course_network_and_sysadmin()
+        # self.course_programming_language()
+        # self.course_cloud_composing()
+        # self.course_image_processing()
+        # self.course_database_management()
 
 
