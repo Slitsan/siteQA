@@ -901,7 +901,7 @@ class CoursePageTest(unittest.TestCase):
     # ----------------------------------------------------TEST----------------------------------------------------
 
     def test_run_maslulim(self):
-        self.course_real_time()
+        # self.course_real_time()
         # self.course_web_development()
         # self.course_cyber()
         # self.course_devops()
@@ -911,6 +911,6 @@ class CoursePageTest(unittest.TestCase):
         # self.course_programming_language()
         # self.course_cloud_composing()
         # self.course_image_processing()
-        # self.course_database_management()
+        self.course_database_management()
 
 

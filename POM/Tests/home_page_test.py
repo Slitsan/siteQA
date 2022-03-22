@@ -54,7 +54,7 @@ class HomePageTest(unittest.TestCase):
         except FileNotFoundError:
             print("Did not found a file")
 
-    # ---------------------------------POPUP TEST-----------------------------------------
+    # ---------------------------------POPUP METHODS-----------------------------------------
     def popup_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                    choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_form="yes"):
         self.string_message("---Inside popup_form function---\n")
@@ -164,7 +164,7 @@ class HomePageTest(unittest.TestCase):
     # self.click_on_send_button_in_popup()
     # self.close_popup()
 
-    # -----------------------------------------MAIN FORM TEST---------------------------------------
+    # -----------------------------------------MAIN FORM METHODS---------------------------------------
     def main_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                   choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
         self.string_message("---Inside main_form function---\n")
@@ -265,7 +265,7 @@ class HomePageTest(unittest.TestCase):
     #     self.tick_terms_and_services_button_in_main_form()
     # self.click_on_send_button_in_main_form()
 
-    # -----------------------------------FLOATING FORM TEST-------------------------------
+    # -----------------------------------FLOATING FORM METHODS-------------------------------
     # def hover_on_floating_menu(self):
     #     print("---Inside click_on_floating_menu function...---")
     #     home_page = HomePage(self.driver)
