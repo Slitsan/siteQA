@@ -21,8 +21,8 @@ class CoursePageTest(unittest.TestCase):
                                                  'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
         cls.driver.maximize_window()
         cls.driver.delete_all_cookies()
-        cls.driver.implicitly_wait(5)
-        cls.driver.set_page_load_timeout(10)
+        cls.driver.implicitly_wait(20)
+        cls.driver.set_page_load_timeout(30)
         cls.driver.get('https://rt-ed.co.il/')
         now = datetime.now()
         cls.date_for_log = now.strftime("%d %m %Y")
@@ -169,6 +169,13 @@ class CoursePageTest(unittest.TestCase):
             course_page.close_button_after_filling_details_in_form_under_syllabus().click()
         self.string_message("@\nOutside form_under_syllabus function\n")
 
+    # Checks if the salary div block is presented
+    def checks_if_salary_block_presented(self, course_page):
+        if course_page.salary_block().is_displayed():
+            self.string_message("---Salary Block is Presented---\n")
+        else:
+            self.string_message("!\nSalary Block is not Presented!")
+
     # ----------------------------------------------COURSE'S METHODS-----------------------------------------------------
     def course_real_time(self):
         self.string_message("@\nInside course_real_time function\n")
@@ -195,58 +202,81 @@ class CoursePageTest(unittest.TestCase):
                 index_of_btn = 0
                 if index == 0:
                     header.sub_course_rt_concepts().click()
+                    self.string_message(f"---Inside sub course {header.sub_course_rt_concepts().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
-
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 1:
                     header.sub_course_c_language().click()
+                    self.string_message(f"---Inside sub course {header.sub_course_c_language().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 2:
                     header.sub_course_linux_kernel_and_device_drivers().click()
+                    self.string_message(f"---Inside sub course {header.sub_course_linux_kernel_and_device_drivers().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 3:
                     header.sub_course_arm_embedded_systems().click()
+                    self.string_message(
+                        f"---Inside sub course {header.sub_course_arm_embedded_systems().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 4:
                     header.sub_course_internet_of_things().click()
+                    self.string_message(
+                        f"---Inside sub course {header.sub_course_internet_of_things().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 5:
                     header.sub_course_free_rtos().click()
+                    self.string_message(
+                        f"---Inside sub course {header.sub_course_free_rtos().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 6:
                     header.sub_course_c_plus_plus_language().click()
+                    self.string_message(
+                        f"---Inside sub course {header.sub_course_c_plus_plus_language().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 7:
                     header.sub_course_yocto_programming().click()
+                    self.string_message(
+                        f"---Inside sub course {header.sub_course_yocto_programming().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 elif index == 8:
                     header.sub_course_linux_embedded().click()
+                    self.string_message(
+                        f"---Inside sub course {header.sub_course_linux_embedded().text}---\n")
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+                    self.checks_if_salary_block_presented(course_page)
                     # self.form_under_syllabus()
                 index += 1
             run = False
@@ -903,15 +933,15 @@ class CoursePageTest(unittest.TestCase):
 
     def test_run_maslulim(self):
         self.course_real_time()
-        self.course_web_development()
-        self.course_cyber()
-        self.course_devops()
-        self.course_data_science()
-        self.course_software_testing()
-        self.course_network_and_sysadmin()
-        self.course_programming_language()
-        self.course_cloud_composing()
-        self.course_image_processing()
-        self.course_database_management()
+        # self.course_web_development()
+        # self.course_cyber()
+        # self.course_devops()
+        # self.course_data_science()
+        # self.course_software_testing()
+        # self.course_network_and_sysadmin()
+        # self.course_programming_language()
+        # self.course_cloud_composing()
+        # self.course_image_processing()
+        # self.course_database_management()
 
 
