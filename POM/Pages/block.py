@@ -36,6 +36,11 @@ class Block:
         self.send_button_in_form_under_syllabus_by_xpath = "//*[@class='pr-3 bluee-color'] /descendant::button"
         self.close_button_after_filling_details_in_form_under_syllabus_by_xpath = "//*[@class='pr-3 bluee-color'] /descendant::span"
 
+        # -------------------------------------------DIV BLOCKS---------------------------------------
+        self.salary_block_by_xpath = "//*[@id='salary-selector-target']"
+        self.faq_block_by_xpath = "//*[@id='faq-selector']"
+        self.list_of_div_blocks_in_faq_by_xpath = "//*[@id='faq_accordion'] //div[@class='card-header']/span"
+
     # ----------------------------------------FORM AFTER CLICKING ON SYLLABUS METHODS--------------------------------------
     def form_after_clicking_on_syllabus(self):
         return self.driver.find_element(By.XPATH, self.form_after_clicking_on_syllabus_by_xpath)
@@ -110,3 +115,13 @@ class Block:
 
     def close_button_after_filling_details_in_form_under_syllabus(self):
         return self.driver.find_element(By.XPATH, self.close_button_after_filling_details_in_form_under_syllabus_by_xpath)
+
+    # -------------------------------------------DIV BLOCKS METHODS---------------------------------------
+    def salary_block(self):
+        return self.driver.find_element(By.XPATH, self.salary_block_by_xpath)
+
+    def faq_block(self):
+        return self.driver.find_element(By.XPATH, self.faq_block_by_xpath)
+
+    def list_of_div_blocks_in_faq(self):
+        return self.driver.find_elements(By.XPATH, self.list_of_div_blocks_in_faq_by_xpath)

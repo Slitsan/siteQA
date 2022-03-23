@@ -198,6 +198,7 @@ class CoursePageTest(unittest.TestCase):
                     course_page.download_syllabus().click()
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
+
                     # self.form_under_syllabus()
                 elif index == 1:
                     header.sub_course_c_language().click()
@@ -901,16 +902,16 @@ class CoursePageTest(unittest.TestCase):
     # ----------------------------------------------------TEST----------------------------------------------------
 
     def test_run_maslulim(self):
-        # self.course_real_time()
-        # self.course_web_development()
-        # self.course_cyber()
-        # self.course_devops()
-        # self.course_data_science()
-        # self.course_software_testing()
-        # self.course_network_and_sysadmin()
-        # self.course_programming_language()
-        # self.course_cloud_composing()
-        # self.course_image_processing()
+        self.course_real_time()
+        self.course_web_development()
+        self.course_cyber()
+        self.course_devops()
+        self.course_data_science()
+        self.course_software_testing()
+        self.course_network_and_sysadmin()
+        self.course_programming_language()
+        self.course_cloud_composing()
+        self.course_image_processing()
         self.course_database_management()
 
 

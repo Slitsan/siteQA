@@ -16,7 +16,6 @@ from datetime import datetime
 # --------------------------------------------
 from POM.Pages.maslul_page import MaslulPage
 
-
 class MaslulPageTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -664,10 +663,10 @@ class MaslulPageTest(unittest.TestCase):
 
     def test_run_maslulim(self):
         self.maslul_real_time()
-        self.maslul_full_stack()
-        self.maslul_cyber()
-        self.maslul_machine_learning()
-        self.maslul_qa()
-        self.maslul_dev_ops()
+        # self.maslul_full_stack()
+        # self.maslul_cyber()
+        # self.maslul_machine_learning()
+        # self.maslul_qa()
+        # self.maslul_dev_ops()
         self.maslul_linux_servers()
-
+        self.open_file_and_append_string_message()

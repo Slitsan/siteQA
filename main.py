@@ -6,7 +6,12 @@
 
 # -------------   main   -----------------------------------------------------
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    pass
-
+file = open("./Source/src.html", "r")
+for line in file.readlines():
+    if "maslulim_by_xpath" in line:
+        print(line)
+        striped_line = line.strip("<div class=\"header\" id=\"maslulim_by_xpath\">").split("<")
+        print(striped_line)
+        line = str(striped_line[0])
+        print(line)
+file.close()

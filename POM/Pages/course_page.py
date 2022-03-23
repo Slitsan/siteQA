@@ -45,7 +45,7 @@ class CoursePage(Block):
     def articles_button_in_nav_bar(self):
         return self.driver.find_element(By.XPATH, self.articles_button_by_xpath)
 
-    # -------------------------------------NAVIGATION BLOCK-------------------------------------
+    # -------------------------------------NAVIGATION BLOCK METHODS-------------------------------------
     def about_block(self):
         return self.driver.find_element(By.XPATH, self.about_block_by_xpath)
 

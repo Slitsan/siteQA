@@ -8,27 +8,20 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support.relative_locator import locate_with
 
-<<<<<<< HEAD
 
 class Header:
 
     def __init__(self, drive: WebDriver):
-        self.list_of_five_buttons = None
-=======
-
-class Header():
-
-    def __init__(self, drive: WebDriver):
->>>>>>> 24409909d7273d340d14d4acd9e8e7eb66cc4ed9
         self.driver = drive
+        self.list_of_five_buttons = None
 
         self.popUp_close_xpath = '//*[@id="lead-form-modal1"]/span'
         self.studentPortal_id = 'student-portal'
         self.search_textbox_id = 'nav-search-string'
         self.search_btn_class = 'btn btn-outline-light order-2 my-2 my-sm-0 col-3'
 
-        self.maslulim_byTXT = 'מסלולים'
-        self.courses_byTXT = 'קורסים'
+        self.maslulim_by_xpath = "//*[@id='primar-menu']/li[@class='nav-item dropdown ml-2'][2]"
+        self.courses_by_xpath = "//*[@id='primar-menu']/li[@class='nav-item dropdown ml-2'][1]"
         self.courses_for_companies_by_txt = "קורסים לחברות"
         self.articles_by_txt = "מאמרים"
         self.about_us_by_txt = "אודות"
@@ -130,20 +123,17 @@ class Header():
         self.sub_course_cuda_by_txt = "CUDA"
         self.sub_course_nvidia_gpus_by_txt = "Nvidia GPUs"
 
-<<<<<<< HEAD
     def get_title(self) -> str:
         return self.driver.title
 
     def maslul(self):
-        return self.driver.find_element(By.LINK_TEXT, self.maslulim_byTXT)
-=======
-    def goToMaslul(self, name):
-        self.driver.find_element(By.LINK_TEXT, self.maslulim_byTXT).click()
->>>>>>> 24409909d7273d340d14d4acd9e8e7eb66cc4ed9
+        return self.driver.find_element(By.XPATH, self.maslulim_by_xpath)
 
-    def goToStudentPortal(self) -> str:
+    # def goToMaslul(self, name):
+    #     self.driver.find_element(By.XPATH, self.maslulim_by_xpath).click()
+
+    def goToStudentPortal(self):
         self.driver.find_element(By.ID, self.studentPortal_id).click()
-<<<<<<< HEAD
         return self.driver
 
     def courses_for_companies(self):
@@ -446,7 +436,5 @@ class Header():
 
     # def get_category_maslulim_list(self) -> list:
     #     return self.driver.find_elements(By.CLASS_NAME, self.maslulim_by_categories_by_class)
-=======
-        self.driver.get('https://rt-crm.com/portal/#/login')
-        return self.driver.title
->>>>>>> 24409909d7273d340d14d4acd9e8e7eb66cc4ed9
+    #     self.driver.get('https://rt-crm.com/portal/#/login')
+    #     return self.driver.title

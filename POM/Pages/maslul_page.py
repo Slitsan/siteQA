@@ -16,7 +16,7 @@ class MaslulPage(Block):
         self.graduate_diploma_by_xpath = "//*[@id=\"nav-secondary-4\"]/a"
         self.questions_and_answers_by_xpath = "//*[@id=\"nav-secondary-5\"]/a"
 
-        #-----------------------------NAVIGATION BLOCK-----------------------------------------
+        # -----------------------------NAVIGATION BLOCK-----------------------------------------
         self.about_block_by_xpath = "//*[@id='about-collage-article']"
         self.structure_of_maslul_block_by_xpath = "//*[@id='single-courses']"
         self.target_audience_and_prior_requirements_block_by_xpath = "//*[@id='target-audience']"
@@ -26,9 +26,6 @@ class MaslulPage(Block):
 
         # -------------------------------DIPLOMA IMG--------------------------------------------
         self.diploma_image_by_xpath = "//*[@id=\"certifiact-selector-target\"] /descendant::img"
-
-        #--------------------------------FAQ DIV BLOCKS-----------------------------------------
-        self.list_of_div_blocks_in_faq_by_xpath = "//*[@id='faq_accordion'] //div[@class='card-header']/span"
 
     # -------------------------------------NAVIGATION BUTTONS METHODS--------------------------------
     def list_of_buttons_in_navigation(self):
@@ -74,7 +71,3 @@ class MaslulPage(Block):
     # -------------------------------DIPLOMA IMG METHODS--------------------------------------------
     def diploma_image(self):
         return self.driver.find_element(By.XPATH, self.diploma_image_by_xpath)
-
-    # --------------------------------FAQ DIV BLOCKS METHODS-----------------------------------------
-    def list_of_div_blocks_in_faq(self):
-        return self.driver.find_elements(By.XPATH, self.list_of_div_blocks_in_faq_by_xpath)

@@ -32,7 +32,6 @@ class HeaderTest(unittest.TestCase):
         cls.driver.implicitly_wait(20)
         cls.driver.set_page_load_timeout(30)
         cls.driver.get('https://rt-ed.co.il/')
-<<<<<<< HEAD
         now = datetime.now()
         cls.date_for_log = now.strftime("%d %m %Y")
         cls.string_result = "-----------------------------------TESTING HEADER-----------------------------------------------\n"
@@ -936,23 +935,20 @@ class HeaderTest(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-=======
-        time.sleep(17)
-        cls.driver.find_element(By.XPATH, popUp_close_XPATH).click()
 
 
-    def test_legalEnter_studentPortal_fromHeader(self):
-        header = Header(self.driver)
-        titleStr = header.goToStudentPortal()
-        time.sleep(4)
-        print('-----  TITLE     -----' + titleStr)
-        if titleStr == studentPortalTitle:
-            stPortal = StudentPortal(self.driver)
-            stPortal.enterUserName(correctUserName)
-            stPortal.enterPassword(correctPassword)
-            stPortal.logIn()
-        else:
-            print('-----  WRONG StPortal TITle     -----')
+# def test_legalEnter_studentPortal_fromHeader(self):
+#     header = Header(self.driver)
+#     titleStr = header.goToStudentPortal()
+#     time.sleep(4)
+#     print('-----  TITLE     -----' + titleStr)
+#     if titleStr == studentPortalTitle:
+#         stPortal = StudentPortal(self.driver)
+#         stPortal.enterUserName(correctUserName)
+#         stPortal.enterPassword(correctPassword)
+#         stPortal.logIn()
+#     else:
+#         print('-----  WRONG StPortal TITle     -----')
 
 
->>>>>>> 24409909d7273d340d14d4acd9e8e7eb66cc4ed9
+
