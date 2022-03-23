@@ -174,7 +174,17 @@ class CoursePageTest(unittest.TestCase):
         if course_page.salary_block().is_displayed():
             self.string_message("---Salary Block is Presented---\n")
         else:
-            self.string_message("!\nSalary Block is not Presented!")
+            self.string_message("!\nSalary Block is not Presented!\n")
+
+    # Checks if the faq div block is presented, and clicks on each question
+    def checks_if_faq_block_presented(self, actions, course_page):
+        if course_page.faq_block().is_displayed():
+            self.string_message("---FAQ Block is Presented---\n")
+            for question in course_page.list_of_div_blocks_in_faq():
+                self.string_message(f"---Clicked on question - {question.text}---\n")
+                actions.move_to_element(question).click().perform()
+        else:
+            self.string_message("!\nFAQ Block is not Presented!\n")
 
     # ----------------------------------------------COURSE'S METHODS-----------------------------------------------------
     def course_real_time(self):
@@ -207,6 +217,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 1:
                     header.sub_course_c_language().click()
@@ -215,6 +226,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 2:
                     header.sub_course_linux_kernel_and_device_drivers().click()
@@ -223,6 +235,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 3:
                     header.sub_course_arm_embedded_systems().click()
@@ -232,6 +245,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 4:
                     header.sub_course_internet_of_things().click()
@@ -241,6 +255,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 5:
                     header.sub_course_free_rtos().click()
@@ -250,6 +265,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 6:
                     header.sub_course_c_plus_plus_language().click()
@@ -259,6 +275,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 7:
                     header.sub_course_yocto_programming().click()
@@ -268,6 +285,7 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 elif index == 8:
                     header.sub_course_linux_embedded().click()
@@ -277,11 +295,14 @@ class CoursePageTest(unittest.TestCase):
                     self.switching_tabs_and_comparing_urls(dict_of_urls, index, key)
                     index_of_btn = self.confirm_which_nav_buttons_works(actions, course_page, index_of_btn)
                     self.checks_if_salary_block_presented(course_page)
+                    self.checks_if_faq_block_presented(actions, course_page)
                     # self.form_under_syllabus()
                 index += 1
             run = False
 
         self.string_message("@\nOutside course_real_time function\n")
+
+
 
     def course_web_development(self):
         self.string_message("@\nInside course_web_development function\n")
