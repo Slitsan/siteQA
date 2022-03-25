@@ -38,6 +38,7 @@ class Block:
 
         # -------------------------------------------DIV BLOCKS---------------------------------------
         self.salary_block_by_xpath = "//*[@id='salary-selector-target']"
+        self.list_of_salary_block_by_xpath = "//*[@id='salary-selector-target'] /descendant::tbody/tr"
         self.faq_block_by_xpath = "//*[@id='faq-selector']"
         self.list_of_div_blocks_in_faq_by_xpath = "//*[@id='faq_accordion'] //div[@class='card-header']/span"
 
@@ -119,6 +120,9 @@ class Block:
     # -------------------------------------------DIV BLOCKS METHODS---------------------------------------
     def salary_block(self):
         return self.driver.find_element(By.XPATH, self.salary_block_by_xpath)
+
+    def list_of_salary_block(self):
+        return self.driver.find_elements(By.XPATH, self.list_of_salary_block_by_xpath)
 
     def faq_block(self):
         return self.driver.find_element(By.XPATH, self.faq_block_by_xpath)
