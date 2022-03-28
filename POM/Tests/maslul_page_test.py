@@ -142,11 +142,11 @@ class MaslulPageTest(unittest.TestCase):
                         if maslul_page.diploma_image().get_attribute(
                                 "src") is None:  # Checks if there is no image for the diploma
                             self.string_message("!\nNo picture for diploma\n")
-                    if btn.text == "שאלות ותשובות":  # Checks if the button equals 'שאלות ותשובות'
-                        for question in maslul_page.list_of_div_blocks_in_faq():  # Loops through the questions in the FAQ div block
-                            self.string_message(
-                                f"---Clicked on question {question.text}---\n")  # Prints each question that was clicked
-                            actions.move_to_element(question).click().perform()  # Clicks on each question
+                    # if btn.text == "שאלות ותשובות":  # Checks if the button equals 'שאלות ותשובות'
+                    #     for question in maslul_page.list_of_div_blocks_in_faq():  # Loops through the questions in the FAQ div block
+                    #         self.string_message(
+                    #             f"---Clicked on question {question.text}---\n")  # Prints each question that was clicked
+                    #         actions.move_to_element(question).click().perform()  # Clicks on each question
                     if btn_id == block_id:  # Checks if the current button id equals to the div block id
                         self.string_message("---Element Matches!---\n")
                 except ElementNotVisibleException:
@@ -192,9 +192,32 @@ class MaslulPageTest(unittest.TestCase):
             driver.switch_to.window(tabs[0])
         self.string_message("--Outside form_under_syllabus function--\n")
 
+    # Checks if the salary block in the page is presented, and if it IS. Confirms that it is not empty
+    def checks_if_salary_block_is_presented_and_if_it_has_content(self, maslul_page):
+        try:
+            if maslul_page.salary_block().is_displayed():
+                self.string_message("---Salary Block is presented---\n")
+                if maslul_page.table_list_of_salary_block() or maslul_page.list_of_p_blocks_in_salary_block():
+                    self.string_message("---There is content in Salary Block---\n")
+                else:
+                    self.string_message("!\nNo content in Salary Block\n")
+        except NoSuchElementException:
+            self.string_message("!\nElement Not Found\n")
+
+    # Checks if the FAQ block in presented on the page and if it IS. Clicks on every question
+    def checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(self, actions, maslul_page):
+        try:
+            if maslul_page.maslul_faq_block().is_displayed():
+                self.string_message("---FAQ Block is presented---\n")
+                for question in maslul_page.list_of_div_blocks_in_faq():
+                    self.string_message(f"Clicked on question -> {question.text}\n")
+                    actions.move_to_element(question).click().perform()
+        except NoSuchElementException:
+            self.string_message("!\nElement Not Found\n")
+
     # --------------------------------------MASLUL'S METHODS---------------------------------------------
     def maslul_real_time(self):
-        self.string_message("@\nInside maslul_real_time function\n")
+        self.string_message("@\nInside Maslul Real-Time function\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -210,6 +233,7 @@ class MaslulPageTest(unittest.TestCase):
             for length in range(len(header.list_of_courses_on_real_time())): # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_real_time().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_real_time()[index].text}\n")
                 header.list_of_courses_on_real_time()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -255,13 +279,15 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
                 # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_real_time function\n")
+        self.string_message("@\nOutside Maslul Real-Time function\n")
 
     def maslul_full_stack(self):
-        self.string_message("@\nInside maslul_full_stack function\n")
+        self.string_message("@\nInside Maslul Full-Stack function\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -275,6 +301,7 @@ class MaslulPageTest(unittest.TestCase):
             for length in range(len(header.list_of_courses_on_full_stack())): # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_full_stack().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_full_stack()[index].text}\n")
                 header.list_of_courses_on_full_stack()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -320,13 +347,15 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
                 # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_full_stack function\n")
+        self.string_message("@\nOutside Maslul Full-Stack function\n")
 
     def maslul_cyber(self):
-        self.string_message("@\nInside maslul_cyber function\n")
+        self.string_message("@\nInside Maslul Cyber function\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -340,6 +369,7 @@ class MaslulPageTest(unittest.TestCase):
             for length in range(len(header.list_of_courses_on_cyber())): # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_cyber().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_cyber()[index].text}\n")
                 header.list_of_courses_on_cyber()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -385,13 +415,15 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
                 # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_cyber function\n")
+        self.string_message("@\nOutside Maslul Cyber function\n")
 
     def maslul_machine_learning(self):
-        self.string_message("@\nInside maslul_machine_learning function\n")
+        self.string_message("@\nInside Maslul Machine Learning function\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -408,6 +440,7 @@ class MaslulPageTest(unittest.TestCase):
             for length in range(len(header.list_of_courses_on_machine_learning())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_machine_learning().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_machine_learning()[index].text}\n")
                 header.list_of_courses_on_machine_learning()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -453,13 +486,15 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
                 # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_machine_learning function\n")
+        self.string_message("@\nOutside Maslul Machine Learning function\n")
 
     def maslul_qa(self):
-        self.string_message("@\nInside maslul_qa function\n")
+        self.string_message("@\nInside Maslul QA function\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -477,6 +512,7 @@ class MaslulPageTest(unittest.TestCase):
                     len(header.list_of_courses_on_qa())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_qa().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_qa()[index].text}\n")
                 header.list_of_courses_on_qa()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -522,13 +558,15 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
                 # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_qa function\n")
+        self.string_message("@\nOutside Maslul QA function\n")
 
     def maslul_dev_ops(self):
-        self.string_message("@\nInside maslul_dev_ops function\n")
+        self.string_message("@\nInside Maslul DevOps function\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -543,6 +581,7 @@ class MaslulPageTest(unittest.TestCase):
                     len(header.list_of_courses_on_dev_ops())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_dev_ops().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_dev_ops()[index].text}\n")
                 header.list_of_courses_on_dev_ops()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -588,13 +627,15 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
                 # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_dev_ops function\n")
+        self.string_message("@\nOutside Maslul DevOps function\n")
 
     def maslul_linux_servers(self):
-        self.string_message("-----Inside maslul_linux_servers function-----\n")
+        self.string_message("@\nInside Maslul Linux Servers function-----\n")
         header = Header(self.driver)
         maslul_page = MaslulPage(self.driver)
         actions = ActionChains(self.driver)
@@ -609,6 +650,7 @@ class MaslulPageTest(unittest.TestCase):
                     len(header.list_of_courses_on_linux_servers())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_linux_servers().click()
+                self.string_message(f"@@\nInside course {header.list_of_courses_on_linux_servers()[index].text}\n")
                 header.list_of_courses_on_linux_servers()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
@@ -654,19 +696,21 @@ class MaslulPageTest(unittest.TestCase):
                         index_of_dict += 1
                         maslul_page.close_button_of_form_after_syllabus().click()
                 self.click_on_each_nav_button_and_verifies_the_block(actions, index_of_btn, maslul_page)
-                self.form_under_syllabus(self.driver)
+                self.checks_if_salary_block_is_presented_and_if_it_has_content(maslul_page)
+                self.checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(actions, maslul_page)
+                # self.form_under_syllabus(self.driver)
                 index += 1
             running = False
-        self.string_message("@\nOutside maslul_linux_servers function\n")
+        self.string_message("@\nOutside Maslul Linux Servers function\n")
 
     # ----------------------------------------------------TEST------------------------------------------
 
     def test_run_maslulim(self):
-        self.maslul_real_time()
+        # self.maslul_real_time()
         # self.maslul_full_stack()
-        # self.maslul_cyber()
+        self.maslul_cyber()
         # self.maslul_machine_learning()
         # self.maslul_qa()
         # self.maslul_dev_ops()
-        self.maslul_linux_servers()
-        self.open_file_and_append_string_message()
+        # self.maslul_linux_servers()
+        # self.open_file_and_append_string_message()

@@ -27,6 +27,10 @@ class MaslulPage(Block):
         # -------------------------------DIPLOMA IMG--------------------------------------------
         self.diploma_image_by_xpath = "//*[@id=\"certifiact-selector-target\"] /descendant::img"
 
+        # ---------------------------------FAQ BLOCK------------------------------------------
+        self.maslul_faq_block_by_xpath = "//*[@id='faq-selectsor-target']"
+        self.maslul_list_of_faq_by_xpath = "//*[@id='faq-selectsor-target'] /descendant::div[@class='card mb-1']"
+
     # -------------------------------------NAVIGATION BUTTONS METHODS--------------------------------
     def list_of_buttons_in_navigation(self):
         return self.driver.find_elements(By.XPATH, self.list_of_button_in_navigation_by_xpath)
@@ -71,3 +75,10 @@ class MaslulPage(Block):
     # -------------------------------DIPLOMA IMG METHODS--------------------------------------------
     def diploma_image(self):
         return self.driver.find_element(By.XPATH, self.diploma_image_by_xpath)
+
+    # ---------------------------------FAQ BLOCK METHOD-----------------------------------------
+    def maslul_faq_block(self):
+        return self.driver.find_element(By.XPATH, self.maslul_faq_block_by_xpath)
+
+    def maslul_list_of_faq(self):
+        return self.driver.find_elements(By.XPATH, self.maslul_list_of_faq_by_xpath)

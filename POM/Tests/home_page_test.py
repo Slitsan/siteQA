@@ -6,6 +6,7 @@ import time
 from datetime import datetime
 import unittest
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.keys import Keys
@@ -131,10 +132,13 @@ class HomePageTest(unittest.TestCase):
     def whatsup_in_floating_menu(self):
         self.string_message("@\nInside whatsup_in_floating_menu function\n")
         home_page = HomePage(self.driver)
-        if home_page.whatsup_link_in_floating_menu().is_displayed():
-            self.string_message("---Button 'WhatsUp' is presented---\n")
-        else:
-            self.string_message("!\nButton 'WhatsUp' is not presented\n")
+        try:
+            if home_page.whatsup_link_in_floating_menu().is_displayed():
+                self.string_message("---Button 'WhatsUp' is presented---\n")
+            else:
+                self.string_message("!\nButton 'WhatsUp' is not presented\n")
+        except NoSuchElementException:
+            self.string_message("!\nElement not found\n")
         self.string_message("@\nOutside whatsup_in_floating_menu function\n")
 
     def floating_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
@@ -173,10 +177,13 @@ class HomePageTest(unittest.TestCase):
     def contact_us_in_floating_menu(self):
         self.string_message("@\nInside click_on_about_us_in_floating_menu function---\n")
         home_page = HomePage(self.driver)
-        if home_page.about_us_in_floating_menu().is_displayed():
-            self.string_message("---Button 'Contact Us' is presented---\n")
-        else:
-            self.string_message("!\nButton 'Contact Us' is not presented\n")
+        try:
+            if home_page.about_us_in_floating_menu().is_displayed():
+                self.string_message("---Button 'Contact Us' is presented---\n")
+            else:
+                self.string_message("!\nButton 'Contact Us' is not presented\n")
+        except NoSuchElementException:
+            self.string_message("!\nElement not found\n")
         self.string_message("@\nOutside click_on_about_us_in_floating_menu function---\n")
 
     # ----------------------------------TRAINING TEST-------------------------------------
