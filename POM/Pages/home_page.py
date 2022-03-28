@@ -55,6 +55,10 @@ class HomePage:
         self.list_of_courses_on_bootcamp_qa_on_home_page_by_xpath = "//*[@id='all-paths-item-2'] /descendant::div/a[@class='text-dark']"
         self.list_of_courses_on_bootcamp_cyber_security_on_home_page_by_xpath = "//*[@id='all-paths-item-3'] /descendant::div/a[@class='text-dark']"
         self.list_of_courses_on_bootcamp_machine_learning_on_home_page_by_xpath = "//*[@id='all-paths-item-4'] /descendant::div/a[@class='text-dark']"
+        # -------------------------------------DEPARTMENT BUTTONS ------------------------------------------------------
+        self.development_apartment_by_xpath = "//*[local-name()='svg' and @class='mx-auto'] //*[local-name()='a'][1]"
+        self.teaching_apartment_by_xpath = "//*[local-name()='svg' and @class='mx-auto'] //*[local-name()='a'][2]"
+        self.hr_apartment_by_xpath = "//*[local-name()='svg' and @class='mx-auto'] //*[local-name()='a'][3]"
 
     # --------------------------------POPUP METHODS---------------------------------------------------
     def popup_form(self):
@@ -175,7 +179,6 @@ class HomePage:
         return self.driver.find_element(By.XPATH, self.machine_learning_on_home_page_by_xpath)
 
     # ------------------------------------LIST OF COURSES ON MASLULIM ON HOME PAGE METHOD--------------------------------
-
     def list_of_courses_on_bootcamp_real_time_on_home_page(self):
         return self.driver.find_elements(By.XPATH, self.list_of_courses_on_bootcamp_real_time_on_home_page_by_xpath)
 
@@ -190,3 +193,13 @@ class HomePage:
 
     def list_of_courses_on_bootcamp_machine_learning_on_home_page(self):
         return self.driver.find_elements(By.XPATH, self.list_of_courses_on_bootcamp_machine_learning_on_home_page_by_xpath)
+
+    # -------------------------------------DEPARTMENT BUTTONS METHODS------------------------------------------------------
+    def development_apartment(self):
+        return self.driver.find_element(By.XPATH, self.development_apartment_by_xpath)
+
+    def teaching_apartment(self):
+        return self.driver.find_element(By.XPATH, self.teaching_apartment_by_xpath)
+
+    def hr_apartment(self):
+        return self.driver.find_element(By.XPATH, self.hr_apartment_by_xpath)

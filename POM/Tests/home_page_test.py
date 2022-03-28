@@ -57,7 +57,7 @@ class HomePageTest(unittest.TestCase):
     # ---------------------------------POPUP METHODS-----------------------------------------
     def popup_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                    choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_form="yes"):
-        self.string_message("---Inside popup_form function---\n")
+        self.string_message("@\nInside popup_form function\n")
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
         home_page = HomePage(self.driver)
@@ -84,7 +84,7 @@ class HomePageTest(unittest.TestCase):
         if close_form == "yes":
             self.string_message("---Closing the popup form---\n")
             home_page.close_button_in_popup_form().click()
-        self.string_message("---Outside popup_form function---\n")
+        self.string_message("@\nOutside popup_form function\n")
 
     def send_keys_to_last_name_field_in_popup(self):
         print("---Inside send_keys_to_last_name_field_in_popup function---")
@@ -167,7 +167,7 @@ class HomePageTest(unittest.TestCase):
     # -----------------------------------------MAIN FORM METHODS---------------------------------------
     def main_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                   choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
-        self.string_message("---Inside main_form function---\n")
+        self.string_message("@\nInside main_form function\n")
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
         home_page = HomePage(self.driver)
@@ -194,7 +194,7 @@ class HomePageTest(unittest.TestCase):
         if close_button == "yes":
             self.string_message("---Clicking on the close button---\n")
             home_page.close_button_after_filling_the_main_form().click()
-        self.string_message("---Outside main_form function---\n")
+        self.string_message("@\nOutside main_form function\n")
 
     def send_keys_to_last_name_field_in_main_form(self):
         print("---Inside send_keys_to_last_name_field_in_main_form function---")
@@ -276,7 +276,7 @@ class HomePageTest(unittest.TestCase):
 
     def floating_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                   choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
-        self.string_message("---Inside floating_form function---\n")
+        self.string_message("@\nInside floating_form function\n")
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
         home_page = HomePage(self.driver)
@@ -305,8 +305,7 @@ class HomePageTest(unittest.TestCase):
         # if close_button == "yes":
         #     self.string_message("---Clicking on the close button---\n")
         #     home_page.close_button_after_filling_the_main_form().click()
-        self.string_message("---Outside floating_form function---\n")
-
+        self.string_message("@\nOutside floating_form function\n")
 
     def click_on_form_in_floating_menu(self):
         print("---Inside click_on_form_in_floating_menu function...---")
