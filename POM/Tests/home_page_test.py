@@ -39,7 +39,7 @@ class HomePageTest(unittest.TestCase):
             self.string_message("---The page is correct---\n")
             return True
         else:
-            self.string_message("---Not the right page---\n")
+            self.string_message("!\nNot the right page---\n")
             return False
 
     def string_message(self, message):
@@ -86,83 +86,9 @@ class HomePageTest(unittest.TestCase):
             home_page.close_button_in_popup_form().click()
         self.string_message("@\nOutside popup_form function\n")
 
-    def send_keys_to_last_name_field_in_popup(self):
-        print("---Inside send_keys_to_last_name_field_in_popup function---")
-        self.string_result += "---Inside send_keys_to_last_name_field_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.last_name_field_in_form_popup().send_keys(self.test_user_last_name)
-        print("---Outside send_keys_to_last_name_field_in_popup function---")
-        self.string_result += "---Outside send_keys_to_last_name_field_in_popup function---\n"
-
-    def send_keys_to_first_name_field_in_popup(self):
-        print("---Inside send_keys_to_first_name_field_in_popup function---")
-        self.string_result += "---Inside send_keys_to_first_name_field_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.first_name_field_in_form_popup().send_keys(self.test_user_first_name)
-        print("---Outside send_keys_to_first_name_field_in_popup function---")
-        self.string_result += "---Outside send_keys_to_first_name_field_in_popup function---\n"
-
-    def send_keys_to_mail_field_in_popup(self):
-        print("---Inside send_keys_to_mail_field_in_popup function---")
-        self.string_result += "---Inside send_keys_to_mail_field_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.email_field_in_form_popup().send_keys(self.test_user_mail)
-        print("---Outside send_keys_to_mail_field_in_popup function---")
-        self.string_result += "---Outside send_keys_to_mail_field_in_popup function---\n"
-
-    def send_keys_to_phone_number_field_in_popup(self):
-        print("---Inside send_keys_to_phone_number_field_in_popup function---")
-        self.string_result += "---Inside send_keys_to_phone_number_field_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.phone_field_in_form_popup().send_keys(self.test_user_phone_number)
-        print("---Outside send_keys_to_phone_number_field_in_popup function---")
-        self.string_result += "---Outside send_keys_to_phone_number_field_in_popup function---\n"
-
-    def choose_maslul_real_time_in_popup(self):
-        print("---Inside choose_maslul_real_time_in_popup function---")
-        self.string_result += "---Inside choose_maslul_real_time_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.choose_maslul_in_form_popup().click()
-        home_page.choose_maslul_real_time_in_form_popup().click()
-        print("---Outside choose_maslul_real_time_in_popup function---")
-        self.string_result += "---Outside choose_maslul_real_time_in_popup function---\n"
-
-    def tick_terms_and_services_button_in_popup(self):
-        print("---Inside tick_terms_and_services_button_in_popup function---")
-        self.string_result += "---Inside tick_terms_and_services_button_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.terms_of_agreement_field_in_form_popup().click()
-        print("---Outside tick_terms_and_services_button_in_popup function---")
-        self.string_result += "---Outside tick_terms_and_services_button_in_popup function---\n"
-
-    def click_on_send_button_in_popup(self):
-        print("---Inside click_on_send_button_in_popup function---")
-        self.string_result += "---Inside click_on_send_button_in_popup function---\n"
-        home_page = HomePage(self.driver)
-        home_page.send_button_in_form_popup().click()
-        print("---Outside click_on_send_button_in_popup function---")
-        self.string_result += "---Outside click_on_send_button_in_popup function---\n"
-
-    def close_popup(self):
-        print("---Inside wait_for_popup function---")
-        self.string_result += "---Inside wait_for_popup function---\n"
-        home_page = HomePage(self.driver)
-        time.sleep(12)
-        home_page.close_button_in_popup_form().click()
-        print("---Outside wait_for_popup function---")
-        self.string_result += "---Outside wait_for_popup function---\n"
-
     # def test_popup_form(self):
     # self.popup_form()
     # self.open_file_and_append_string_message()
-    # self.send_keys_to_last_name_field_in_popup()
-    # self.send_keys_to_first_name_field_in_popup()
-    # self.send_keys_to_mail_field_in_popup()
-    # self.send_keys_to_phone_number_field_in_popup()
-    # self.choose_maslul_real_time_in_popup()
-    # self.tick_terms_and_services_button_in_popup()
-    # self.click_on_send_button_in_popup()
-    # self.close_popup()
 
     # -----------------------------------------MAIN FORM METHODS---------------------------------------
     def main_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
@@ -196,83 +122,20 @@ class HomePageTest(unittest.TestCase):
             home_page.close_button_after_filling_the_main_form().click()
         self.string_message("@\nOutside main_form function\n")
 
-    def send_keys_to_last_name_field_in_main_form(self):
-        print("---Inside send_keys_to_last_name_field_in_main_form function---")
-        self.string_result += "---Inside send_keys_to_last_name_field_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.last_name_field_in_main_form().send_keys(self.test_user_last_name)
-        print("---Outside send_keys_to_last_name_field_in_main_form function---")
-        self.string_result += "---Outside send_keys_to_last_name_field_in_main_form function---\n"
-
-    def send_keys_to_first_name_field_in_main_form(self):
-        print("---Inside send_keys_to_first_name_field_in_main_form function---")
-        self.string_result += "---Inside send_keys_to_first_name_field_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.first_name_field_in_main_form().send_keys(self.test_user_first_name)
-        print("---Outside send_keys_to_first_name_field_in_main_form function---")
-        self.string_result += "---Outside send_keys_to_first_name_field_in_main_form function---\n"
-
-    def send_keys_to_mail_field_in_main_form(self):
-        print("---Inside send_keys_to_mail_field_in_main_form function---")
-        self.string_result += "---Inside send_keys_to_mail_field_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.email_field_in_main_form().send_keys(self.test_user_mail)
-        print("---Outside send_keys_to_mail_field_in_main_form function---")
-        self.string_result += "---Outside send_keys_to_mail_field_in_main_form function---\n"
-
-    def send_keys_to_phone_number_field_in_main_form(self):
-        print("---Inside send_keys_to_phone_number_field_in_main_form function---")
-        self.string_result += "---Inside send_keys_to_phone_number_field_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.phone_number_field_in_main_form().send_keys(self.test_user_phone_number)
-        print("---Outside send_keys_to_phone_number_field_in_main_form function---")
-        self.string_result += "---Outside send_keys_to_phone_number_field_in_main_form function---\n"
-
-    def choose_maslul_real_time_in_main_form(self):
-        print("---Inside choose_maslul_real_time_in_main_form function---")
-        self.string_result += "---Inside choose_maslul_real_time_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.choose_maslul_in_main_form().click()
-        home_page.choose_maslul_real_time_in_main_form().click()
-        print("---Outside choose_maslul_real_time_in_main_form function---")
-        self.string_result += "---Outside choose_maslul_real_time_in_main_form function---\n"
-
-    def tick_terms_and_services_button_in_main_form(self):
-        print("---Inside tick_terms_and_services_button_in_main_form function---")
-        self.string_result += "---Inside tick_terms_and_services_button_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.terms_of_agreement_field_in_main_form().click()
-        print("---Outside tick_terms_and_services_button_in_main_form function---")
-        self.string_result += "---Outside tick_terms_and_services_button_in_main_form function---\n"
-
-    def click_on_send_button_in_main_form(self):
-        print("---Inside click_on_send_button_in_main_form function---")
-        self.string_result += "---Inside click_on_send_button_in_main_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.send_button_in_main_form().click()
-        print("---Outside click_on_send_button_in_main_form function---")
-        self.string_result += "---Outside click_on_send_button_in_main_form function---\n"
-
     # def test_main_form(self):
     #     self.close_popup()
     #     self.main_form()
     #     self.open_file_and_append_string_message()
-    #     self.send_keys_to_last_name_field_in_main_form()
-    #     self.send_keys_to_first_name_field_in_main_form()
-    #     self.send_keys_to_mail_field_in_main_form()
-    #     self.send_keys_to_phone_number_field_in_main_form()
-    #     self.choose_maslul_real_time_in_main_form()
-    #     self.tick_terms_and_services_button_in_main_form()
-    # self.click_on_send_button_in_main_form()
 
-    # -----------------------------------FLOATING FORM METHODS-------------------------------
-    # def hover_on_floating_menu(self):
-    #     print("---Inside click_on_floating_menu function...---")
-    #     home_page = HomePage(self.driver)
-    #     actions = ActionChains(self.driver)
-    #     actions.move_to_element(home_page.floating_menu()).perform()
-    #     # home_page.floating_menu().click()
-    #     print("---Outside click_on_floating_menu function...---")
+    # -----------------------------------FLOATING MENU METHODS-------------------------------
+    def whatsup_in_floating_menu(self):
+        self.string_message("@\nInside whatsup_in_floating_menu function\n")
+        home_page = HomePage(self.driver)
+        if home_page.whatsup_link_in_floating_menu().is_displayed():
+            self.string_message("---Button 'WhatsUp' is presented---\n")
+        else:
+            self.string_message("!\nButton 'WhatsUp' is not presented\n")
+        self.string_message("@\nOutside whatsup_in_floating_menu function\n")
 
     def floating_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                   choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
@@ -307,97 +170,14 @@ class HomePageTest(unittest.TestCase):
         #     home_page.close_button_after_filling_the_main_form().click()
         self.string_message("@\nOutside floating_form function\n")
 
-    def click_on_form_in_floating_menu(self):
-        print("---Inside click_on_form_in_floating_menu function...---")
-        self.string_result += "---Inside click_on_form_in_floating_menu function---\n"
+    def contact_us_in_floating_menu(self):
+        self.string_message("@\nInside click_on_about_us_in_floating_menu function---\n")
         home_page = HomePage(self.driver)
-        home_page.form_in_floating_menu().click()
-        print("---Outside click_on_form_in_floating_menu function...---")
-        self.string_result += "---Outside click_on_form_in_floating_menu function---\n"
-
-    def send_keys_to_last_name_field_in_floating_form(self):
-        print("---Inside send_keys_to_last_name_field_in_floating_form function---")
-        self.string_result += "---Inside send_keys_to_last_name_field_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.last_name_field_in_floating_form().send_keys(self.test_user_last_name)
-        print("---Outside send_keys_to_last_name_field_in_floating_form function---")
-        self.string_result += "---Outside send_keys_to_last_name_field_in_floating_form function---\n"
-
-    def send_keys_to_first_name_field_in_floating_form(self):
-        print("---Inside send_keys_to_first_name_field_in_floating_form function---")
-        self.string_result += "---Inside send_keys_to_first_name_field_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.first_name_field_in_floating_form().send_keys(self.test_user_first_name)
-        print("---Outside send_keys_to_first_name_field_in_floating_form function---")
-        self.string_result += "---Outside send_keys_to_first_name_field_in_floating_form function---\n"
-
-    def send_keys_to_mail_field_in_floating_form(self):
-        print("---Inside send_keys_to_mail_field_in_floating_form function---")
-        self.string_result += "---Inside send_keys_to_mail_field_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.email_field_in_floating_form().send_keys(self.test_user_mail)
-        print("---Outside send_keys_to_mail_field_in_floating_form function---")
-        self.string_result += "---Outside send_keys_to_mail_field_in_floating_form function---\n"
-
-    def send_keys_to_phone_number_field_in_floating_form(self):
-        print("---Inside send_keys_to_phone_number_field_in_floating_form function---")
-        self.string_result += "---Inside send_keys_to_phone_number_field_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.phone_number_field_in_floating_form().send_keys(self.test_user_phone_number)
-        print("---Outside send_keys_to_phone_number_field_in_floating_form function---")
-        self.string_result += "---Outside send_keys_to_phone_number_field_in_floating_form function---\n"
-
-    def choose_maslul_real_time_in_floating_form(self):
-        print("---Inside choose_maslul_real_time_in_floating_form function---")
-        self.string_result += "---Inside choose_maslul_real_time_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.choose_maslul_in_floating_form().click()
-        home_page.choose_maslul_real_time_in_floating_form().click()
-        print("---Outside choose_maslul_real_time_in_floating_form function---")
-        self.string_result += "---Outside choose_maslul_real_time_in_floating_form function---\n"
-
-    def tick_terms_and_services_button_in_floating_form(self):
-        print("---Inside tick_terms_and_services_button_in_floating_form function---")
-        self.string_result += "---Inside tick_terms_and_services_button_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.terms_of_agreement_field_in_floating_form().click()
-        print("---Outside tick_terms_and_services_button_in_floating_form function---")
-        self.string_result += "---Outside tick_terms_and_services_button_in_floating_form function---\n"
-
-    def click_on_send_button_in_floating_form(self):
-        print("---Inside click_on_send_button_in_floating_form function---")
-        self.string_result += "---Inside click_on_send_button_in_floating_form function---\n"
-        home_page = HomePage(self.driver)
-        home_page.send_button_in_floating_form().click()
-        print("---Outside click_on_send_button_in_floating_form function---")
-        self.string_result += "---Outside click_on_send_button_in_floating_form function---\n"
-
-    # def test_floating_menu(self):
-    #     self.close_popup()
-    #     self.floating_form()
-    #     self.open_file_and_append_string_message()
-    #     # self.hover_on_floating_menu()
-    #     self.click_on_form_in_floating_menu()
-    #     self.send_keys_to_last_name_field_in_floating_form()
-    #     self.send_keys_to_first_name_field_in_floating_form()
-    #     self.send_keys_to_mail_field_in_floating_form()
-    #     self.send_keys_to_phone_number_field_in_floating_form()
-    #     self.choose_maslul_real_time_in_floating_form()
-    #     self.tick_terms_and_services_button_in_floating_form()
-    # self.click_on_send_button_in_floating_form()
-
-    # -----------------------------------FLOATING ABOUT US TEST----------------------------
-
-    def click_on_about_us_in_floating_menu(self):
-        self.string_message("---Inside click_on_about_us_in_floating_menu function---\n")
-        home_page = HomePage(self.driver)
-        home_page.about_us_in_floating_menu().click()
-        self.string_message("---Outside click_on_about_us_in_floating_menu function---\n")
-
-    # def test_floating_about_us(self):
-        # self.hover_on_floating_menu()
-        # self.click_on_about_us_in_floating_menu()
-        # self.open_file_and_append_string_message()
+        if home_page.about_us_in_floating_menu().is_displayed():
+            self.string_message("---Button 'Contact Us' is presented---\n")
+        else:
+            self.string_message("!\nButton 'Contact Us' is not presented\n")
+        self.string_message("@\nOutside click_on_about_us_in_floating_menu function---\n")
 
     # ----------------------------------TRAINING TEST-------------------------------------
     def opens_tab_and_compares_title(self, course, dict_of_titles, index):
@@ -434,7 +214,6 @@ class HomePageTest(unittest.TestCase):
         self.string_message("---Outside enter_each_training_and_compare_title function---\n")
 
     # -----------------------------------LIST OF COURSES ON HOME PAGE----------------------
-
     def enter_each_course_on_bootcamp_real_time_and_compare_title(self):
         self.string_message("---Inside enter_each_course_on_bootcamp_real_time_and_compare_title function---\n")
         home_page = HomePage(self.driver)
@@ -560,16 +339,63 @@ class HomePageTest(unittest.TestCase):
             run = False
         self.string_message("---Outside enter_each_course_on_bootcamp_machine_learning_and_compare_title function---\n")
 
-    # -------------------------------------------------TEST-------------------------------------------------------------------
+    # -------------------------------------------DEPARTMENT PAGES-------------------------------
+    def department_pages(self):
+        self.string_message("@\nInside department_pages function\n")
+        home_page = HomePage(self.driver)
+        actions = ActionChains(self.driver)
+        index_of_dict = 0
+        running = True
+        dict_of_urls = {
+            "Development Department": "https://rt-projects.com/",
+            "Education Department": "https://rt-ed.co.il/",
+            "HR Department": "https://rt-hr.co.il/"
+        }
+        while running:
+            for key in dict_of_urls.keys():
+                if index_of_dict == 0:
+                    actions.move_to_element(home_page.development_apartment()).click().perform()
+                    tabs = self.driver.window_handles
+                    self.driver.switch_to.window(tabs[1])
+                    url = "https://rt-projects.com/"
+                    actual_url = list(dict_of_urls.values())[index_of_dict]
+                    self.compare_title_pages(url, actual_url, key)
+                    self.driver.close()
+                    self.driver.switch_to.window(tabs[0])
+                elif index_of_dict == 1:
+                    actions.move_to_element(home_page.teaching_apartment()).click().perform()
+                    tabs = self.driver.window_handles
+                    self.driver.switch_to.window(tabs[1])
+                    url = "https://rt-ed.co.il/"
+                    actual_url = list(dict_of_urls.values())[index_of_dict]
+                    self.compare_title_pages(url, actual_url, key)
+                    self.driver.close()
+                    self.driver.switch_to.window(tabs[0])
+                elif index_of_dict == 2:
+                    actions.move_to_element(home_page.hr_apartment()).click().perform()
+                    tabs = self.driver.window_handles
+                    self.driver.switch_to.window(tabs[1])
+                    url = "https://rt-hr.co.il/"
+                    actual_url = list(dict_of_urls.values())[index_of_dict]
+                    self.compare_title_pages(url, actual_url, key)
+                    self.driver.close()
+                    self.driver.switch_to.window(tabs[0])
+                index_of_dict += 1
+            running  = False
+        self.string_message("@\nOutside department_pages function\n")
 
+    # -------------------------------------------------TEST-------------------------------------------------------------------
     def test_run_all(self):
         # self.popup_form()
         # self.main_form()
+        self.whatsup_in_floating_menu()
         # self.floating_form()
-        self.enter_each_training_and_compare_title()
-        self.enter_each_course_on_bootcamp_real_time_and_compare_title()
-        self.enter_each_course_on_bootcamp_fullstack_and_compare_title()
-        self.enter_each_course_on_bootcamp_qa_and_compare_title()
-        self.enter_each_course_on_bootcamp_cyber_security_and_compare_title()
-        self.enter_each_course_on_bootcamp_machine_learning_and_compare_title()
-        self.open_file_and_append_string_message()
+        # self.contact_us_in_floating_menu()
+        # self.enter_each_training_and_compare_title()
+        # self.enter_each_course_on_bootcamp_real_time_and_compare_title()
+        # self.enter_each_course_on_bootcamp_fullstack_and_compare_title()
+        # self.enter_each_course_on_bootcamp_qa_and_compare_title()
+        # self.enter_each_course_on_bootcamp_cyber_security_and_compare_title()
+        # self.enter_each_course_on_bootcamp_machine_learning_and_compare_title()
+        # self.department_pages()
+        # self.open_file_and_append_string_message()

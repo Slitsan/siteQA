@@ -174,7 +174,7 @@ class CoursePageTest(unittest.TestCase):
         try:
             if course_page.salary_block().is_displayed():
                 self.string_message("---Salary Block is Presented---\n")
-                if course_page.list_of_salary_block():
+                if course_page.table_list_of_salary_block():
                     self.string_message("---There is content in Salary block---\n")
                 else:
                     self.string_message("!\nNo content in Salary Block---\n")
