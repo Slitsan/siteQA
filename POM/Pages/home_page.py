@@ -42,6 +42,7 @@ class HomePage:
         self.choose_maslul_real_time_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::option[2]"
         self.terms_of_agreement_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@class='px-2']"
         self.send_button_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::button"
+        self.close_button_in_floating_form_by_xpath = "//*[@id='lead-form-modal']/span"
         # ----------------------------TRAINING AND PLACEMENT TRACKS FOR HIGH-TECH PROFESSIONS------------------------
         self.training_and_placement_tracks_for_high_tech_professions_by_xpath = "//*[@id='all-categories-cards'] /descendant::a"
         self.real_time_embedded_on_home_page_by_xpath = "//*[@id='all-categories-card-0'] /descendant::a"
@@ -156,6 +157,9 @@ class HomePage:
 
     def send_button_in_floating_form(self):
         return self.driver.find_element(By.XPATH, self.send_button_in_floating_form_by_xpath)
+
+    def close_button_in_floating_form(self):
+        return self.driver.find_element(By.XPATH, self.close_button_in_floating_form_by_xpath)
 
     # ----------------------------TRAINING AND PLACEMENT TRACKS FOR HIGH-TECH PROFESSIONS METHOD------------------------
     def training_and_placement_tracks_for_high_tech_professions(self):

@@ -1,0 +1,1435 @@
+*-----------------------------------TESTING COURSE PAGE-----------------------------------------------
+@Inside Course 'Real Time' function
+@@Inside Sub Course 'RT Concepts'---
+---Checking The RT Concepts (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> איך בנוי הקורס Real-Time Embedded O.S. Systems Implemented by FreeRTOS?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+@@Inside Sub Course 'C'---
+---Checking The (EN) שפת C Syllabus---
+---The syllabus is correct---
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס C?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס C?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'Linux Kernel and Device Drivers'---
+---Checking The Linux Kernel And Device Drivers (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> מה לוםדים בקורס לינוקס / Linux ?---
+@@Inside Sub Course 'ARM Embedded Systems'---
+---Checking The ARM - Embedded Systems (EN) Syllabus---
+---The syllabus is correct---
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> באיזו שפה מועבר הקורס Embedded Systems ?---
+---Clicked on question -> מדוע כדאי ללמוד ARM Architecture ב – Real Time College?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'Internet of Things'---
+---Checking The Internet Of Things Syllabus---
+!Not the right syllabus
+!The button 'נושאים' does not work
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+@@Inside Sub Course 'Free RTOS'---
+---Checking The FreeRTOS Syllabus---
+!Not the right syllabus
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'C++'---
+---Checking The (EN) שפת ++C Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס ++C?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס ++C?---
+---Clicked on question -> מדוע כדאי ללמוד שפת ++C ב – Real Time College?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+@@Inside Sub Course 'Yocto Programming'---
+---Checking The Yocto Programming Syllabus---
+!Not the right syllabus
+!The button 'נושאים' does not work
+!The button 'קורסי המשך' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+@@Inside Sub Course 'Linux Embedded'---
+---Checking The Embedded Linux (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> היכן מתקיימים הלימודים של Embedded Linux?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+@Outside Course 'Real Time' function
+@Inside Course 'Web Development' function
+@@Inside Sub Course 'Web Foundations'---
+---Checking The Web Foundations (EN) Syllabus---
+---The syllabus is correct---
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'AngularJS'---
+---Checking The (EN) AngularJS | אנגולר Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'Python'---
+---Checking The (EN) פייתון |  Python Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מדוע כדאי ללמוד קורס פייתון ב – Real Time College ?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס Python?---
+---Clicked on question -> מהם תנאי הקבלה לקורס פייתון?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> מהם האפשרויות ללימודי המשך בסיום קורס פייתון---
+---Clicked on question -> למה פייתון---
+@@Inside Sub Course 'CSS3'---
+---Checking The CSS3 (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מי יכול להשתתף בקורס css 3?---
+---Clicked on question -> מה הם תנאי קדם של קורס CSS 3?---
+---Clicked on question -> מהם 3 סוגי ה-CSS?---
+---Clicked on question -> מהם התכונות החדשות ב-CSS3?---
+---Clicked on question -> מה ההבדל בין CSS ל-CSS3?---
+---Clicked on question -> מה זה CSS3?---
+---Clicked on question -> מה זה CSS?---
+---Clicked on question -> מה ההבדל בין HTML ל-CSS?---
+---Clicked on question -> מה זה CSS ו-JavaScript?---
+---Clicked on question -> האם JavaScript יכול להחליף CSS?---
+@@Inside Sub Course 'NodeJS'---
+---Checking The NodeJS (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'JavaScript'---
+---Checking The Javascript (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למה משמש JavaScript?---
+---Clicked on question -> האם עלי ללמוד JavaScript או Python?---
+---Clicked on question -> מה זה JavaScript עם דוגמה?---
+@@Inside Sub Course 'TypeScript'---
+---Checking The TypeScript Syllabus---
+!Not the right syllabus
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'MongoDB'---
+---Checking The MongoDB (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה MongoDB?---
+---Clicked on question -> מה זה nosql?---
+---Clicked on question -> מה זה MongoDB vs MySQL?---
+---Clicked on question -> האם MongoDB הוא NoSQL?---
+---Clicked on question -> מה זה NoSQL vs SQL?---
+@@Inside Sub Course 'HTML5'---
+---Checking The HTML5 (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה HTML?---
+---Clicked on question -> מה ההבדל בין HTML ל-HTML5?---
+---Clicked on question -> מהם השימושים הנפוצים ביותר של HTML?---
+---Clicked on question -> מהם יתרונות וחסרונות של HTML?---
+---Clicked on question -> כיצד קשורים HTML, CSS ו-Javascript ?---
+---Clicked on question -> האם קל ללמוד HTML?---
+---Clicked on question -> למה משמש HTML בעיקר?---
+@@Inside Sub Course 'React'---
+---Checking The React |  ריאקט (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה React ולמה אנחנו משתמשים בו?---
+---Clicked on question -> מה React יכול לעשות?---
+---Clicked on question -> האם JavaScript ו- ReactJS זהים?---
+---Clicked on question -> האם React טוב יותר או Angular?---
+---Clicked on question -> מהם המפתחות ב-React?---
+---Clicked on question -> מה זה react router?---
+---Clicked on question -> מה זה react router?---
+---Clicked on question -> מה זה react router?---
+---Clicked on question -> האם אני יכול לקבל עבודה עם React?---
+@@Inside Sub Course 'Java'---
+---Checking The Java (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> האם לומדים בקורס java תכנות מונחה עצמים ?---
+---Clicked on question -> אם לומדים מנגנונים של try catch java---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+---Clicked on question -> מה זה Java ומדוע משתמשים בה?---
+---Clicked on question -> מה ההבדל בין Java ל- JavaScript?---
+---Clicked on question -> האם גאווה מספיקה כדי למצוא עבודה?---
+@@\Inside Sub Course 'BootStrap'---
+---Checking The Bootstrap (EN) Syllabus---
+---The syllabus is correct---
+!The button 'נושאים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למה משמש Bootstrap?---
+---Clicked on question -> מה זה Bootstrap?---
+---Clicked on question -> האם Bootstrap היא שפת תכנות?---
+---Clicked on question -> מה זה Bootstrap 5?---
+---Clicked on question -> מה החדש ב- Bootstrap 5?---
+---Clicked on question -> מה עדיף Bootstrap 4 או 5?---
+---Clicked on question -> האם Bootstrap 5 released?---
+---Clicked on question -> מה זה front end framework?---
+@@Inside Sub Course 'App Development for Android'---
+---Checking The פיתוח אפליקציות לאנדרואיד Syllabus---
+!Not the right syllabus
+!The button 'קורסי המשך' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה אנדרואיד?---
+---Clicked on question -> מה זה פיתוח אנדרואיד?---
+---Clicked on question -> למה משמש Android Studio?---
+---Clicked on question -> איפה מתקיימים הלימודים?---
+---Clicked on question -> למה כדי ללמוד ב Real Time Group?---
+@@Inside Sub Course 'GIT Source Control'---
+---Checking The GIT (Version Control) (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'SQL'---
+---Checking The SQL (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@Outside Course 'Web Development' function
+@Inside Course 'Cyber' function
+@@Inside Sub Course 'Preparations for Certification Exam'---
+---Checking The הכנה לבחינת הסמכה C | EH Syllabus---
+!Not the right syllabus
+!The button 'נושאים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Cyber Attack Infrastructure'---
+---Checking The Cyber Attack Infrastructure (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Malware Analysis'---
+---Checking The Malware Analysis (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה ניתוח תוכנות זדוניות באבטחת סייבר?---
+---Clicked on question -> מה עושה malware analyst?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'Penetration Testing'---
+---Checking The Penetration Testing (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Linux Fundamentals'---
+---Checking The Linux Fundamentals Syllabus---
+!Not the right syllabus
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם היסודות של לינוקס?---
+---Clicked on question -> מה זה לינוקס ולמה משתמשים בה?---
+@@Inside Sub Course 'Cyber Security Fundamentals'---
+---Checking The Cyber Security Fundamentals Syllabus---
+!Not the right syllabus
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר מסלול ההכשרה?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+@@Inside Sub Course 'Networking'---
+---Checking The Networking (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה הבסיס של networking?---
+---Clicked on question -> מהן כישורי רשת?---
+---Clicked on question -> איך מגיעים למכללה?---
+---Clicked on question -> היכן מתקיימים הלימודים?---
+@@Inside Sub Course 'Forensics Investigation and Incident Report'---
+---Checking The Forensics Investigation & Incident Response Syllabus---
+---The syllabus is correct---
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@Outside Course 'Cyber' function
+@Inside Course 'DevOps' function
+@@Inside Sub Course 'Docker'---
+---Checking The Docker (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהו Docker ומדוע משתמשים בו?---
+---Clicked on question -> מדוע עלי להשתמש ב- Docker?---
+---Clicked on question -> האם דוקר הוא מכונה וירטואלית?---
+---Clicked on question -> מה הם כישורי Docker?---
+@@Inside Sub Course 'Linux Admin'---
+---Checking The (EN) לינוקס | Linux Admin Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה Linux administration?---
+---Clicked on question -> האם מנהל לינוקס הוא עבודה טובה?---
+@@Inside Sub Course 'Kubernetes'---
+---Checking The Kubernetes (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Python'---
+---Checking The (EN) פייתון |  Python Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מדוע כדאי ללמוד קורס פייתון ב – Real Time College ?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס Python?---
+---Clicked on question -> מהם תנאי הקבלה לקורס פייתון?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> מהם האפשרויות ללימודי המשך בסיום קורס פייתון---
+---Clicked on question -> למה פייתון---
+@@Inside Sub Course 'Zabbix'---
+---Checking The Zabbix (EN) Syllabus---
+---The syllabus is correct---
+!The button 'נושאים' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Terraform'---
+---Checking The Terraform (EN) Syllabus---
+---The syllabus is correct---
+!The button 'נושאים' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה טרפורם?---
+---Clicked on question -> מהו Terraform ולמה הוא משמש?---
+---Clicked on question -> מה ההבדל בין Terraform ל- Kubernetes?---
+---Clicked on question -> מה זה Ansible ו- Terraform?---
+---Clicked on question -> מי יכול להשתתף בקורס טרפורם?---
+---Clicked on question -> מה הם תנאי קדם של קורס טרפורם?---
+@@Inside Sub Course 'Networking'---
+---Checking The Networking (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה הבסיס של networking?---
+---Clicked on question -> מהן כישורי רשת?---
+---Clicked on question -> איך מגיעים למכללה?---
+---Clicked on question -> היכן מתקיימים הלימודים?---
+@@Inside Sub Course 'Ansible'---
+---Checking The ANSIBLE (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למי כדאי להשתתף בקורס Ansible?---
+---Clicked on question -> מה הם תנאי קדם של קורס Ansible?---
+---Clicked on question -> למה משמש Ansible?---
+@@Inside Sub Course 'Bash Scripting'---
+---Checking The Bash Scripting Syllabus---
+!Not the right syllabus
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'AWS'---
+---Checking The AWS (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Jenkins'---
+---Checking The Jenkins (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@Outside Course DevOps function
+@Inside Course 'Data Science' function
+@@Inside Sub Course 'Machine Learning Fundamentals'---
+---Checking The Machine Learning Fundamentals (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס בינה מלאכותית / AI?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר מסלול ההכשרה?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'Machine Learning with Python'---
+---Checking The Machine Learning With Python (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Deep Learning with TensorFlow'---
+---Checking The Deep Learning With Tensorflow (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למי מיועד קורס Deep Learning with Tensorflow?---
+---Clicked on question -> מה הם תנאי קבלה של קורס Deep Learning with Tensorflow?---
+---Clicked on question -> האם TensorFlow משמש לdeep learning?---
+---Clicked on question -> מה זה TensorFlow?---
+---Clicked on question -> למה משמש TensorFlow?---
+---Clicked on question -> האם TensorFlow היא שפת תכנות?---
+---Clicked on question -> האם עלי ללמוד TensorFlow או Keras?---
+---Clicked on question -> האם אוכל להשתמש ב-Keras ללא TensorFlow?---
+@Outside Course 'Data Science' function
+@Inside Course 'Software Testing' function
+@@Inside Sub Course 'Selenium'---
+---Checking The Selenium (EN) Syllabus---
+---The syllabus is correct---
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+---FAQ Block is Presented---
+---Clicked on question -> אפשר להיות בודק תוכנה | אוטומציה ללא ניסיון qa---
+---Clicked on question -> אם צריך ידע קודם ב SELENIUM---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> האם צריך ידע מקצועי כדי להתקבל ללמודים?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+@@Inside Sub Course 'LabView'---
+---Checking The LabView Syllabus---
+!Not the right syllabus
+!The button 'נושאים' does not work
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Jira'---
+---Checking The JIRA | ג'ירה Syllabus---
+!Not the right syllabus
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+---FAQ Block is Presented---
+---Clicked on question -> למה JIRA?---
+---Clicked on question -> מה זה Agile?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+@@Inside Sub Course 'QA Methodologies'---
+---Checking The מתודולוגיות QA Syllabus---
+!Not the right syllabus
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+---FAQ Block is Presented---
+---Clicked on question -> כמה זה חשוב להכיר את כל השיטות?---
+---Clicked on question -> אפשר להיות בודק תוכנה ללא ניסיון qa ?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+@@Inside Sub Course 'Java'---
+---Checking The Java (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> האם לומדים בקורס java תכנות מונחה עצמים ?---
+---Clicked on question -> אם לומדים מנגנונים של try catch java---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+---Clicked on question -> מה זה Java ומדוע משתמשים בה?---
+---Clicked on question -> מה ההבדל בין Java ל- JavaScript?---
+---Clicked on question -> האם גאווה מספיקה כדי למצוא עבודה?---
+@Outside Course 'Software Testing' function
+@Inside Course 'Network and Sysadmin' function
+@@Inside Sub Course 'Linux Admin'---
+---Checking The (EN) לינוקס | Linux Admin Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה Linux administration?---
+---Clicked on question -> האם מנהל לינוקס הוא עבודה טובה?---
+@@Inside Sub Course 'LPIC-2'---
+---Checking The LPIC-2 Syllabus---
+!Not the right syllabus
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Linux Fundamentals'---
+---Checking The Linux Fundamentals Syllabus---
+!Not the right syllabus
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם היסודות של לינוקס?---
+---Clicked on question -> מה זה לינוקס ולמה משתמשים בה?---
+@@Inside Sub Course 'LPIC-1'---
+---Checking The LPIC-1 Syllabus---
+!Not the right syllabus
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'קורסי המשך' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Networking'---
+---Checking The Networking (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה הבסיס של networking?---
+---Clicked on question -> מהן כישורי רשת?---
+---Clicked on question -> איך מגיעים למכללה?---
+---Clicked on question -> היכן מתקיימים הלימודים?---
+@Outside Course 'Network and Sysadmin' function---
+@Inside Course 'Programming Languages' function
+@@Inside Sub Course 'Java'---
+---Checking The Java (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> האם לומדים בקורס java תכנות מונחה עצמים ?---
+---Clicked on question -> אם לומדים מנגנונים של try catch java---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> האם יש שיעורי בית, מבחנים או פרוייקטים?---
+---Clicked on question -> מה זה Java ומדוע משתמשים בה?---
+---Clicked on question -> מה ההבדל בין Java ל- JavaScript?---
+---Clicked on question -> האם גאווה מספיקה כדי למצוא עבודה?---
+@@Inside Sub Course 'C'---
+---Checking The (EN) שפת C Syllabus---
+---The syllabus is correct---
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס C?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס C?---
+---Clicked on question -> מדוע כדאי ללמוד ב – Real Time College?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'JavaScript'---
+---Checking The Javascript (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למה משמש JavaScript?---
+---Clicked on question -> האם עלי ללמוד JavaScript או Python?---
+---Clicked on question -> מה זה JavaScript עם דוגמה?---
+@@Inside Sub Course 'Python'---
+---Checking The (EN) פייתון |  Python Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מדוע כדאי ללמוד קורס פייתון ב – Real Time College ?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס Python?---
+---Clicked on question -> מהם תנאי הקבלה לקורס פייתון?---
+---Clicked on question -> היכן הלימודים מתקיימים?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+---Clicked on question -> מהם האפשרויות ללימודי המשך בסיום קורס פייתון---
+---Clicked on question -> למה פייתון---
+@@Inside Sub Course 'C++'---
+---Checking The (EN) שפת ++C Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס ++C?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר קורס ++C?---
+---Clicked on question -> מדוע כדאי ללמוד שפת ++C ב – Real Time College?---
+---Clicked on question -> האם אתם מתחייבים להשמה לעבודה בהייטק?---
+@Outside Course 'Programming Languages' function
+@Inside Course 'Cloud Composing' function
+@@Inside Sub Course 'AWS'---
+---Checking The AWS (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Microsoft Azure'---
+---Checking The Microsoft Azure Syllabus---
+!Not the right syllabus
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@Outside Course 'Cloud Composing' function
+@Inside Course 'Image Processing' function
+@@Inside Sub Course 'Machine Learning Fundamentals'---
+---Checking The Machine Learning Fundamentals (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+---FAQ Block is Presented---
+---Clicked on question -> מהם תנאי הקבלה לקורס בינה מלאכותית / AI?---
+---Clicked on question -> באילו חברות ותפקידים ניתן להשתלב לאחר מסלול ההכשרה?---
+---Clicked on question -> באיזו שפה מועבר הקורס?---
+---Clicked on question -> ניתן לקחת שיעורים חוזרים?---
+@@Inside Sub Course 'OpenCV'---
+---Checking The OpenCV Syllabus---
+!Not the right syllabus
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למה משתמשים ב-OpenCV?---
+---Clicked on question -> מה זה OpenCV ואיך זה עובד?---
+---Clicked on question -> האם OpenCV הוא פייתון?---
+---Clicked on question -> האם OpenCV זמין ב-C++?---
+---Clicked on question -> מה זה openCV?---
+---Clicked on question -> האם עלי להשתמש ב-C++ או ב-Python עבור OpenCV?---
+@@Inside Sub Course 'CUDA'---
+---Checking The CUDA Syllabus---
+!Not the right syllabus
+!The button 'קהל יעד ודרישות קדם' does not work
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+!The button 'מאמרים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Machine Learning with Python'---
+---Checking The Machine Learning With Python (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'Deep Learning with TensorFlow'---
+---Checking The Deep Learning With Tensorflow (EN) Syllabus---
+---The syllabus is correct---
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> למי מיועד קורס Deep Learning with Tensorflow?---
+---Clicked on question -> מה הם תנאי קבלה של קורס Deep Learning with Tensorflow?---
+---Clicked on question -> האם TensorFlow משמש לdeep learning?---
+---Clicked on question -> מה זה TensorFlow?---
+---Clicked on question -> למה משמש TensorFlow?---
+---Clicked on question -> האם TensorFlow היא שפת תכנות?---
+---Clicked on question -> האם עלי ללמוד TensorFlow או Keras?---
+---Clicked on question -> האם אוכל להשתמש ב-Keras ללא TensorFlow?---
+@@Inside Sub Course 'Nvidia GPUs'---
+---Checking The Nvidia GPUs Syllabus---
+!Not the right syllabus
+!The button 'נושאים' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+!No content in Salary Block---
+!FAQ Block is not Presented!
+@Outside Course 'Image Processing' function
+@Inside Course 'Database Management' function
+@@Inside Sub Course 'SQL'---
+---Checking The SQL (EN) Syllabus---
+---The syllabus is correct---
+!The button 'קורסי המשך' does not work
+!The button 'חוות דעת סטודנטים' does not work
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+!FAQ Block is not Presented!
+@@Inside Sub Course 'MongoDB'---
+---Checking The MongoDB (EN) Syllabus---
+---The syllabus is correct---
+---Comparing Between The 'אודות המסלול' Nav Button And The 'אודות המסלול' Div Block---
+---Element Matches---
+---Comparing Between The 'נושאים' Nav Button And The 'נושאים' Div Block---
+---Element Matches---
+---Comparing Between The 'קהל יעד ודרישות קדם' Nav Button And The 'קהל יעד ודרישות קדם' Div Block---
+---Element Matches---
+---Comparing Between The 'קורסי המשך' Nav Button And The 'קורסי המשך' Div Block---
+---Element Matches---
+---Comparing Between The 'חוות דעת סטודנטים' Nav Button And The 'חוות דעת סטודנטים' Div Block---
+---Element Matches---
+---Comparing Between The 'מאמרים' Nav Button And The 'מאמרים' Div Block---
+---Element Matches---
+---Salary Block is Presented---
+---There is content in Salary block---
+---FAQ Block is Presented---
+---Clicked on question -> מה זה MongoDB?---
+---Clicked on question -> מה זה nosql?---
+---Clicked on question -> מה זה MongoDB vs MySQL?---
+---Clicked on question -> האם MongoDB הוא NoSQL?---
+---Clicked on question -> מה זה NoSQL vs SQL?---
+@Outside Course 'Database Management' function

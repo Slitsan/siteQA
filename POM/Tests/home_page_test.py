@@ -31,7 +31,7 @@ class HomePageTest(unittest.TestCase):
         cls.test_user_first_name = "test"
         cls.test_user_mail = current_time + "@test.com"
         cls.test_user_phone_number = current_time
-        cls.string_result = "-----------------------------------TESTING HOME PAGE-----------------------------------------------\n"
+        cls.string_result = "*-----------------------------------TESTING HOME PAGE-----------------------------------------------\n"
 
     def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
@@ -40,7 +40,7 @@ class HomePageTest(unittest.TestCase):
             self.string_message("---The page is correct---\n")
             return True
         else:
-            self.string_message("!\nNot the right page---\n")
+            self.string_message("!Not the right page---\n")
             return False
 
     def string_message(self, message):
@@ -58,7 +58,7 @@ class HomePageTest(unittest.TestCase):
     # ---------------------------------POPUP METHODS-----------------------------------------
     def popup_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                    choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_form="yes"):
-        self.string_message("@\nInside popup_form function\n")
+        self.string_message("@Inside PopUp Form function\n")
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
         home_page = HomePage(self.driver)
@@ -79,13 +79,13 @@ class HomePageTest(unittest.TestCase):
         if tick_terms_and_services == "yes":
             self.string_message("---Ticking the terms of agreement and services---\n")
             home_page.terms_of_agreement_field_in_form_popup().click()
-        if send_button == "yes":
-            self.string_message("---Clicking on the 'send' button---\n")
-            home_page.send_button_in_form_popup().click()
+        # if send_button == "yes":
+        #     self.string_message("---Clicking on the 'send' button---\n")
+        #     home_page.send_button_in_form_popup().click()
         if close_form == "yes":
             self.string_message("---Closing the popup form---\n")
             home_page.close_button_in_popup_form().click()
-        self.string_message("@\nOutside popup_form function\n")
+        self.string_message("@Outside PopUp Form function\n")
 
     # def test_popup_form(self):
     # self.popup_form()
@@ -94,7 +94,7 @@ class HomePageTest(unittest.TestCase):
     # -----------------------------------------MAIN FORM METHODS---------------------------------------
     def main_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
                   choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
-        self.string_message("@\nInside main_form function\n")
+        self.string_message("@Inside Main Form function\n")
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
         home_page = HomePage(self.driver)
@@ -115,13 +115,13 @@ class HomePageTest(unittest.TestCase):
         if tick_terms_and_services == "yes":
             self.string_message("---Ticking the terms of agreement and services---\n")
             home_page.terms_of_agreement_field_in_main_form().click()
-        if send_button == "yes":
-            self.string_message("---Clicking on the 'send' button---\n")
-            home_page.send_button_in_main_form().click()
-        if close_button == "yes":
-            self.string_message("---Clicking on the close button---\n")
-            home_page.close_button_after_filling_the_main_form().click()
-        self.string_message("@\nOutside main_form function\n")
+        # if send_button == "yes":
+        #     self.string_message("---Clicking on the 'send' button---\n")
+        #     home_page.send_button_in_main_form().click()
+        # if close_button == "yes":
+        #     self.string_message("---Clicking on the close button---\n")
+        #     home_page.close_button_after_filling_the_main_form().click()
+        self.string_message("@Outside Main Form function\n")
 
     # def test_main_form(self):
     #     self.close_popup()
@@ -130,20 +130,20 @@ class HomePageTest(unittest.TestCase):
 
     # -----------------------------------FLOATING MENU METHODS-------------------------------
     def whatsup_in_floating_menu(self):
-        self.string_message("@\nInside whatsup_in_floating_menu function\n")
+        self.string_message("@Inside WhatsUp Button in Floating Menu function\n")
         home_page = HomePage(self.driver)
         try:
             if home_page.whatsup_link_in_floating_menu().is_displayed():
                 self.string_message("---Button 'WhatsUp' is presented---\n")
             else:
-                self.string_message("!\nButton 'WhatsUp' is not presented\n")
+                self.string_message("!Button 'WhatsUp' is not presented\n")
         except NoSuchElementException:
-            self.string_message("!\nElement not found\n")
-        self.string_message("@\nOutside whatsup_in_floating_menu function\n")
+            self.string_message("!Element not found\n")
+        self.string_message("@Outside WhatsUp Button in Floating Menu function\n")
 
     def floating_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
-                  choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
-        self.string_message("@\nInside floating_form function\n")
+                      choose_maslul="yes", tick_terms_and_services="yes", send_button="yes", close_button="yes"):
+        self.string_message("@Inside Floating Form function\n")
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
         home_page = HomePage(self.driver)
@@ -166,25 +166,25 @@ class HomePageTest(unittest.TestCase):
         if tick_terms_and_services == "yes":
             self.string_message("---Ticking the terms of agreement and services---\n")
             home_page.terms_of_agreement_field_in_floating_form().click()
-        if send_button == "yes":
-            self.string_message("---Clicking on the 'send' button---\n")
-            home_page.send_button_in_floating_form().click()
-        # if close_button == "yes":
-        #     self.string_message("---Clicking on the close button---\n")
-        #     home_page.close_button_after_filling_the_main_form().click()
-        self.string_message("@\nOutside floating_form function\n")
+        # if send_button == "yes":
+        #     self.string_message("---Clicking on the 'send' button---\n")
+        #     home_page.send_button_in_floating_form().click()
+        if close_button == "yes":
+            self.string_message("---Clicking on the close button---\n")
+            home_page.close_button_in_floating_form().click()
+        self.string_message("@Outside Floating Form function\n")
 
     def contact_us_in_floating_menu(self):
-        self.string_message("@\nInside click_on_about_us_in_floating_menu function---\n")
+        self.string_message("@Inside Contact Us Button in Floating Menu function---\n")
         home_page = HomePage(self.driver)
         try:
             if home_page.about_us_in_floating_menu().is_displayed():
                 self.string_message("---Button 'Contact Us' is presented---\n")
             else:
-                self.string_message("!\nButton 'Contact Us' is not presented\n")
+                self.string_message("!Button 'Contact Us' is not presented\n")
         except NoSuchElementException:
-            self.string_message("!\nElement not found\n")
-        self.string_message("@\nOutside click_on_about_us_in_floating_menu function---\n")
+            self.string_message("!Element not found\n")
+        self.string_message("@Outside Contact Us Button in Floating Menu function---\n")
 
     # ----------------------------------TRAINING TEST-------------------------------------
     def opens_tab_and_compares_title(self, course, dict_of_titles, index):
@@ -200,7 +200,7 @@ class HomePageTest(unittest.TestCase):
         self.driver.switch_to.window(tabs[0])
 
     def enter_each_training_and_compare_title(self):
-        self.string_message("---Inside enter_each_training_and_compare_title function---\n")
+        self.string_message("@Inside 'Training and Placement Tracks for High-Tech Professions' function---\n")
         home_page = HomePage(self.driver)
         index = 0
         run = True
@@ -209,7 +209,7 @@ class HomePageTest(unittest.TestCase):
             "Cyber Security": "קורס Cyber אבטחת מידע וסייבר | Cyber Security » Real Time Group",
             "Fullstack Developer": "קורס Full Stack | לימודי Full Stack | קורס Web Development",
             "DevOps": "קורס DevOps | קורס דאבאופס ניהול פרויקטים בפיתוח » Real Time Group",
-            "Automation and QA": "קורס QA | קורס בודק תוכנה - כולל סטאז' מעשי » Real Time College",
+            "Automation and QA": "קורס QA | קורס בודק תוכנה QA - כולל סטאז' מעשי » Real Time College",
             "Machine Learning": "קורס machine learning | הכשרה והשמה :Real Time Group"}
         keys_of_dict_of_titles = dict_of_titles.keys()
 
@@ -218,11 +218,11 @@ class HomePageTest(unittest.TestCase):
                 self.opens_tab_and_compares_title(course, dict_of_titles, index)
                 index += 1
             run = False
-        self.string_message("---Outside enter_each_training_and_compare_title function---\n")
+        self.string_message("@Outside 'Training and Placement Tracks for High-Tech Professions' function---\n")
 
     # -----------------------------------LIST OF COURSES ON HOME PAGE----------------------
     def enter_each_course_on_bootcamp_real_time_and_compare_title(self):
-        self.string_message("---Inside enter_each_course_on_bootcamp_real_time_and_compare_title function---\n")
+        self.string_message("@Inside 'Real-Time Bootcamp' course table in home page function---\n")
         home_page = HomePage(self.driver)
         index = 0
         run = True
@@ -244,16 +244,16 @@ class HomePageTest(unittest.TestCase):
                 self.opens_tab_and_compares_title(course, dict_of_titles, index)
                 index += 1
             run = False
-        self.string_message("---Outside enter_each_course_on_bootcamp_real_time_and_compare_title function---\n")
+        self.string_message("@Outside 'Real-Time Bootcamp' course table in home page function---\n")
 
     def enter_each_course_on_bootcamp_fullstack_and_compare_title(self):
-        self.string_message("---Inside enter_each_course_on_bootcamp_fullstack_and_compare_title function---\n")
+        self.string_message("@Inside 'Full-Stack Bootcamp' course table in home page function---\n")
         home_page = HomePage(self.driver)
         index = 0
         run = True
         dict_of_titles = {
             "Web Foundations": "קורס Web Foundations להכיר את היסודות של בניית אתרים» Real Time College",
-            "HTML5": "קורס HTML | למד HTML5 עם המומחים של Real Time College",
+            "HTML5": "קורס HTML | לימודי html5 עם המומחים של Real Time College",
             "CSS3": "קורס CSS3 | ללמוד הצגה ועיצוב של דפי אינטרנט :Real Time Group",
             "JavaScript": "קורס JavaScript & jQuery של Real Time College מקבוצה של RTG",
             "SQL": "קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group",
@@ -269,10 +269,10 @@ class HomePageTest(unittest.TestCase):
                 self.opens_tab_and_compares_title(course, dict_of_titles, index)
                 index += 1
             run = False
-        self.string_message("---Outside enter_each_course_on_bootcamp_fullstack_and_compare_title function---\n")
+        self.string_message("@Outside 'Full-Stack Bootcamp' course table in home page function---\n")
 
     def enter_each_course_on_bootcamp_qa_and_compare_title(self):
-        self.string_message("---Inside enter_each_course_on_bootcamp_qa_and_compare_title function---\n")
+        self.string_message("@Inside 'QA Bootcamp' course table in home page function---\n")
         home_page = HomePage(self.driver)
         index = 0
         run = True
@@ -295,10 +295,10 @@ class HomePageTest(unittest.TestCase):
                 self.opens_tab_and_compares_title(course, dict_of_titles, index)
                 index += 1
             run = False
-        self.string_message("---Outside enter_each_course_on_bootcamp_qa_and_compare_title function---\n")
+        self.string_message("@Outside 'QA Bootcamp' course table in home page function---\n")
 
     def enter_each_course_on_bootcamp_cyber_security_and_compare_title(self):
-        self.string_message("---Inside enter_each_course_on_bootcamp_cyber_security_and_compare_title function---\n")
+        self.string_message("@Inside 'Cyber Security Bootcamp' course table in home page function---\n")
         home_page = HomePage(self.driver)
         index = 0
         run = True
@@ -322,10 +322,10 @@ class HomePageTest(unittest.TestCase):
                 self.opens_tab_and_compares_title(course, dict_of_titles, index)
                 index += 1
             run = False
-        self.string_message("---Outside enter_each_course_on_bootcamp_cyber_security_and_compare_title function---\n")
+        self.string_message("@Outside 'Cyber Security Bootcamp' course table in home page function---\n")
 
     def enter_each_course_on_bootcamp_machine_learning_and_compare_title(self):
-        self.string_message("---Inside enter_each_course_on_bootcamp_machine_learning_and_compare_title function---\n")
+        self.string_message("@Inside 'Machine Learning Bootcamp' course table in home page function---\n")
         home_page = HomePage(self.driver)
         index = 0
         run = True
@@ -344,11 +344,11 @@ class HomePageTest(unittest.TestCase):
                 self.opens_tab_and_compares_title(course, dict_of_titles, index)
                 index += 1
             run = False
-        self.string_message("---Outside enter_each_course_on_bootcamp_machine_learning_and_compare_title function---\n")
+        self.string_message("@Outside 'Machine Learning Bootcamp' course table in home page function---\n")
 
     # -------------------------------------------DEPARTMENT PAGES-------------------------------
     def department_pages(self):
-        self.string_message("@\nInside department_pages function\n")
+        self.string_message("@Inside Department Pages function\n")
         home_page = HomePage(self.driver)
         actions = ActionChains(self.driver)
         index_of_dict = 0
@@ -388,21 +388,21 @@ class HomePageTest(unittest.TestCase):
                     self.driver.close()
                     self.driver.switch_to.window(tabs[0])
                 index_of_dict += 1
-            running  = False
-        self.string_message("@\nOutside department_pages function\n")
+            running = False
+        self.string_message("@Outside Department Pages function\n")
 
     # -------------------------------------------------TEST-------------------------------------------------------------------
     def test_run_all(self):
-        # self.popup_form()
-        # self.main_form()
+        self.popup_form()
+        self.main_form()
         self.whatsup_in_floating_menu()
-        # self.floating_form()
-        # self.contact_us_in_floating_menu()
-        # self.enter_each_training_and_compare_title()
-        # self.enter_each_course_on_bootcamp_real_time_and_compare_title()
-        # self.enter_each_course_on_bootcamp_fullstack_and_compare_title()
-        # self.enter_each_course_on_bootcamp_qa_and_compare_title()
-        # self.enter_each_course_on_bootcamp_cyber_security_and_compare_title()
-        # self.enter_each_course_on_bootcamp_machine_learning_and_compare_title()
-        # self.department_pages()
-        # self.open_file_and_append_string_message()
+        self.floating_form()
+        self.contact_us_in_floating_menu()
+        self.enter_each_training_and_compare_title()
+        self.enter_each_course_on_bootcamp_real_time_and_compare_title()
+        self.enter_each_course_on_bootcamp_fullstack_and_compare_title()
+        self.enter_each_course_on_bootcamp_qa_and_compare_title()
+        self.enter_each_course_on_bootcamp_cyber_security_and_compare_title()
+        self.enter_each_course_on_bootcamp_machine_learning_and_compare_title()
+        self.department_pages()
+        self.open_file_and_append_string_message()
