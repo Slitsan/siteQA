@@ -31,8 +31,9 @@ class HomePage:
         self.close_button_after_filling_the_main_form_by_xpath = "//*[@id=\"modal-2\"]/div/span"
         # -----------------------------------------FLOATING FORM---------------------------------------------------
         self.floating_menu_by_xpath = "//*[@id=\"floating-form\"]"
+        self.whatsup_link_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[1]"
         self.about_us_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[2]"
-        self.form_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[2]"
+        self.form_in_floating_menu_by_xpath = "//*[@id='floating-form'] /descendant::div[3]"
         self.last_name_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@id='lname']"
         self.first_name_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@id='fname']"
         self.phone_number_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@id='phone']"
@@ -41,6 +42,7 @@ class HomePage:
         self.choose_maslul_real_time_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::option[2]"
         self.terms_of_agreement_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::input[@class='px-2']"
         self.send_button_in_floating_form_by_xpath = "//*[@id=\"lead-form-modal\"] /descendant::button"
+        self.close_button_in_floating_form_by_xpath = "//*[@id='lead-form-modal']/span"
         # ----------------------------TRAINING AND PLACEMENT TRACKS FOR HIGH-TECH PROFESSIONS------------------------
         self.training_and_placement_tracks_for_high_tech_professions_by_xpath = "//*[@id='all-categories-cards'] /descendant::a"
         self.real_time_embedded_on_home_page_by_xpath = "//*[@id='all-categories-card-0'] /descendant::a"
@@ -120,12 +122,14 @@ class HomePage:
         return self.driver.find_element(By.XPATH, self.close_button_after_filling_the_main_form_by_xpath)
 
     # --------------------------------------FLOATING FORM METHODS-----------------------------------------
-
     def floating_menu(self):
         return self.driver.find_element(By.XPATH, self.floating_menu_by_xpath)
 
     def about_us_in_floating_menu(self):
         return self.driver.find_element(By.XPATH, self.about_us_in_floating_menu_by_xpath)
+
+    def whatsup_link_in_floating_menu(self):
+        return self.driver.find_element(By.XPATH, self.whatsup_link_in_floating_menu_by_xpath)
 
     def form_in_floating_menu(self):
         return self.driver.find_element(By.XPATH, self.form_in_floating_menu_by_xpath)
@@ -154,8 +158,10 @@ class HomePage:
     def send_button_in_floating_form(self):
         return self.driver.find_element(By.XPATH, self.send_button_in_floating_form_by_xpath)
 
-    # ----------------------------TRAINING AND PLACEMENT TRACKS FOR HIGH-TECH PROFESSIONS METHOD------------------------
+    def close_button_in_floating_form(self):
+        return self.driver.find_element(By.XPATH, self.close_button_in_floating_form_by_xpath)
 
+    # ----------------------------TRAINING AND PLACEMENT TRACKS FOR HIGH-TECH PROFESSIONS METHOD------------------------
     def training_and_placement_tracks_for_high_tech_professions(self):
         return self.driver.find_elements(By.XPATH,
                                          self.training_and_placement_tracks_for_high_tech_professions_by_xpath)
@@ -178,7 +184,7 @@ class HomePage:
     def machine_learning_on_home_page(self):
         return self.driver.find_element(By.XPATH, self.machine_learning_on_home_page_by_xpath)
 
-    # ------------------------------------LIST OF COURSES ON MASLULIM ON HOME PAGE METHOD--------------------------------
+    # ------------------------------------LIST OF COURSES ON MASLULIM ON HOME PAGE METHOD-------------------------------
     def list_of_courses_on_bootcamp_real_time_on_home_page(self):
         return self.driver.find_elements(By.XPATH, self.list_of_courses_on_bootcamp_real_time_on_home_page_by_xpath)
 
@@ -194,7 +200,7 @@ class HomePage:
     def list_of_courses_on_bootcamp_machine_learning_on_home_page(self):
         return self.driver.find_elements(By.XPATH, self.list_of_courses_on_bootcamp_machine_learning_on_home_page_by_xpath)
 
-    # -------------------------------------DEPARTMENT BUTTONS METHODS------------------------------------------------------
+    # -------------------------------------DEPARTMENT BUTTONS METHODS---------------------------------------------------
     def development_apartment(self):
         return self.driver.find_element(By.XPATH, self.development_apartment_by_xpath)
 
