@@ -22,35 +22,12 @@ popUp_close_XPATH = '//*[@id="lead-form-modal1"]/span'
 
 
 class HeaderTest(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-
-        cls.driver: WebDriver = webdriver.Chrome(executable_path=
-                                                 'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
-        cls.driver.maximize_window()
-        cls.driver.delete_all_cookies()
-        cls.driver.implicitly_wait(20)
-        cls.driver.set_page_load_timeout(30)
-        cls.driver.get('https://rt-ed.co.il/')
+    def __init__(self, init_driver):
+        super().__init__()
+        self.driver = init_driver
         now = datetime.now()
-        cls.date_for_log = now.strftime("%d %m %Y")
-        cls.string_result = "*-----------------------------------TESTING HEADER-----------------------------------------------\n"
-        # print('-----  BEFORE SLEEP  -----')
-        # time.sleep(12)
-        # print('-----  AFTER SLEEP  -----')
-        # cls.driver.find_element(By.XPATH, '//*[@id="lead-form-modal1"]/span').click()
-        print('-----  END OF CLS  -----')
-
-    # def test_legalEnter_studentPortal_fromHeader(self):
-    #     print('-----  START test_studentPortal_fromHeader  -----')
-    #     header = Header(self.driver)
-    #     print('-----  after init Header test_studentPortal_fromHeader  -----')
-    #     header.goToStudentPortal()
-    #
-    #     stPortal = StudentPortal(self.driver)
-    #     stPortal.enterUserName(correctUserName)
-    #     stPortal.enterPassword(correctPassword)
-    #     stPortal.logIn()
+        self.date_for_log = now.strftime("%d %m %Y")
+        self.string_result = "*-----------------------------------TESTING HEADER-----------------------------------------------\n"
 
     def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
@@ -59,7 +36,7 @@ class HeaderTest(unittest.TestCase):
             self.string_message("---The page is correct---\n")
             return True
         else:
-            self.string_message("!Not the right page---\n")
+            self.string_message("!------Not the right page------!\n")
             return False
 
     def string_message(self, message):
@@ -68,7 +45,7 @@ class HeaderTest(unittest.TestCase):
 
     def open_file_and_append_string_message(self):
         try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file = open(f"./Source/log {self.date_for_log}.txt", "a+")
             file.write(self.string_result)
             file.close()
         except FileNotFoundError:

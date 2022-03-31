@@ -15,23 +15,18 @@ from POM.Pages.home_page import HomePage
 
 # ---------------------------------------------------------
 class HomePageTest(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.driver: WebDriver = webdriver.Chrome(executable_path=
-                                                 'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
-        cls.driver.maximize_window()
-        cls.driver.delete_all_cookies()
-        cls.driver.implicitly_wait(20)
-        cls.driver.set_page_load_timeout(30)
-        cls.driver.get('https://rt-ed.co.il/')
+    def __init__(self, init_driver):
+        super().__init__()
+        self.driver = init_driver
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
-        cls.date_for_log = now.strftime("%d %m %Y")
-        cls.test_user_last_name = "test"
-        cls.test_user_first_name = "test"
-        cls.test_user_mail = current_time + "@test.com"
-        cls.test_user_phone_number = current_time
-        cls.string_result = "*-----------------------------------TESTING HOME PAGE-----------------------------------------------\n"
+        self.date_for_log = now.strftime("%d %m %Y")
+        self.test_user_last_name = "test"
+        self.test_user_first_name = "test"
+        self.test_user_mail = current_time + "@test.com"
+        self.test_user_phone_number = current_time
+        self.string_result = "*-----------------------------------TESTING HOME PAGE-----------------------------------------------\n"
+
 
     def compare_title_pages(self, title: str, actual_page_title: str, button_name: str):
         actual_title_of_page = actual_page_title
@@ -40,7 +35,7 @@ class HomePageTest(unittest.TestCase):
             self.string_message("---The page is correct---\n")
             return True
         else:
-            self.string_message("!Not the right page---\n")
+            self.string_message("!------Not the right page------!\n")
             return False
 
     def string_message(self, message):
@@ -49,7 +44,7 @@ class HomePageTest(unittest.TestCase):
 
     def open_file_and_append_string_message(self):
         try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file = open(f"./Source/log {self.date_for_log}.txt", "a+")
             file.write(self.string_result)
             file.close()
         except FileNotFoundError:
@@ -136,9 +131,9 @@ class HomePageTest(unittest.TestCase):
             if home_page.whatsup_link_in_floating_menu().is_displayed():
                 self.string_message("---Button 'WhatsUp' is presented---\n")
             else:
-                self.string_message("!Button 'WhatsUp' is not presented\n")
+                self.string_message("!------Button 'WhatsUp' is not presented------!\n")
         except NoSuchElementException:
-            self.string_message("!Element not found\n")
+            self.string_message("!------Element not found------!\n")
         self.string_message("@Outside WhatsUp Button in Floating Menu function\n")
 
     def floating_form(self, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
@@ -181,9 +176,9 @@ class HomePageTest(unittest.TestCase):
             if home_page.about_us_in_floating_menu().is_displayed():
                 self.string_message("---Button 'Contact Us' is presented---\n")
             else:
-                self.string_message("!Button 'Contact Us' is not presented\n")
+                self.string_message("!------Button 'Contact Us' is not presented------!\n")
         except NoSuchElementException:
-            self.string_message("!Element not found\n")
+            self.string_message("!------Element not found------!\n")
         self.string_message("@Outside Contact Us Button in Floating Menu function---\n")
 
     # ----------------------------------TRAINING TEST-------------------------------------

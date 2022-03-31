@@ -16,24 +16,19 @@ from datetime import datetime
 # --------------------------------------------
 from POM.Pages.maslul_page import MaslulPage
 
+
 class MaslulPageTest(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.driver: WebDriver = webdriver.Chrome(executable_path=
-                                                 'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
-        cls.driver.maximize_window()
-        cls.driver.delete_all_cookies()
-        cls.driver.implicitly_wait(20)
-        cls.driver.set_page_load_timeout(30)
-        cls.driver.get('https://rt-ed.co.il/')
+    def __init__(self, init_driver):
+        super().__init__()
+        self.driver = init_driver
         now = datetime.now()
         current_time = now.strftime("%d%m%H%M%S")
-        cls.date_for_log = now.strftime("%d %m %Y")
-        cls.test_user_last_name = "test"
-        cls.test_user_first_name = "test"
-        cls.test_user_mail = current_time + "@test.com"
-        cls.test_user_phone_number = current_time
-        cls.string_result = "*-----------------------------------TESTING MASLUL PAGES-----------------------------------------------\n"
+        self.date_for_log = now.strftime("%d %m %Y")
+        self.test_user_last_name = "test"
+        self.test_user_first_name = "test"
+        self.test_user_mail = current_time + "@test.com"
+        self.test_user_phone_number = current_time
+        self.string_result = "*-----------------------------------TESTING MASLUL PAGES-----------------------------------------------\n"
 
     # Appends the message parameter to the string_result
     def string_message(self, message):
@@ -43,7 +38,7 @@ class MaslulPageTest(unittest.TestCase):
     # Opens a new file if there is not one. Appends the string to it
     def open_file_and_append_string_message(self):
         try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file = open(f"./Source/log {self.date_for_log}.txt", "a+")
             file.write(self.string_result)
             file.close()
         except FileNotFoundError:
@@ -57,7 +52,7 @@ class MaslulPageTest(unittest.TestCase):
             self.string_message("---The syllabus is correct---\n")
             return True
         else:
-            self.string_message("!Not the right syllabus\n")
+            self.string_message("!------Not the right syllabus------!\n")
             return False
 
     # Filling the form that pops ups after clicking on the 'download syllabus'
@@ -76,45 +71,46 @@ class MaslulPageTest(unittest.TestCase):
 
     # Prepares a dictionary of nav buttons according to page
     def prepares_dictionary_of_div_block(self, maslul_page):
-            dict_of_nav_buttons_blocks = {}
-            for div in range(len(maslul_page.list_of_buttons_in_navigation())):
-                if div == 0:
-                    try:
-                        dict_of_nav_buttons_blocks["אודות המסלול"] = maslul_page.about_block()
-                    except NoSuchElementException:
-                        self.string_message("!The button 'אודות המסלול' does not work\n")
-                        continue
-                if div == 1:
-                    try:
-                        dict_of_nav_buttons_blocks["מבנה המסלול"] = maslul_page.structure_of_maslul_block()
-                    except NoSuchElementException:
-                        self.string_message("!The button 'מבנה המסלול' does not work\n")
-                        continue
-                if div == 2:
-                    try:
-                        dict_of_nav_buttons_blocks["קהל יעד ודרישות קודם"] = maslul_page.target_audience_and_prior_requirements_block()
-                    except NoSuchElementException:
-                        self.string_message("!The button 'קהל יעד ודרישות קודם' does not work\n")
-                        continue
-                if div == 3:
-                    try:
-                        dict_of_nav_buttons_blocks["ללמוד אצלנו"] = maslul_page.to_study_with_us_block()
-                    except NoSuchElementException:
-                        self.string_message("!The button 'ללמוד אצלנו' does not work\n")
-                        continue
-                if div == 4:
-                    try:
-                        dict_of_nav_buttons_blocks["תעודת גמר"] = maslul_page.graduate_diploma_block()
-                    except NoSuchElementException:
-                        self.string_message("!The button 'תעודת גמר' does not work\n")
-                        continue
-                if div == 5:
-                    try:
-                        dict_of_nav_buttons_blocks["שאלות ותשובות"] = maslul_page.questions_and_answers_block()
-                    except NoSuchElementException:
-                        self.string_message("!The button 'שאלות ותשובות' does not work\n")
-                        continue
-            return dict_of_nav_buttons_blocks
+        dict_of_nav_buttons_blocks = {}
+        for div in range(len(maslul_page.list_of_buttons_in_navigation())):
+            if div == 0:
+                try:
+                    dict_of_nav_buttons_blocks["אודות המסלול"] = maslul_page.about_block()
+                except NoSuchElementException:
+                    self.string_message("!------The button 'אודות המסלול' does not work------!\n")
+                    continue
+            if div == 1:
+                try:
+                    dict_of_nav_buttons_blocks["מבנה המסלול"] = maslul_page.structure_of_maslul_block()
+                except NoSuchElementException:
+                    self.string_message("!------The button 'מבנה המסלול' does not work------!\n")
+                    continue
+            if div == 2:
+                try:
+                    dict_of_nav_buttons_blocks[
+                        "קהל יעד ודרישות קודם"] = maslul_page.target_audience_and_prior_requirements_block()
+                except NoSuchElementException:
+                    self.string_message("!------The button 'קהל יעד ודרישות קודם' does not work------!\n")
+                    continue
+            if div == 3:
+                try:
+                    dict_of_nav_buttons_blocks["ללמוד אצלנו"] = maslul_page.to_study_with_us_block()
+                except NoSuchElementException:
+                    self.string_message("!------The button 'ללמוד אצלנו' does not work------!\n")
+                    continue
+            if div == 4:
+                try:
+                    dict_of_nav_buttons_blocks["תעודת גמר"] = maslul_page.graduate_diploma_block()
+                except NoSuchElementException:
+                    self.string_message("!------The button 'תעודת גמר' does not work------!\n")
+                    continue
+            if div == 5:
+                try:
+                    dict_of_nav_buttons_blocks["שאלות ותשובות"] = maslul_page.questions_and_answers_block()
+                except NoSuchElementException:
+                    self.string_message("!------The button 'שאלות ותשובות' does not work------!\n")
+                    continue
+        return dict_of_nav_buttons_blocks
 
     # Click on each nav button in the navigation bar
     def click_on_each_nav_button_and_verifies_the_block(self, actions, index_of_btn, maslul_page):
@@ -141,7 +137,7 @@ class MaslulPageTest(unittest.TestCase):
                     if btn.text == "תעודת גמר":  # Checks if the button equals to 'תעודת גמר'
                         if maslul_page.diploma_image().get_attribute(
                                 "src") is None:  # Checks if there is no image for the diploma
-                            self.string_message("!No picture for diploma\n")
+                            self.string_message("!------No picture for diploma------!\n")
                     # if btn.text == "שאלות ותשובות":  # Checks if the button equals 'שאלות ותשובות'
                     #     for question in maslul_page.list_of_div_blocks_in_faq():  # Loops through the questions in the FAQ div block
                     #         self.string_message(
@@ -150,13 +146,14 @@ class MaslulPageTest(unittest.TestCase):
                     if btn_id == block_id:  # Checks if the current button id equals to the div block id
                         self.string_message("---Element Matches---\n")
                 except ElementNotVisibleException:
-                    self.string_message("!Element Not Found...\n")
+                    self.string_message("!------Element Not Found------!\n")
                 except IndexError:
                     print("Out of bounds")
                 index_of_btn += 1
 
     # Fills the form under the syllabus
-    def form_under_syllabus(self, driver: WebDriver, last_name="test", first_name="test", ending_of_mail="@test.com", phone_number="",
+    def form_under_syllabus(self, driver: WebDriver, last_name="test", first_name="test", ending_of_mail="@test.com",
+                            phone_number="",
                             choose_maslul="yes", tick_terms_and_services="yes", send_button="yes",
                             close_button="yes"):
         self.string_message("--Inside form_under_syllabus function--\n")
@@ -200,9 +197,9 @@ class MaslulPageTest(unittest.TestCase):
                 if maslul_page.table_list_of_salary_block() or maslul_page.list_of_p_blocks_in_salary_block():
                     self.string_message("---There is content in Salary Block---\n")
                 else:
-                    self.string_message("!No content in Salary Block\n")
+                    self.string_message("!------No content in Salary Block------!\n")
         except NoSuchElementException:
-            self.string_message("!Element Not Found\n")
+            self.string_message("!------Element Not Found------!\n")
 
     # Checks if the FAQ block in presented on the page and if it IS. Clicks on every question
     def checks_if_faq_block_is_presented_and_clicks_on_every_question_in_it(self, actions, maslul_page):
@@ -213,7 +210,7 @@ class MaslulPageTest(unittest.TestCase):
                     self.string_message(f"Clicked on question -> {question.text}\n")
                     actions.move_to_element(question).click().perform()
         except NoSuchElementException:
-            self.string_message("!\nElement Not Found\n")
+            self.string_message("!------Element Not Found------!\n")
 
     # --------------------------------------MASLUL'S METHODS---------------------------------------------
     def maslul_real_time(self):
@@ -223,21 +220,22 @@ class MaslulPageTest(unittest.TestCase):
         actions = ActionChains(self.driver)
         index = 0
         index_of_dict = 0
-        dict_of_urls_of_syllabus = {"Bootcamp Real Time (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Real_Time_Emb_Linux_Complete_Path.pdf",
-                                    "Embedded Systems (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Embedded_Systems_Complete_Path.pdf",
-                                    "Real Time Embedded Linux (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Real_Time_Emb_Linux_Complete_Path.pdf",
-                                    "Embedded Linux (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Embedded_Linux_Complete_Path.pdf"}
+        dict_of_urls_of_syllabus = {
+            "Bootcamp Real Time (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Real_Time_Emb_Linux_Complete_Path.pdf",
+            "Embedded Systems (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Embedded_Systems_Complete_Path.pdf",
+            "Real Time Embedded Linux (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Real_Time_Emb_Linux_Complete_Path.pdf",
+            "Embedded Linux (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/RT/Embedded_Linux_Complete_Path.pdf"}
         running = True
 
         while running:
-            for length in range(len(header.list_of_courses_on_real_time())): # Loops according to the courses in Maslul
+            for length in range(len(header.list_of_courses_on_real_time())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_real_time().click()
                 self.string_message(f"@@Inside course {header.list_of_courses_on_real_time()[index].text}\n")
                 header.list_of_courses_on_real_time()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
-                if maslul_page.form_after_clicking_on_syllabus().is_displayed(): # Checks if a form appears after clicking on 'download syllabus'
+                if maslul_page.form_after_clicking_on_syllabus().is_displayed():  # Checks if a form appears after clicking on 'download syllabus'
                     self.filling_form_after_clicking_on_syllabus(maslul_page)
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
@@ -293,19 +291,21 @@ class MaslulPageTest(unittest.TestCase):
         actions = ActionChains(self.driver)
         index = 0
         index_of_dict = 0
-        dict_of_urls_of_syllabus = {"Full Stack (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/FS/Full_Stack_Complete_Track.pdf",
-                                    "Full Stack (HEB)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/FS/Full_Stack_Complete_Track-HE.pdf"}
+        dict_of_urls_of_syllabus = {
+            "Full Stack (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/FS/Full_Stack_Complete_Track.pdf",
+            "Full Stack (HEB)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/FS/Full_Stack_Complete_Track-HE.pdf"}
         running = True
 
         while running:
-            for length in range(len(header.list_of_courses_on_full_stack())): # Loops according to the courses in Maslul
+            for length in range(
+                    len(header.list_of_courses_on_full_stack())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_full_stack().click()
                 self.string_message(f"@@Inside course {header.list_of_courses_on_full_stack()[index].text}\n")
                 header.list_of_courses_on_full_stack()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
-                if maslul_page.form_after_clicking_on_syllabus().is_displayed(): # Checks if a form appears after clicking on 'download syllabus'
+                if maslul_page.form_after_clicking_on_syllabus().is_displayed():  # Checks if a form appears after clicking on 'download syllabus'
                     self.filling_form_after_clicking_on_syllabus(maslul_page)
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
@@ -361,19 +361,20 @@ class MaslulPageTest(unittest.TestCase):
         actions = ActionChains(self.driver)
         index = 0
         index_of_dict = 0
-        dict_of_urls_of_syllabus = {"Cyber (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/Cyber/Cyber_Security_Complete_Track_EN.pdf",
-                                    "Cyber (HEB)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/Cyber/Cyber_Security_Complete_Track.pdf"}
+        dict_of_urls_of_syllabus = {
+            "Cyber (EN)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/Cyber/Cyber_Security_Complete_Track_EN.pdf",
+            "Cyber (HEB)": "https://rt-ed.co.il/wp-content/uploads/syllabus/Tracks/Cyber/Cyber_Security_Complete_Track.pdf"}
         running = True
 
         while running:
-            for length in range(len(header.list_of_courses_on_cyber())): # Loops according to the courses in Maslul
+            for length in range(len(header.list_of_courses_on_cyber())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_cyber().click()
                 self.string_message(f"@@Inside course {header.list_of_courses_on_cyber()[index].text}\n")
                 header.list_of_courses_on_cyber()[index].click()
                 index_of_btn = 0
                 maslul_page.download_syllabus().click()
-                if maslul_page.form_after_clicking_on_syllabus().is_displayed(): # Checks if a form appears after clicking on 'download syllabus'
+                if maslul_page.form_after_clicking_on_syllabus().is_displayed():  # Checks if a form appears after clicking on 'download syllabus'
                     self.filling_form_after_clicking_on_syllabus(maslul_page)
                     if maslul_page.choose_language_of_syllabus().is_displayed():  # Checks if a window of choosing a language for the syllabus appears
                         index_of_languages = 0
@@ -437,7 +438,8 @@ class MaslulPageTest(unittest.TestCase):
         has_diploma_picture = False
 
         while running:
-            for length in range(len(header.list_of_courses_on_machine_learning())):  # Loops according to the courses in Maslul
+            for length in range(
+                    len(header.list_of_courses_on_machine_learning())):  # Loops according to the courses in Maslul
                 header.maslul().click()
                 header.maslul_machine_learning().click()
                 self.string_message(f"@@Inside course {header.list_of_courses_on_machine_learning()[index].text}\n")

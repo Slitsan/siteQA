@@ -15,18 +15,12 @@ from POM.Pages.header import Header
 
 
 class CoursePageTest(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls) -> None:
-        cls.driver: WebDriver = webdriver.Chrome(executable_path=
-                                                 'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
-        cls.driver.maximize_window()
-        cls.driver.delete_all_cookies()
-        cls.driver.implicitly_wait(12)
-        cls.driver.set_page_load_timeout(22)
-        cls.driver.get('https://rt-ed.co.il/')
+    def __init__(self, init_driver):
+        super().__init__()
+        self.driver = init_driver
         now = datetime.now()
-        cls.date_for_log = now.strftime("%d %m %Y")
-        cls.string_result = "*-----------------------------------TESTING COURSE PAGE-----------------------------------------------\n"
+        self.date_for_log = now.strftime("%d %m %Y")
+        self.string_result = "*-----------------------------------TESTING COURSE PAGE-----------------------------------------------\n"
 
     # Compares the syllabus url with a given url inside the 'maslul functions'
     def compare_syllabus_url(self, title: str, actual_page_title: str, button_name: str):
@@ -36,7 +30,7 @@ class CoursePageTest(unittest.TestCase):
             self.string_message("---The syllabus is correct---\n")
             return True
         else:
-            self.string_message("!Not the right syllabus\n")
+            self.string_message("!------Not the right syllabus------!\n")
             return False
 
     # Appends the message parameter to the string_result
@@ -47,7 +41,7 @@ class CoursePageTest(unittest.TestCase):
     # Opens a new file if there is not one. Appends the string to it
     def open_file_and_append_string_message(self):
         try:
-            file = open(f"../../Source/log {self.date_for_log}.txt", "a+")
+            file = open(f"./Source/log {self.date_for_log}.txt", "a+")
             file.write(self.string_result)
             file.close()
         except FileNotFoundError:
@@ -74,37 +68,37 @@ class CoursePageTest(unittest.TestCase):
                 try:
                     dict_of_nav_buttons_blocks["אודות המסלול"] = course_page.about_block()
                 except NoSuchElementException:
-                    self.string_message("!The button 'אודות המסלול' does not work\n")
+                    self.string_message("!------The button 'אודות המסלול' does not work------!\n")
                     continue
             if div == 1:
                 try:
                     dict_of_nav_buttons_blocks["נושאים"] = course_page.course_topics_block()
                 except NoSuchElementException:
-                    self.string_message("!The button 'נושאים' does not work\n")
+                    self.string_message("!------The button 'נושאים' does not work------!\n")
                     continue
             if div == 2:
                 try:
                     dict_of_nav_buttons_blocks["קהל יעד ודרישות קדם"] = course_page.target_audience_block()
                 except NoSuchElementException:
-                    self.string_message("!The button 'קהל יעד ודרישות קדם' does not work\n")
+                    self.string_message("!------The button 'קהל יעד ודרישות קדם' does not work------!\n")
                     continue
             if div == 3:
                 try:
                     dict_of_nav_buttons_blocks["קורסי המשך"] = course_page.follow_up_courses_block()
                 except NoSuchElementException:
-                    self.string_message("!The button 'קורסי המשך' does not work\n")
+                    self.string_message("!------The button 'קורסי המשך' does not work------!\n")
                     continue
             if div == 4:
                 try:
                     dict_of_nav_buttons_blocks["חוות דעת סטודנטים"] = course_page.videos_block()
                 except NoSuchElementException:
-                    self.string_message("!The button 'חוות דעת סטודנטים' does not work\n")
+                    self.string_message("!------The button 'חוות דעת סטודנטים' does not work------!\n")
                     continue
             if div == 5:
                 try:
                     dict_of_nav_buttons_blocks["מאמרים"] = course_page.articles_block()
                 except NoSuchElementException:
-                    self.string_message("!The button 'מאמרים' does not work\n")
+                    self.string_message("!------The button 'מאמרים' does not work------!\n")
                     continue
         return dict_of_nav_buttons_blocks
 
@@ -118,11 +112,12 @@ class CoursePageTest(unittest.TestCase):
             block = list(dict_of_nav_buttons_blocks.values())[index]  # Value of dictionary
             block_key = list(dict_of_nav_buttons_blocks.keys())[index]  # Key of dictionary
             block_id = block.get_attribute("id")  # 'id' of the current block
-            self.string_message(f"---Comparing Between The '{btn.text}' Nav Button And The '{block_key}' Div Block---\n")
+            self.string_message(
+                f"---Comparing Between The '{btn.text}' Nav Button And The '{block_key}' Div Block---\n")
             if btn_id == block_id:
                 self.string_message("---Element Matches---\n")
         except ElementNotVisibleException:
-            self.string_message("!Element Not Found...\n")
+            self.string_message("!------Element Not Found------!\n")
         except IndexError:
             print("Out of bounds")
 
@@ -177,9 +172,9 @@ class CoursePageTest(unittest.TestCase):
                 if course_page.table_list_of_salary_block():
                     self.string_message("---There is content in Salary block---\n")
                 else:
-                    self.string_message("!No content in Salary Block---\n")
+                    self.string_message("!------No content in Salary Block------!\n")
         except NoSuchElementException:
-            self.string_message("!Salary Block is not Presented!\n")
+            self.string_message("!------Salary Block is not Presented------!\n")
 
     # Checks if the faq div block is presented, and clicks on each question
     def checks_if_faq_block_presented(self, actions, course_page):
@@ -190,7 +185,7 @@ class CoursePageTest(unittest.TestCase):
                     self.string_message(f"---Clicked on question -> {question.text}---\n")
                     actions.move_to_element(question).click().perform()
         except NoSuchElementException:
-            self.string_message("!FAQ Block is not Presented!\n")
+            self.string_message("!------FAQ Block is not Presented------!\n")
 
     # ----------------------------------------------COURSE'S METHODS-----------------------------------------------------
     def course_real_time(self):
@@ -1188,10 +1183,10 @@ class CoursePageTest(unittest.TestCase):
             run = False
 
         self.string_message("@Outside Course 'Database Management' function\n")
-
+        self.driver.quit()
     # ----------------------------------------------------TEST----------------------------------------------------
 
-    def test_run_maslulim(self):
+    def test_run_courses(self):
         self.course_real_time()
         self.course_web_development()
         self.course_cyber()
@@ -1204,5 +1199,3 @@ class CoursePageTest(unittest.TestCase):
         self.course_image_processing()
         self.course_database_management()
         self.open_file_and_append_string_message()
-
-
