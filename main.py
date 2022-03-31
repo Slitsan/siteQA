@@ -17,28 +17,61 @@
 # file.close()
 from datetime import datetime
 
-now = datetime.now()
-date_for_log = now.strftime("%d %m %Y")
-string_error_result = ""
+from POM.Tests.course_page_test import CoursePageTest
+from POM.Tests.header_test import HeaderTest
+from POM.Tests.home_page_test import HomePageTest
+from POM.Tests.maslul_page_test import MaslulPageTest
+from selenium import webdriver
+from selenium.webdriver.chrome.webdriver import WebDriver
 
-try:
-    file = open(f"./Source/log {date_for_log}.txt", "r")
-    for line in file.readlines():
-        if "*" in line:
-            string_error_result += line.strip("*") + "\n"
-        elif "@" in line:
-            string_error_result += line.strip("@") + "\n"
-        elif "@@" in line:
-            string_error_result += line.strip("@@") + "\n"
-        elif "!" in line:
-            string_error_result += line.strip("!") + "\n"
-    file.close()
-except FileNotFoundError:
-    print("Did not found a file")
 
-try:
-    file = open(f"./Source/Error log {date_for_log}.txt", "a+")
-    file.write(string_error_result)
-    file.close()
-except FileNotFoundError:
-    print("Did not found a file")
+def write_errors_to_different_file():
+    now = datetime.now()
+    date_for_log = now.strftime("%d %m %Y")
+    string_error_result = ""
+    try:
+        file = open(f"./Source/log {date_for_log}.txt", "r")
+        for line in file.readlines():
+            if "*" in line:
+                string_error_result += line + "\n"
+            elif "@" in line:
+                string_error_result += line + "\n"
+            elif "@@" in line:
+                string_error_result += line + "\n"
+            elif "!" in line:
+                string_error_result += line + "\n"
+        file.close()
+    except FileNotFoundError:
+        print("Did not found a file")
+    try:
+        file = open(f"./Source/Error log {date_for_log}.txt", "a+")
+        file.write(string_error_result)
+        file.close()
+    except FileNotFoundError:
+        print("Did not found a file")
+
+
+def set_driver():
+    driver: WebDriver = webdriver.Chrome(executable_path=
+                                         'C:\\Users\Public\\Documents\\GitHub Projects\\Python\\siteQA\\drivers\\chromedriver.exe')
+    driver.maximize_window()
+    driver.delete_all_cookies()
+    driver.implicitly_wait(20)
+    driver.set_page_load_timeout(30)
+    driver.get('https://rt-ed.co.il/')
+    return driver
+
+
+if __name__ == '__main__':
+    driver = set_driver()
+
+    test_home_page = HomePageTest(driver)
+    test_header = HeaderTest(driver)
+    test_maslulim = MaslulPageTest(driver)
+    test_courses = CoursePageTest(driver)
+
+    test_home_page.test_run_all()
+    test_header.test_header()
+    test_maslulim.test_run_maslulim()
+    test_courses.test_run_courses()
+    write_errors_to_different_file()
