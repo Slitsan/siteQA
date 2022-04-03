@@ -15,8 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Installing Chrome
     - uses: browser-actions/setup-chrome@latest
+    - name: Installing Chrome
     - run: chrome --version
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
