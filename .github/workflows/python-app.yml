@@ -23,4 +23,5 @@ jobs:
     - name: Run
       run: |
         pip install selenium
+        ls
         python main.py
