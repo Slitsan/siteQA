@@ -22,4 +22,5 @@ jobs:
         python-version: "3.10"
     - name: Run
       run: |
+        pip install selenium
         python main.py
