@@ -53,7 +53,7 @@ def write_errors_to_different_file():
 
 def set_driver():
     driver: WebDriver = webdriver.Chrome(executable_path=
-                                         'drivers/chromedriver.exe')
+                                         'chromedriver.exe')
     driver.maximize_window()
     driver.delete_all_cookies()
     driver.implicitly_wait(20)
