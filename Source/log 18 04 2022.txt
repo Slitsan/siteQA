@@ -1,0 +1,171 @@
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+!------Not the right page------!
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+!------Not the right page------!
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@@Inside course ARM - Embedded Systems
+Internet Of Things
+FreeRTOS
+שפת ++C
+Yocto Programming
+Embedded Linux
+RT Concepts
+שפת C
+Linux Kernel And Device Drivers
+---Checking The Real Time Group | rt | הסבה לפיתוח תוכנה | לימוד הייטק Page...---
+!------Not the right page------!
+@Outside Maslul Real-Time function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@@Inside course Internet Of Things
+FreeRTOS
+שפת ++C
+Yocto Programming
+Embedded Linux
+RT Concepts
+שפת C
+Linux Kernel And Device Drivers
+ARM - Embedded Systems
+---Checking The Real Time Group | rt | הסבה לפיתוח תוכנה | לימוד הייטק Page...---
+!------Not the right page------!
+@Outside  Real-Time function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@@Inside course Yocto Programming
+Embedded Linux
+RT Concepts
+שפת C
+Linux Kernel And Device Drivers
+ARM - Embedded Systems
+Internet Of Things
+FreeRTOS
+שפת ++C
+---Checking The Real Time Group | rt | הסבה לפיתוח תוכנה | לימוד הייטק Page...---
+!------Not the right page------!
+@Outside  Real-Time function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@@Inside course FreeRTOS
+שפת ++C
+Yocto Programming
+Embedded Linux
+RT Concepts
+שפת C
+Linux Kernel And Device Drivers
+ARM - Embedded Systems
+Internet Of Things
+---Checking The Real Time Group | rt | הסבה לפיתוח תוכנה | לימוד הייטק Page...---
+!------Not the right page------!
+@Outside  Real-Time function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---

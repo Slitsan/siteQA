@@ -1,0 +1,129 @@
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The FreeRTOS Page...---
+---Expected title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---Actual title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---The page is correct---
+---Checking The שפת ++C Page...---
+---Expected title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---Actual title קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College ---
+!------Not the right page------!
+---Checking The Yocto Programming Page...---
+---Expected title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---Actual title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---The page is correct---
+---Checking The Embedded Linux Page...---
+---Expected title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The RT Concepts Page...---
+---Expected title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The שפת C Page...---
+---Expected title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---Actual title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---The page is correct---
+---Checking The Linux Kernel And Device Drivers Page...---
+---Expected title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---Actual title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---The page is correct---
+---Checking The ARM - Embedded Systems Page...---
+---Expected title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---Actual title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---The page is correct---
+---Checking The Internet Of Things Page...---
+---Expected title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---Actual title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---The page is correct---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The Linux Kernel And Device Drivers Page...---
+---Expected title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---Actual title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---The page is correct---
+---Checking The ARM - Embedded Systems Page...---
+---Expected title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---Actual title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---The page is correct---
+---Checking The Internet Of Things Page...---
+---Expected title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---Actual title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---The page is correct---
+---Checking The FreeRTOS Page...---
+---Expected title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---Actual title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---The page is correct---
+---Checking The שפת ++C Page...---
+---Expected title קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College ---
+---Actual title קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College ---
+---The page is correct---
+---Checking The Yocto Programming Page...---
+---Expected title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---Actual title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---The page is correct---
+---Checking The Embedded Linux Page...---
+---Expected title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The RT Concepts Page...---
+---Expected title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The שפת C Page...---
+---Expected title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---Actual title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---The page is correct---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside web_development function---
+@Outside  web_development function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside web_development function---
+@Outside  web_development function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside web_development function---
+@Outside  web_development function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Cyber Security function---
+@Outside  cyber_security function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Course 'Image Processing' function---
+---Checking The OpenCV Page...---
+---Expected title קורס OpenCV | לפתח קריירה בחזית התעשייה בתחום של Image Processing ---
+---Actual title קורס OpenCV | לפתח קריירה בחזית התעשייה בתחום של Image Processing ---
+---The page is correct---
+---Checking The CUDA Page...---
+---Expected title קורס CUDA | לנצל את הכוח GPU של המחשב » Real Time College ---
+---Actual title קורס CUDA | לנצל את הכוח GPU של המחשב » Real Time College ---
+---The page is correct---
+---Checking The Machine Learning With Python Page...---
+---Expected title קורס Machine Learning with Python » Real Time College ---
+---Actual title קורס Machine Learning with Python » Real Time College ---
+---The page is correct---
+---Checking The Deep Learning With Tensorflow Page...---
+---Expected title קורס פיתוח Deep Learning with Tensorflow » Real Time College ---
+---Actual title קורס פיתוח Deep Learning with Tensorflow » Real Time College ---
+---The page is correct---
+---Checking The Nvidia GPUs Page...---
+---Expected title קורס Nvidia GPUs | שימוש לטובת פיתוח עיבוד תמונה לצורך פרוייקטים ---
+---Actual title קורס Nvidia GPUs | שימוש לטובת פיתוח עיבוד תמונה לצורך פרוייקטים ---
+---The page is correct---
+---Checking The Machine Learning Fundamentals Page...---
+---Expected title קורס Machine Learning Fundamentals » Real Time College ---
+---Actual title קורס Machine Learning Fundamentals » Real Time College ---
+---The page is correct---
+@Outside  image processing function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Social function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Social function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Social function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Social function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Social function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Social function---

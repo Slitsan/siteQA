@@ -1,0 +1,286 @@
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside info function---
+@Outside info function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The Linux Kernel And Device Drivers Page...---
+---Expected title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---Actual title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---The page is correct---
+---Checking The ARM - Embedded Systems Page...---
+---Expected title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---Actual title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---The page is correct---
+---Checking The Internet Of Things Page...---
+---Expected title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---Actual title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---The page is correct---
+---Checking The FreeRTOS Page...---
+---Expected title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---Actual title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---The page is correct---
+---Checking The שפת ++C Page...---
+---Expected title קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College ---
+---Actual title קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College ---
+---The page is correct---
+---Checking The Yocto Programming Page...---
+---Expected title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---Actual title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---The page is correct---
+---Checking The Embedded Linux Page...---
+---Expected title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The RT Concepts Page...---
+---Expected title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The שפת C Page...---
+---Expected title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---Actual title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---The page is correct---
+@Outside  Real-Time function---
+@Inside web_development function---
+---Checking The NodeJS Page...---
+---Expected title קורס NodeJS | הקורס המקיף והמעשי ביותר בארץ :Real Time Group ---
+---Actual title קורס NodeJS | הקורס המקיף והמעשי ביותר בארץ :Real Time Group ---
+---The page is correct---
+---Checking The Javascript Page...---
+---Expected title קורס JavaScript & jQuery של Real Time College מקבוצה של RTG ---
+---Actual title קורס JavaScript & jQuery של Real Time College מקבוצה של RTG ---
+---The page is correct---
+---Checking The TypeScript Page...---
+---Expected title קורס TypeScript | התמחות בכלים של Google » Real Time Group ---
+---Actual title קורס TypeScript | התמחות בכלים של Google » Real Time Group ---
+---The page is correct---
+---Checking The MongoDB Page...---
+---Expected title קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group ---
+---Actual title קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group ---
+---The page is correct---
+---Checking The HTML5 Page...---
+---Expected title קורס HTML | לימודי html5 עם המומחים של Real Time College ---
+---Actual title קורס HTML | לימודי html5 עם המומחים של Real Time College ---
+---The page is correct---
+---Checking The React | ריאקט Page...---
+---Expected title קורס React | לימודי תכנות ופיתוח אפליקציות React native JS ---
+---Actual title קורס React | לימודי תכנות ופיתוח אפליקציות React native JS ---
+---The page is correct---
+---Checking The Java Page...---
+---Expected title קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group ---
+---Actual title קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group ---
+---The page is correct---
+---Checking The Bootstrap Page...---
+---Expected title קורס Bootstrap | בניית אתרי אינטרנט בעזרת בוטסטראפ ---
+---Actual title קורס Bootstrap | בניית אתרי אינטרנט בעזרת בוטסטראפ ---
+---The page is correct---
+---Checking The פיתוח אפליקציות לאנדרואיד Page...---
+---Expected title קורס פיתוח אפליקציות לאנדרואיד | פיתוח אפליקציות תוך שימוש בשפת התכנות Java ---
+---Actual title קורס פיתוח אפליקציות לאנדרואיד | פיתוח אפליקציות תוך שימוש בשפת התכנות Java ---
+---The page is correct---
+---Checking The GIT (Version Control) Page...---
+---Expected title קורס Version Control עם המומחים » Real Time Group ---
+---Actual title קורס Version Control עם המומחים » Real Time Group ---
+---The page is correct---
+---Checking The SQL Page...---
+---Expected title קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group ---
+---Actual title קורס SQL למתחילים | ניהול בסיסי נתונים :Real Time Group ---
+---The page is correct---
+---Checking The Web Foundations Page...---
+---Expected title קורס Web Foundations להכיר את היסודות של בניית אתרים» Real Time College ---
+---Actual title קורס Web Foundations להכיר את היסודות של בניית אתרים» Real Time College ---
+---The page is correct---
+---Checking The AngularJS | אנגולר Page...---
+---Expected title קורס AngularJS | לימודי אנגולר למתחילים » Real Time College ---
+---Actual title קורס AngularJS | לימודי אנגולר למתחילים » Real Time College ---
+---The page is correct---
+---Checking The פייתון | Python Page...---
+---Expected title קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם ---
+---Actual title קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם ---
+---The page is correct---
+---Checking The CSS3 Page...---
+---Expected title קורס CSS3 | ללמוד הצגה ועיצוב של דפי אינטרנט :Real Time Group ---
+---Actual title קורס CSS3 | ללמוד הצגה ועיצוב של דפי אינטרנט :Real Time Group ---
+---The page is correct---
+@Outside  web_development function---
+@Inside Cyber Security function---
+---Checking The Forensics Investigation & Incident Response Page...---
+---Expected title קורס Forensics Investigation & Incident Response » Real Time College ---
+---Actual title קורס Forensics Investigation & Incident Response » Real Time College ---
+---The page is correct---
+---Checking The Cyber Attack Infrastructure Page...---
+---Expected title קורס Cyber Attack Infrastructure - לזהות נקודות תורפה | Real Time College ---
+---Actual title קורס Cyber Attack Infrastructure - לזהות נקודות תורפה | Real Time College ---
+---The page is correct---
+---Checking The הכנה לבחינת הסמכה C | EH Page...---
+---Expected title הכנה לבחינת הסמכה CEH » Real Time College ---
+---Actual title הכנה לבחינת הסמכה CEH » Real Time College ---
+---The page is correct---
+---Checking The Malware Analysis Page...---
+---Expected title קורס Malware Analysis לפרק ולהבין איומים פוטנציאלים » Real Time College ---
+---Actual title קורס Malware Analysis לפרק ולהבין איומים פוטנציאלים » Real Time College ---
+---The page is correct---
+---Checking The Penetration Testing Page...---
+---Expected title קורס Penetration Testing - מבחני חדירות » Real Time College ---
+---Actual title קורס Penetration Testing - מבחני חדירות » Real Time College ---
+---The page is correct---
+---Checking The Cyber Security Fundamentals Page...---
+---Expected title קורס Cyber Security Fundamentals | סייבר ואבטחת מידע :Real Time Group ---
+---Actual title קורס Cyber Security Fundamentals | סייבר ואבטחת מידע :Real Time Group ---
+---The page is correct---
+---Checking The Linux Fundamentals Page...---
+---Expected title קורס Linux Fundamentals -כל הידע והפרקטיקה הנדרשים » Real Time College ---
+---Actual title קורס Linux Fundamentals -כל הידע והפרקטיקה הנדרשים » Real Time College ---
+---The page is correct---
+---Checking The Networking Page...---
+---Expected title קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College ---
+---Actual title קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College ---
+---The page is correct---
+@Outside  cyber_security function---
+@Inside devops function---
+---Checking The AWS Page...---
+---Expected title קורס AWS | התמחות בכלי שירותי הענן של אמזון :Real Time Group ---
+---Actual title קורס AWS | התמחות בכלי שירותי הענן של אמזון :Real Time Group ---
+---The page is correct---
+---Checking The Jenkins Page...---
+---Expected title קורס Jenkins - למד לעבוד עם ג'נקינס בצורה הטובה ביותר! | Real Time Group ---
+---Actual title קורס Jenkins - למד לעבוד עם ג'נקינס בצורה הטובה ביותר! | Real Time Group ---
+---The page is correct---
+---Checking The Docker Containers Page...---
+---Expected title קורס Docker - פלטפורמת תוכנה מובילה לניהול יישומים והרצת קוד בקונטיינרים ---
+---Actual title קורס Docker - פלטפורמת תוכנה מובילה לניהול יישומים והרצת קוד בקונטיינרים ---
+---The page is correct---
+---Checking The לינוקס | Linux Admin Page...---
+---Expected title קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College ---
+---Actual title קורס לינוקס Linux Admin | ניהול מערכות הפעלה - Real Time College ---
+---The page is correct---
+---Checking The Kubernetes Page...---
+---Expected title קורס Kubernetes | לימוד קוברנטיס מעשי » Real Time College ---
+---Actual title קורס Kubernetes | לימוד קוברנטיס מעשי » Real Time College ---
+---The page is correct---
+---Checking The פייתון | Python Page...---
+---Expected title קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם ---
+---Actual title קורס פייתון - Python | לימוד שפת פייתון מומלץ למתחילים / מתקדם ---
+---The page is correct---
+---Checking The Zabbix Page...---
+---Expected title קורס Zabbix | מעקב אחר פעילות שירותי ענן » Real Time Group ---
+---Actual title קורס Zabbix | מעקב אחר פעילות שירותי ענן » Real Time Group ---
+---The page is correct---
+---Checking The Terraform Page...---
+---Expected title קורס Terraform - ניהול תשתיות בענן » Real Time College ---
+---Actual title קורס Terraform - ניהול תשתיות בענן » Real Time College ---
+---The page is correct---
+---Checking The Networking Page...---
+---Expected title קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College ---
+---Actual title קורס Networking | לימודי מעשי בתקשורת הנתונים » Real Time College ---
+---The page is correct---
+---Checking The ANSIBLE Page...---
+---Expected title קורס ANSIBLE - כלי לניהול ופיתוח כלי אוטומציה » Real Time College ---
+---Actual title קורס ANSIBLE - כלי לניהול ופיתוח כלי אוטומציה » Real Time College ---
+---The page is correct---
+---Checking The Bash Scripting Page...---
+---Expected title קורס Bash Scripting | תיכנות בסביבת לינוקס » Real Time Group ---
+---Actual title קורס Bash Scripting | תיכנות בסביבת לינוקס » Real Time Group ---
+---The page is correct---
+@Outside  devops function---
+@Inside Course 'Data Science' function---
+---Checking The Machine Learning With Python Page...---
+---Expected title קורס Machine Learning with Python » Real Time College ---
+---Actual title קורס Machine Learning with Python » Real Time College ---
+---The page is correct---
+---Checking The Deep Learning With Tensorflow Page...---
+---Expected title קורס פיתוח Deep Learning with Tensorflow » Real Time College ---
+---Actual title קורס פיתוח Deep Learning with Tensorflow » Real Time College ---
+---The page is correct---
+---Checking The Machine Learning Fundamentals Page...---
+---Expected title קורס Machine Learning Fundamentals » Real Time College ---
+---Actual title קורס Machine Learning Fundamentals » Real Time College ---
+---The page is correct---
+@Outside  data science function---
+@Inside Course 'Software Testing' function---
+---Checking The Java Page...---
+---Expected title קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group ---
+---Actual title קורס Java | למידת שפת Java למתחילים / מתקדמים » Real Time Group ---
+---The page is correct---
+---Checking The Selenium Page...---
+---Expected title קורס Selenium - לימודי פיתוח אוטומציה | הקורס הכי מקיף ומעשי בארץ ---
+---Actual title קורס Selenium - לימודי פיתוח אוטומציה | הקורס הכי מקיף ומעשי בארץ ---
+---The page is correct---
+---Checking The LabView Page...---
+---Expected title קורס LabView - לימוד מעשי וממוקד לפיתוח בפלטפורמת LabView ---
+---Actual title קורס LabView - לימוד מעשי וממוקד לפיתוח בפלטפורמת LabView ---
+---The page is correct---
+---Checking The JIRA | ג'ירה Page...---
+---Expected title קורס JIRA | בואו להתמקצע ולצבור ניסיון בכלי המוביל למעקב באגים ---
+---Actual title קורס JIRA | בואו להתמקצע ולצבור ניסיון בכלי המוביל למעקב באגים ---
+---The page is correct---
+---Checking The מתודולוגיות QA Page...---
+---Expected title קורס מתודולוגיות QA עם המומחים של Real Time College ---
+---Actual title קורס מתודולוגיות QA עם המומחים של Real Time College ---
+---The page is correct---
+@Outside  software testing function---
+@Inside Course 'Image Processing' function---
+---Checking The Deep Learning With Tensorflow Page...---
+---Expected title קורס פיתוח Deep Learning with Tensorflow » Real Time College ---
+---Actual title קורס פיתוח Deep Learning with Tensorflow » Real Time College ---
+---The page is correct---
+---Checking The Nvidia GPUs Page...---
+---Expected title קורס Nvidia GPUs | שימוש לטובת פיתוח עיבוד תמונה לצורך פרוייקטים ---
+---Actual title קורס Nvidia GPUs | שימוש לטובת פיתוח עיבוד תמונה לצורך פרוייקטים ---
+---The page is correct---
+---Checking The Machine Learning Fundamentals Page...---
+---Expected title קורס Machine Learning Fundamentals » Real Time College ---
+---Actual title קורס Machine Learning Fundamentals » Real Time College ---
+---The page is correct---
+---Checking The OpenCV Page...---
+---Expected title קורס OpenCV | לפתח קריירה בחזית התעשייה בתחום של Image Processing ---
+---Actual title קורס OpenCV | לפתח קריירה בחזית התעשייה בתחום של Image Processing ---
+---The page is correct---
+---Checking The CUDA Page...---
+---Expected title קורס CUDA | לנצל את הכוח GPU של המחשב » Real Time College ---
+---Actual title קורס CUDA | לנצל את הכוח GPU של המחשב » Real Time College ---
+---The page is correct---
+---Checking The Machine Learning With Python Page...---
+---Expected title קורס Machine Learning with Python » Real Time College ---
+---Actual title קורס Machine Learning with Python » Real Time College ---
+---The page is correct---
+@Outside  image processing function---
+@Inside 'courses_for_companies' function---
+---Checking The Courses For Companies Page...---
+---Expected title Real Time College » Real Time Group's Training Center ---
+---Actual title Real Time College » Real Time Group's Training Center ---
+---The page is correct---
+@Outside 'courses_for_companies' function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---Expected title Realtime Group - מאמרים ---
+---Actual title Realtime Group - מאמרים ---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---Expected title אודות Real Time Group - חטיבת הדרכה | חטיבת השמה | מיקור חוץ ---
+---Actual title אודות Real Time Group - חטיבת הדרכה | חטיבת השמה | מיקור חוץ ---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---Expected title הצהרת נגישות » Real Time College ---
+---Actual title הצהרת נגישות » Real Time College ---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'privacy_policy' function---
+---Checking The privacy_policy Page...---
+---Expected title מדיניות פרטיות » Real Time College ---
+---Actual title מדיניות פרטיות » Real Time College ---
+---The page is correct---
+@Outside 'privacy_policy' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---Expected title Real Time Group - דרושים ---
+---Actual title Real Time Group - דרושים ---
+---The page is correct---
+@Outside 'Jobs' function---
+@Inside Social function---
+@Outside 'social links' function---
+@Inside info function---
+@Outside info function---

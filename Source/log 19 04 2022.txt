@@ -1,0 +1,250 @@
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Inside course Linux Kernel And Device Drivers
+ARM - Embedded Systems
+Internet Of Things
+FreeRTOS
+שפת ++C
+Yocto Programming
+Embedded Linux
+RT Concepts
+שפת C
+---Checking The Real Time Group | rt | הסבה לפיתוח תוכנה | לימוד הייטק Page...---
+!------Not the right page------!
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'courses_for_companies' function---
+---Checking The Courses For Companies Page...---
+---The page is correct---
+@Outside 'courses_for_companies' function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'courses_for_companies' function---
+---Checking The Courses For Companies Page...---
+---The page is correct---
+@Outside 'courses_for_companies' function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'privacy_policy' function---
+---Checking The privacy_policy Page...---
+!------Not the right page------!
+@Outside 'privacy_policy' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'courses_for_companies' function---
+---Checking The Courses For Companies Page...---
+---The page is correct---
+@Outside 'courses_for_companies' function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'privacy_policy' function---
+---Checking The privacy_policy Page...---
+!------Not the right page------!
+@Outside 'privacy_policy' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside 'courses_for_companies' function---
+---Checking The Courses For Companies Page...---
+---The page is correct---
+@Outside 'courses_for_companies' function---
+@Inside 'Articles' function---
+---Checking The Articles Page...---
+---The page is correct---
+@Outside 'Articles' function---
+@Inside 'About Us' function---
+---Checking The About Us Page...---
+---The page is correct---
+@Outside 'About Us' function---
+@Inside 'Declaration of Accessibility' function---
+---Checking The Declaration Of Accessibility Page...---
+---The page is correct---
+@Outside 'Declaration of Accessibility' function---
+@Inside 'privacy_policy' function---
+---Checking The privacy_policy Page...---
+---The page is correct---
+@Outside 'privacy_policy' function---
+@Inside 'Jobs' function---
+---Checking The Jobs Page...---
+---The page is correct---
+@Outside 'Jobs' function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Inside course Internet Of Things
+FreeRTOS
+שפת ++C
+Yocto Programming
+Embedded Linux
+RT Concepts
+שפת C
+Linux Kernel And Device Drivers
+ARM - Embedded Systems
+---Checking The Real Time Group | rt | הסבה לפיתוח תוכנה | לימוד הייטק Page...---
+!------Not the right page------!
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? Page...---
+---The page is correct---
+---Checking The קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College Page...---
+!------Not the right page------!
+---Checking The קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group Page...---
+---The page is correct---
+---Checking The קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן Page...---
+---The page is correct---
+---Checking The YOCTO programming | מערכות Embedded Linux » Real Time College Page...---
+---The page is correct---
+---Checking The קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group Page...---
+---The page is correct---
+---Checking The קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group Page...---
+---The page is correct---
+---Checking The קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס Page...---
+---The page is correct---
+---Checking The קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? Page...---
+---The page is correct---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן Page...---
+---The page is correct---
+---Checking The קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College Page...---
+!------Not the right page------!
+---Checking The YOCTO programming | מערכות Embedded Linux » Real Time College Page...---
+---The page is correct---
+---Checking The קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group Page...---
+---The page is correct---
+---Checking The קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group Page...---
+---The page is correct---
+---Checking The קורס שפת C | לימודים שפת | C למתחילים :Real Time Group Page...---
+---The page is correct---
+---Checking The קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס Page...---
+---The page is correct---
+---Checking The קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College Page...---
+---The page is correct---
+---Checking The קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? Page...---
+---The page is correct---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College Page...---
+---Actual title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---The page is correct---
+---Checking The קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? Page...---
+---Actual title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---The page is correct---
+---Checking The קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן Page...---
+---Actual title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---The page is correct---
+---Checking The קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College Page...---
+---Actual title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+!------Not the right page------!
+---Checking The YOCTO programming | מערכות Embedded Linux » Real Time College Page...---
+---Actual title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---The page is correct---
+---Checking The קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group Page...---
+---Actual title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group Page...---
+---Actual title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The קורס שפת C | לימודים שפת | C למתחילים :Real Time Group Page...---
+---Actual title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---The page is correct---
+---Checking The קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס Page...---
+---Actual title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---The page is correct---
+@Outside  Real-Time function---
+*-----------------------------------TESTING Footer-----------------------------------------------
+@Inside Real-Time function---
+---Checking The FreeRTOS Page...---
+---Expected title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---Actual title קורס Free Rtos - ללמוד איזה תכנית תזכה במעבד בכל נקודת זמן ---
+---The page is correct---
+---Checking The שפת ++C Page...---
+---Expected title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---Actual title קורס שפת C למתחילים / שפת C ++ למתקדמים | ללמוד » Real Time College ---
+!------Not the right page------!
+---Checking The Yocto Programming Page...---
+---Expected title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---Actual title YOCTO programming | מערכות Embedded Linux » Real Time College ---
+---The page is correct---
+---Checking The Embedded Linux Page...---
+---Expected title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס Embedded Linux | פיתוח מערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The RT Concepts Page...---
+---Expected title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---Actual title קורס RT Concepts | מבוא למערכות משובצות מחשב » Real Time Group ---
+---The page is correct---
+---Checking The שפת C Page...---
+---Expected title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---Actual title קורס שפת C | לימודים שפת | C למתחילים :Real Time Group ---
+---The page is correct---
+---Checking The Linux Kernel And Device Drivers Page...---
+---Expected title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---Actual title קורס Linux Kernel and Device Drivers | מערכות משובצות מחשב בסביבת לינוקס ---
+---The page is correct---
+---Checking The ARM - Embedded Systems Page...---
+---Expected title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---Actual title קורס Arm - Embedded Systems | פיתוח תוכנה - Real Time College ---
+---The page is correct---
+---Checking The Internet Of Things Page...---
+---Expected title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---Actual title קורס Internet Of Things | מה זה IOT ואיך זה יכול לשנות על חיינו? ---
+---The page is correct---
+@Outside  Real-Time function---

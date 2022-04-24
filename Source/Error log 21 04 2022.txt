@@ -1,0 +1,82 @@
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside info function---
+
+@Outside info function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside info function---
+
+@Outside info function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@Outside  Real-Time function---
+
+@Inside web_development function---
+
+---Expected title קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group ---
+
+---Actual title קורס MongoDB | ללמוד BigData - MongoDB בקלות! | Real Time Group ---
+
+@Outside  web_development function---
+
+@Inside Cyber Security function---
+
+@Outside  cyber_security function---
+
+@Inside devops function---
+
+---Expected title קורס Jenkins - למד לעבוד עם ג'נקינס בצורה הטובה ביותר! | Real Time Group ---
+
+---Actual title קורס Jenkins - למד לעבוד עם ג'נקינס בצורה הטובה ביותר! | Real Time Group ---
+
+@Outside  devops function---
+
+@Inside Course 'Data Science' function---
+
+@Outside  data science function---
+
+@Inside Course 'Software Testing' function---
+
+@Outside  software testing function---
+
+@Inside Course 'Image Processing' function---
+
+@Outside  image processing function---
+
+@Inside 'courses_for_companies' function---
+
+@Outside 'courses_for_companies' function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'privacy_policy' function---
+
+@Outside 'privacy_policy' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+@Inside Social function---
+
+@Outside 'social links' function---
+
+@Inside info function---
+
+@Outside info function---
+

@@ -1,0 +1,610 @@
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course ARM - Embedded Systems
+
+!------Not the right page------!
+
+@Outside Maslul Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course ARM - Embedded Systems
+
+!------Not the right page------!
+
+@Outside Maslul Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course Internet Of Things
+
+!------Not the right page------!
+
+@Outside  Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course ARM - Embedded Systems
+
+!------Not the right page------!
+
+@Outside Maslul Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course Internet Of Things
+
+!------Not the right page------!
+
+@Outside  Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course Yocto Programming
+
+!------Not the right page------!
+
+@Outside  Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+!------Not the right page------!
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course ARM - Embedded Systems
+
+!------Not the right page------!
+
+@Outside Maslul Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course Internet Of Things
+
+!------Not the right page------!
+
+@Outside  Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course Yocto Programming
+
+!------Not the right page------!
+
+@Outside  Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
+*-----------------------------------TESTING Footer-----------------------------------------------
+
+@Inside Real-Time function---
+
+@@Inside course FreeRTOS
+
+!------Not the right page------!
+
+@Outside  Real-Time function---
+
+@Inside 'Articles' function---
+
+@Outside 'Articles' function---
+
+@Inside 'About Us' function---
+
+@Outside 'About Us' function---
+
+@Inside 'Declaration of Accessibility' function---
+
+@Outside 'Declaration of Accessibility' function---
+
+@Inside 'Jobs' function---
+
+@Outside 'Jobs' function---
+
